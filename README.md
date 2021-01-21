@@ -7,7 +7,7 @@ Practical sessions for Data Mining
 * [TP1](fr/TP1/TP1.md)
 * [TP2](fr/TP2/TP2.md)
 * [TP3](fr/TP3/TP3.md)
-* [Projet](fr/Projet/projet.md)
+* [Projet](fr/Projet/Projet.md)
 
 ## English 
 ### Exercises
