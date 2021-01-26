@@ -16,9 +16,9 @@ you finish easy and medium-difficult exercises to have a good score.
 Given below is the difficulty scale that will be marked with every
 exercise:
 
-1.  [★]: Easy
-2.  [★★]: Medium
-3.  [★★★]: Difficult
+1.  ★: Easy
+2.  ★★: Medium
+3.  ★★★: Difficult
 
 ### Guidelines
 
