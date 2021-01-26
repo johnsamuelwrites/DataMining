@@ -1,58 +1,22 @@
 ### Goals
 
-1.  Continue working with
-    [clustering](http://scikit-learn.org/stable/modules/clustering.html)
-    and
-    [classification](http://scikit-learn.org/stable/modules/svm.html)
+1.  Continue working with [clustering](http://scikit-learn.org/stable/modules/clustering.html)
+    and [classification](http://scikit-learn.org/stable/modules/svm.html)
     algorithms
-2.  Work on [linear regression
-    models](http://scikit-learn.org/stable/modules/linear_model.html)
-3.  Start working on [neural network
-    models](http://scikit-learn.org/stable/modules/neural_networks_supervised.html)
+2.  Work on [linear regression models](http://scikit-learn.org/stable/modules/linear_model.html)
+3.  Start working on [neural network models](http://scikit-learn.org/stable/modules/neural_networks_supervised.html)
     including single and multilayered perceptrons.
-4.  Work on [decision
-    trees](https://en.wikipedia.org/wiki/Decision_tree) and [random
-    forests](https://en.wikipedia.org/wiki/Random_forest).
-5.  Work on [online machine
-    training](https://en.wikipedia.org/wiki/Online_machine_learning).
-6.  Work on [neural network
-    models](http://scikit-learn.org/stable/modules/neural_networks_supervised.html)
+4.  Work on [decision trees](https://en.wikipedia.org/wiki/Decision_tree) and [random forests](https://en.wikipedia.org/wiki/Random_forest).
+5.  Work on [online machine training](https://en.wikipedia.org/wiki/Online_machine_learning).
+6.  Work on [neural network models](http://scikit-learn.org/stable/modules/neural_networks_supervised.html)
     using [Tensorflow](https://www.tensorflow.org/).
-7.  Continue working on the [recommender
-    system](https://en.wikipedia.org/wiki/Recommender_system)
-
-### Scoring
-
-Every exercise has an associated difficulty level. Easy and
-medium-difficult exercises help you understand the fundamentals and give
-you ideas to work on difficult exercises. It is highly recommended that
-you finish easy and medium-difficult exercises to have a good score.
-Given below is the difficulty scale that will be marked for every
-exercise:
-
-1.  [★]: Easy
-2.  [★★]: Medium
-3.  [★★★]: Difficult
-
-### Guidelines
-
-1.  To get complete guidance from the mentors, it is highly recommended
-    that you work on today\'s practical session and not on the preceding
-    ones.
-2.  There are several ways to achieve a task. Hence there are many
-    possible solutions. But try to make maximum use of the libraries
-    that have been suggested to you for your exercises.
-
-#### Installation
-
-
+7.  Continue working on the [recommender system](https://en.wikipedia.org/wiki/Recommender_system)
 
 
 #### Exercise 3.1 [★]
 
 
-We will now work with **linear regression** (refer
-[here](http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares)).
+We will now work with **linear regression** (refer [here](http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares)).
 
 Let\'s see some simple programs. In the following data, where we have
 some sample data for the equation: *y = x*. We will first train our
@@ -248,8 +212,7 @@ notice? You may have got the following graph.
 
 What are your observations? So the above program using linear regression
 perfectly fit for a subset of data. Let\'s now try with **polynomial
-features** with degree 2 (refer [Polynomial Regression: Extending linear
-models](http://scikit-learn.org/stable/modules/linear_model.html#polynomial-regression-extending-linear-models-with-basis-functions)).
+features** with degree 2 (refer [Polynomial Regression: Extending linear models](http://scikit-learn.org/stable/modules/linear_model.html#polynomial-regression-extending-linear-models-with-basis-functions)).
 
 ``` 
           

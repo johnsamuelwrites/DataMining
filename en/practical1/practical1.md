@@ -244,8 +244,7 @@ your current working directory and use the following code to parse the
 JSON file. In this exercise, we use [Pandas python
 package](https://pandas.pydata.org/pandas-docs/stable/) (**Ref:**
 [https://pandas.pydata.org/pandas-docs/stable/]) to
-parse the JSON file to obtain a [Pandas
-DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
+parse the JSON file to obtain a [Pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
 (**Ref:**
 [https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html]).
 Try using methods like
@@ -258,10 +257,8 @@ Try using methods like
 etc.
 
 Before continuing this exercise, please practice working with Pandas.
-Take a look at [10 minutes to
-pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
-(**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/getting\_started/10min.html]).
+Take a look at [10 minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
+(**Ref:** [https://pandas.pydata.org/pandas-docs/stable/getting\_started/10min.html]).
 
 ``` 
             
@@ -282,8 +279,7 @@ pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
 
 In this exercise, we will take a look at how to download data from
 external data sources using special query interfaces. Take for example,
-above data was obtained from [Wikidata
-query](https://query.wikidata.org/) (**Ref:**
+above data was obtained from [Wikidata query](https://query.wikidata.org/) (**Ref:**
 [https://query.wikidata.org/]) interface with the
 [query examples](./references.html) (**Ref:**
 [https://johnsamuel.info/en/teaching/courses/2018/DataMining/references.html]).
@@ -411,8 +407,7 @@ and download the JSON file.
 ```
 
 Now, compute and display the following information (using various
-[operations available in pandas
-library](https://pandas.pydata.org/pandas-docs/stable/10min.html)
+[operations available in pandas library](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 (**Ref:**
 [https://pandas.pydata.org/pandas-docs/stable/10min.html])):
 
@@ -424,8 +419,7 @@ library](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 
 Your next goal is to run the following query to get information related
 to scientific articles published after 2010 (limited to 10000 rows). Run
-the following query on [Wikidata query
-service](=%22https://query.wikidata.org%22) and download the JSON file.
+the following query on [Wikidata query service](=%22https://query.wikidata.org%22) and download the JSON file.
 It gives you the following information related to the scientific
 article: title, main subject and publication year.
 
