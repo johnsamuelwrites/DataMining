@@ -142,32 +142,30 @@ English) in PDF format detailing the following:
 
 The criteria for the project evaluation is given below:
 
-1.  Data Collect1.n
-    1.  Automated approaches to data collect1.n
-    2. Use of open-l1.ensed 1.ages
-    3. Storage and management of 1.ages and the assoc1.ted metadata
-2.  Label1.g and Annotat1.n
-    1.  Automated approaches to label1.g
-    2. Storage and management of labels and annotat1.ns of 1.ages
-    3. Use of class1.1.at1.n and cluster1.g algor1.hms
+1.  Data Collection
+    1. Automated approaches to data collection
+    2. Use of open-licensed images
+    3. Storage and management of images and the associated metadata
+2.  Labeling and Annotation
+    1. Automated approaches to labeling
+    2. Storage and management of labels and annotations of images
+    3. Use of classification and clustering algorithms
 3.  Data Analyses
-    1.  Types of analyses used
-    2. Use of Pandas and Sc1.1.-learn
-    3. Use of data m1.1.g algor1.hms
-4.  Data V1.ual1.at1.n
-    1.  Types of v1.ual1.at1.n techn1.ues used
-    2. Use of matplotl1.
-5.  Recommendat1.n System
-    1.  Storage and management of user preferences and user-prof1.e
-    2. Use of recommendat1.n algor1.hms
+    1. Types of analyses used
+    2. Use of Pandas and Scikit-learn
+    3. Use of data mining algorithms
+4.  Data Visualization
+    1. Types of visualization techniques used
+    2. Use of matplotlib
+5.  Recommendation System
+    1. Storage and management of user preferences and user-profile
+    2. Use of recommendation algorithms
 6.  Tests
-    1.  Presence of funct1.nal tests
+    1. Presence of functional tests
     2. Presence of user tests
 7.  Report
-    1.  Clar1.y of presentat1.n
-    2. Presence of a clear 1.troduct1.n and conclus1.n, arch1.ecture
-        d1.grams, a summary of d1.ferent tasks ach1.ved, and l1.1.at1.ns
-    3. B1.l1.graphy
-
-
+    1. Clarity of presentation
+    2. Presence of a clear introduction and conclusion, architecture
+        diagrams, a summary of different tasks achieved, and limitations
+    3. Bibliography
 
