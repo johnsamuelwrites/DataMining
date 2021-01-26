@@ -157,7 +157,7 @@ plot this multi-annual population.
          
 ```
 
-![](../../2017/DataMining/images/populationscatterplot.png)
+![](../../images/populationscatterplot.png)
 
 We will focus on data starting from 1960 (why?). Our goal is to use
 regression techniques to predict population. But we don\'t know how to
@@ -203,12 +203,12 @@ population values and the predicted values.
          
 ```
 
-![](../../2017/DataMining/images/populationlinearregression.png)
+![](../../images/populationlinearregression.png)
 
 Now test the above program including the data before 1960. What did you
 notice? You may have got the following graph.
 
-![](../../2017/DataMining/images/allpopulationlinearregression.png)
+![](../../images/allpopulationlinearregression.png)
 
 What are your observations? So the above program using linear regression
 perfectly fit for a subset of data. Let\'s now try with **polynomial
@@ -255,7 +255,7 @@ features** with degree 2 (refer [Polynomial Regression: Extending linear models]
          
 ```
 
-![](../../2017/DataMining/images/populationpolynomialregression.png)
+![](../../images/populationpolynomialregression.png)
 
 Before jumping into a conclusion, let\'s consider the entire data and
 see.
@@ -305,7 +305,7 @@ see.
          
 ```
 
-![](../../2017/DataMining/images/allpopulationpolynomialregression.png)
+![](../../images/allpopulationpolynomialregression.png)
 
 What do you think? Can we use this program to predict the missing data
 (especially in the absence of other external source of information)? Try
@@ -495,7 +495,7 @@ already have labels for the entire dataset.
          
 ```
 
-![](../../2017/DataMining/images/scikitlearnfour.png)
+![](../../images/scikitlearnfour.png)
 
 Now let\'s try predicting the remaining labels and use the classifcation
 report to get the precision of prediction.

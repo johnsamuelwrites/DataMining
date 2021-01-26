@@ -28,7 +28,7 @@ importing the *matplotlib* library, we initialize x values and plot it.
           
 ```
 
-![](../../2017/DataMining/images/plot.png)
+![](../../images/plot.png)
 
 Now let\'s change the color, style and width of the line.
 
@@ -57,7 +57,7 @@ We will now initialize the y-values and plot the graph.
           
 ```
 
-![](../../2017/DataMining/images/stepploty.png)
+![](../../images/stepploty.png)
 
 In the [first practical session](./practicals1.html), we saw how to
 parse JSON files. Continuing with the same
@@ -123,7 +123,7 @@ There is yet another way to plot the dataframes, by using
           
 ```
 
-![](../../2017/DataMining/images/dataframeplot.png)
+![](../../images/dataframeplot.png)
 
 Now, we want to create multiple subplots. A simple way is given below.
 Recall in [first practical session](./practicals1.html), we did group by
@@ -169,7 +169,7 @@ on multiple columns. Subplots can be used to visualize these data.
           
 ```
 
-![](../../2017/DataMining/images/subplots.png)
+![](../../images/subplots.png)
 
 Make changes to the above code, so that we can get visual information on
 count of languages of different programming paradigms released in every
@@ -181,8 +181,8 @@ programming languages belonging to each programming language paradigm.
 
 
 In this exercise, we will work on images. Download an image (e.g.,
-[picture.bmp](../../2017/DataMining/images/picture.bmp) and
-[flower.jpg](../../2017/DataMining/images/flower.jpg)) in your current
+[picture.bmp](../../images/picture.bmp) and
+[flower.jpg](../../images/flower.jpg)) in your current
 working folder and open it in the following manner. We will first try to
 get some metadata of the image.
 
@@ -262,7 +262,7 @@ of different colors.
           
 ```
 
-![](../../2017/DataMining/images/histogramsubplots.png)
+![](../../images/histogramsubplots.png)
 
 But if wish to see all of them in one single plot.
 
@@ -290,7 +290,7 @@ But if wish to see all of them in one single plot.
           
 ```
 
-![](../../2017/DataMining/images/histogramplot.png)
+![](../../images/histogramplot.png)
 
 But we do not wish to loose the band colors.
 
@@ -320,7 +320,7 @@ But we do not wish to loose the band colors.
           
 ```
 
-![](../../2017/DataMining/images/histogramplotcolors.png)
+![](../../images/histogramplotcolors.png)
 
 Your next question is to get the top 20 intensities in each band and
 create a single plot of these top intensities. Write a python program
@@ -367,7 +367,7 @@ image.
           
 ```
 
-![](../../2017/DataMining/images/barchart.png)
+![](../../images/barchart.png)
 
 For your next question, your goal is to understand the above code and
 achieve the following:
@@ -381,7 +381,7 @@ achieve the following:
     below)
 4.  Do you have any interesting observations?
 
-![](../../2017/DataMining/images/piechart.png)
+![](../../images/piechart.png)
 
 
 #### Exercise 2.4 [★★]
@@ -509,7 +509,7 @@ purpose?
 
 
 Now let\'s continue working with
-[flower.jpg](../../2017/DataMining/images/flower.jpg). Let\'s start once
+[flower.jpg](../../images/flower.jpg). Let\'s start once
 again with **KMeans** and try to get clusters of size between 2 and 11.
 
 ``` 
@@ -565,7 +565,7 @@ Your next goal is to test the above code for cluster sizes between 2 and
 minutes. Optionally, you can add *print* statements to test whether your
 code is working fine.
 
-![](../../2017/DataMining/images/kmeans.png)
+![](../../images/kmeans.png)
 
 Now we modify the above algorithm to use **MiniBatchKMeans** clustering
 algorithm (refer
@@ -624,7 +624,7 @@ below.
 
 What are your conclusions?
 
-![](../../2017/DataMining/images/minibatchkmeans.png)
+![](../../images/minibatchkmeans.png)
 
 In order to compare the two algorithms, we consider the time taken by
 each of these algorithms. We will repeat the above experiment, but this
@@ -667,7 +667,7 @@ We start with **KMeans**.
 
 You may get a graph similar to the following.
 
-![](../../2017/DataMining/images/kmeanstime.png)
+![](../../images/kmeanstime.png)
 
 We now use **MiniBatchKMeans**.
 
@@ -706,7 +706,7 @@ We now use **MiniBatchKMeans**.
 
 You may get a graph similar to the following.
 
-![](../../2017/DataMining/images/minibatchkmeanstime.png)
+![](../../images/minibatchkmeanstime.png)
 
 Now test the above code using **MiniBatchKMeans** algorithm with cluster
 sizes between 2 and 50. What are your observations?
@@ -761,7 +761,7 @@ black) to distinguish the cluster centers from the two algorithms.
           
 ```
 
-![](../../2017/DataMining/images/scatterplots.png)
+![](../../images/scatterplots.png)
 
 We would like to see how the individual pixel values have been
 clustered. Run the following program a couple of times.
@@ -873,7 +873,7 @@ clustered. Run the following program a couple of times.
           
 ```
 
-![](../../2017/DataMining/images/kmeansminibatchcomparison.png)
+![](../../images/kmeansminibatchcomparison.png)
 
 What are your conclusions?
 

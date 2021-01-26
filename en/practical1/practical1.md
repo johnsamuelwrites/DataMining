@@ -23,11 +23,11 @@ pip
 
 ``` 
             
-              $ sudo apt update
+$ sudo apt update
 
-              $ sudo apt install python3-dev 
+$ sudo apt install python3-dev 
 
-              $ sudo apt install python3-pip
+$ sudo apt install python3-pip
             
           
 ```
@@ -36,7 +36,7 @@ Installation of virtualenv
 
 ``` 
             
-              $ sudo apt install virtualenv
+$ sudo apt install virtualenv
             
           
 ```
@@ -45,7 +45,7 @@ Installation inside virtualenv
 
 ``` 
             
-              $ virtualenv --system-site-packages -p python3 env
+$ virtualenv --system-site-packages -p python3 env
 
           $ source env/bin/activate
             
@@ -65,7 +65,7 @@ Installation of scikit-learn
 
 ``` 
             
-              $ python3 -m pip install scikit-learn
+$ python3 -m pip install scikit-learn
             
           
 ```
@@ -74,7 +74,7 @@ Installation of numpy
 
 ``` 
             
-              $ python3 -m pip install numpy
+$ python3 -m pip install numpy
             
           
 ```
@@ -83,7 +83,7 @@ Installation of pandas
 
 ``` 
             
-              $ python3 -m pip install pandas
+$ python3 -m pip install pandas
             
           
 ```
@@ -92,7 +92,7 @@ Installation of matplotlib
 
 ``` 
             
-              $ python3 -m pip install matplotlib
+$ python3 -m pip install matplotlib
             
           
 ```
@@ -103,32 +103,32 @@ If your installation is successful, you can run
 
 ``` 
             
-              $ mkdir TP1 && cd TP1
-              $ jupyter notebook
+$ mkdir TP1 && cd TP1
+$ jupyter notebook
             
           
 ```
 
 A new page will appear on your browser and you will see the following
-image ![](../../2017/DataMining/images/jupyter.png)
+image ![](../../images/jupyter.png)
 
 Click on the tab \'Running\'. You see no notebooks running (if it\'s the
 first time you are running jupyter).
-![](../../2017/DataMining/images/jupyterrunning.png)
+![](../../images/jupyterrunning.png)
 
 Go back to the \'Files\' tab and click on New and choose Python3 under
-Notebook ![](../../2017/DataMining/images/jupyternotebook.png)
+Notebook ![](../../images/jupyternotebook.png)
 
 A new tab will open as shown below. Write the following code in the cell
 
 ``` 
             
-              print("Hello World!")
+print("Hello World!")
             
           
 ```
 
-![](../../2017/DataMining/images/jupyterprogram.png)
+![](../../images/jupyterprogram.png)
 
 You can go to any cell and press \'Run\'
 
@@ -136,11 +136,11 @@ By default, your Notebook is named \'Untitled\'. You can rename it as
 shown below, by clicking on the name \'Untitled\' and by giving a new
 name.
 
-![](../../2017/DataMining/images/jupyterrenamenotebook.png)
+![](../../images/jupyterrenamenotebook.png)
 
 Now go back to the \'Files\' tab and you can see the renamed notebook.
 You can click on your notebook at any time to continue working.
-![](../../2017/DataMining/images/jupyternotebooks.png)
+![](../../images/jupyternotebooks.png)
 
 Now let\'s continue working on your current Notebook. Write the
 following code to check whether scikit is properly installed.
@@ -149,14 +149,14 @@ The code below shows the available datasets from scikit.
 
 ``` 
             
-              from sklearn import datasets
+from sklearn import datasets
 
-              print(datasets.__all__)
+print(datasets.__all__)
             
           
 ```
 
-![](../../2017/DataMining/images/jupyterscikit.png)
+![](../../images/jupyterscikit.png)
 
 Now, you are ready to go!!
 
@@ -184,16 +184,16 @@ datatypes (U100, i4)
 
 ``` 
             
-              import numpy as np 
-              dataset = np.loadtxt("pl.csv", dtype={'names': ('name', 'year'), 
-                  'formats': ('U100', 'i4')}, 
-                 skiprows=1, delimiter=",", encoding="UTF-8") 
-              print(dataset)
+import numpy as np 
+dataset = np.loadtxt("pl.csv", dtype={'names': ('name', 'year'), 
+    'formats': ('U100', 'i4')}, 
+   skiprows=1, delimiter=",", encoding="UTF-8") 
+print(dataset)
             
           
 ```
 
-![](../../2017/DataMining/images/numpycsv.png)
+![](../../images/numpycsv.png)
 
 [CSV support in
 numpy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html)
@@ -220,11 +220,11 @@ tsv file.
 
 ``` 
             
-              import numpy as np 
-              dataset = np.loadtxt("pl.tsv", dtype={'names': ('name', 'year'), 
-                  'formats': ('U100', 'i4')}, 
-                 skiprows=1, delimiter="\t", encoding="UTF-8") 
-              print(dataset)
+import numpy as np 
+dataset = np.loadtxt("pl.tsv", dtype={'names': ('name', 'year'), 
+    'formats': ('U100', 'i4')}, 
+   skiprows=1, delimiter="\t", encoding="UTF-8") 
+print(dataset)
             
           
 ```
@@ -262,13 +262,13 @@ Take a look at [10 minutes to pandas](https://pandas.pydata.org/pandas-docs/stab
 
 ``` 
             
-              from pandas.io.json import json_normalize
-              import pandas as pd
-              import json
-              
-              data = json.load(open('pl.json'))
-              dataframe = json_normalize(data)
-              print(dataframe)
+from pandas.io.json import json_normalize
+import pandas as pd
+import json
+
+data = json.load(open('pl.json'))
+dataframe = json_normalize(data)
+print(dataframe)
             
           
 ```
@@ -285,7 +285,7 @@ above data was obtained from [Wikidata query](https://query.wikidata.org/) (**Re
 [https://johnsamuel.info/en/teaching/courses/2018/DataMining/references.html]).
 See the screenshot given below.
 
-![](../../2017/DataMining/images/wikidataquery.png)
+![](../../images/wikidataquery.png)
 
 Given below is the code to read data from an external data source. Use
 this
@@ -295,24 +295,24 @@ and replace \"..\" by the previous URL value.
 
 ``` 
             
-              import urllib.request
-              import json
-              import pandas as pd
-              
-              url = "..."
-              response = urllib.request.urlopen(url)
-              responsedata =  json.loads(response.read().decode('utf-8'))
-              
-              array = []
-              
-              for data in responsedata['results']['bindings']:
-                array.append([data['year']['value'],
-               data['languageLabel']['value']])
-              dataframe = pd.DataFrame(array,
-               columns=['year', 'languageLabel'])
-              dataframe = dataframe.astype(dtype= {"year":"<i4",
-               "languageLabel":"<U200"})
-              print(dataframe)
+import urllib.request
+import json
+import pandas as pd
+
+url = "..."
+response = urllib.request.urlopen(url)
+responsedata =  json.loads(response.read().decode('utf-8'))
+
+array = []
+
+for data in responsedata['results']['bindings']:
+  array.append([data['year']['value'],
+ data['languageLabel']['value']])
+dataframe = pd.DataFrame(array,
+ columns=['year', 'languageLabel'])
+dataframe = dataframe.astype(dtype= {"year":"<i4",
+ "languageLabel":"<U200"})
+print(dataframe)
             
           
 ```
@@ -327,8 +327,8 @@ languages released in a year.
 
 ``` 
             
-              grouped = dataframe.groupby('year').count()
-              print(grouped)
+grouped = dataframe.groupby('year').count()
+print(grouped)
             
           
 ```
@@ -337,8 +337,8 @@ You can also use multiple aggregate functions using agg()
 
 ``` 
             
-              grouped = dataframe.groupby('year').agg(['count'])
-              print(grouped)
+grouped = dataframe.groupby('year').agg(['count'])
+print(grouped)
             
           
 ```
@@ -351,24 +351,24 @@ to your working directory. And test the following program.
 
 ``` 
             
-              from pandas.io.json import json_normalize
-              import pandas as pd
-              import json
-              
-              jsondata = json.load(open('plparadigm.json'))
-              array = []
-              
-              for data in jsondata:
-                array.append([data['year'],
-                data['languageLabel'], data['paradigmLabel']])
-              dataframe = pd.DataFrame(array,
-                columns=['year', 'languageLabel', 'paradigmLabel']) 
-              dataframe = dataframe.astype(dtype= {"year" : "int64",
-                "languageLabel" : "<U200", "paradigmLabel" : "<U200"})
-              
-              grouped = dataframe.groupby(['year',
-                 'paradigmLabel']).agg(['count'])
-              print(grouped)
+from pandas.io.json import json_normalize
+import pandas as pd
+import json
+
+jsondata = json.load(open('plparadigm.json'))
+array = []
+
+for data in jsondata:
+  array.append([data['year'],
+  data['languageLabel'], data['paradigmLabel']])
+dataframe = pd.DataFrame(array,
+  columns=['year', 'languageLabel', 'paradigmLabel']) 
+dataframe = dataframe.astype(dtype= {"year" : "int64",
+  "languageLabel" : "<U200", "paradigmLabel" : "<U200"})
+
+grouped = dataframe.groupby(['year',
+   'paradigmLabel']).agg(['count'])
+print(grouped)
             
           
 ```
@@ -377,9 +377,9 @@ Now test the following program. Compare the difference in output.
 
 ``` 
             
-              grouped = dataframe.groupby(['paradigmLabel',
-                 'year']).agg(['count'])
-              print(grouped)
+grouped = dataframe.groupby(['paradigmLabel',
+   'year']).agg(['count'])
+print(grouped)
             
           
 ```
@@ -435,7 +435,7 @@ article: title, main subject and publication year.
               BIND(YEAR(?date) as ?year).
               #published after 2010
               FILTER(lang(?title)="en" &&
-                 lang(?subjectLabel)="en" && ?year>2010)
+   lang(?subjectLabel)="en" && ?year>2010)
             }
             LIMIT 10000
             

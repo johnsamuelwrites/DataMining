@@ -13,7 +13,7 @@
 1\. Comments
 
 ``` 
-               # This is a comment
+ # This is a comment
            print("Bonjour")
 ```
 
@@ -26,31 +26,31 @@
 ```
 
 ``` 
-              a = 10
-              b = 20
-              c = a + b
-              print(c)
+a = 10
+b = 20
+c = a + b
+print(c)
           
 ```
 
 ``` 
             
-              # floating point numbers
-              pi = 3.14
-              print(pi)
+# floating point numbers
+pi = 3.14
+print(pi)
             
           
 ```
 
 ``` 
             
-              # data types
+# data types
           message1 = "Bonjour"
-              a = 12
-              pi = 3.14
-              print(type(message1))
-              print(type(a))
-              print(type(pi))
+a = 12
+pi = 3.14
+print(type(message1))
+print(type(a))
+print(type(pi))
             
           
 ```
@@ -68,31 +68,31 @@
 
 ``` 
             
-              # concatenation of two strings
+# concatenation of two strings
           message1 = "Bonjour "
           message2 = "le monde!"
-              print(message1 + message2)
+print(message1 + message2)
             
           
 ```
 
 ``` 
             
-              # concatenation involving two variables of different data types
-              # operation + on two different data types
+# concatenation involving two variables of different data types
+# operation + on two different data types
           message1 = "Bonjour en Python"
-              a = 3
-              print(message1 + a)
+a = 3
+print(message1 + a)
             
           
 ```
 
 ``` 
             
-              # concatenation solution involving two variables of different data types
+# concatenation solution involving two variables of different data types
           message1 = "Bonjour en Python "
-              a = 3
-              print(message1 + str(a))
+a = 3
+print(message1 + str(a))
             
           
 ```
@@ -101,28 +101,28 @@
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              print(a)
+a = [10, 20, 30, 40, 50]
+print(a)
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              print(a[0])
-              print(a[1])
-              print(a[2])
-              print(a[3])
-              print(a[4])
+a = [10, 20, 30, 40, 50]
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+print(a[4])
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              print(a[8])
+a = [10, 20, 30, 40, 50]
+print(a[8])
             
           
 ```
@@ -130,77 +130,77 @@
 ``` 
             
           message1 = "Bonjour en Python "
-              print(message1[0])
-              print(message1[1])
-              print(message1[2])
-              print(message1[3])
-              print(message1[4])
-              print(message1[5])
-              print(message1[6])
-              print(message1[7])
+print(message1[0])
+print(message1[1])
+print(message1[2])
+print(message1[3])
+print(message1[4])
+print(message1[5])
+print(message1[6])
+print(message1[7])
             
           
 ```
 
 ``` 
             
-              message1 = "Bonjour en Python "
-              print(len(message1))
+message1 = "Bonjour en Python "
+print(len(message1))
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              print(len(a))
+a = [10, 20, 30, 40, 50]
+print(len(a))
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              a.append(60)
-              print(a)
+a = [10, 20, 30, 40, 50]
+a.append(60)
+print(a)
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              a[0] = 0
-              print(a)
+a = [10, 20, 30, 40, 50]
+a[0] = 0
+print(a)
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              a[6] = 20
-              print(a)
+a = [10, 20, 30, 40, 50]
+a[6] = 20
+print(a)
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              a.insert(0, 0)
-              print(a)
-              print(len(a))
+a = [10, 20, 30, 40, 50]
+a.insert(0, 0)
+print(a)
+print(len(a))
             
           
 ```
 
 ``` 
             
-              a = [10, 20, 30, 40, 50]
-              a.insert(6,60)
-              print(a)
-              print(len(a))
+a = [10, 20, 30, 40, 50]
+a.insert(6,60)
+print(a)
+print(len(a))
             
           
 ```
@@ -209,25 +209,25 @@
 
 ``` 
             
-              a = (10, 20, 30, 40, 50)
-              print(a)
+a = (10, 20, 30, 40, 50)
+print(a)
             
           
 ```
 
 ``` 
             
-              a = (10, 20, 30, 40, 50)
-              print(a[0])
+a = (10, 20, 30, 40, 50)
+print(a[0])
             
           
 ```
 
 ``` 
             
-              a = (10, 20, 30, 40, 50)
-              a[0] = 0
-              print(a)
+a = (10, 20, 30, 40, 50)
+a[0] = 0
+print(a)
             
           
 ```
@@ -236,55 +236,55 @@
 
 ``` 
             
-              a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
-              print(a)
+a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
+print(a)
             
           
 ```
 
 ``` 
             
-              a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
-              a.add(10)
-              print(a)
+a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
+a.add(10)
+print(a)
             
           
 ```
 
 ``` 
             
-              a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
-              a.add(60)
-              print(a)
+a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
+a.add(60)
+print(a)
             
           
 ```
 
 ``` 
             
-              a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
-              a.remove(40)
-              print(a)
+a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
+a.remove(40)
+print(a)
             
           
 ```
 
 ``` 
             
-              # set
-              a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
-              print(a)
-              print(type(a))
-              
-              # tuple
-              b = (10, 20, 30, 40, 50, 10, 20, 30, 40, 50)
-              print(b)
-              print(type(b))
-              
-              # list
-              c= [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
-              print(c)
-              print(type(c))
+# set
+a = {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}
+print(a)
+print(type(a))
+
+# tuple
+b = (10, 20, 30, 40, 50, 10, 20, 30, 40, 50)
+print(b)
+print(type(b))
+
+# list
+c= [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
+print(c)
+print(type(c))
             
           
 ```
@@ -297,10 +297,10 @@
 
 ``` 
             
-              a = 12
-              if( a%2 == 0):
+a = 12
+if( a%2 == 0):
             print(a, " is divisible by 2")
-              else:
+else:
             print(a, " is not divisible by 2")
             
           
@@ -308,10 +308,10 @@
 
 ``` 
             
-              lang = "Français"
+lang = "Français"
           if (lang =="Français"):
             print("Bonjour le monde!")
-              else:
+else:
             print("Hello World!")
             
           
@@ -321,24 +321,24 @@
 
 ``` 
             
-              for i in [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]:
-                print(i)
+for i in [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]:
+  print(i)
             
           
 ```
 
 ``` 
             
-              for i in (10, 20, 30, 40, 50, 10, 20, 30, 40, 50):
-                print(i)
+for i in (10, 20, 30, 40, 50, 10, 20, 30, 40, 50):
+  print(i)
             
           
 ```
 
 ``` 
             
-              for i in {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}:
-                print(i)
+for i in {10, 20, 30, 40, 50, 10, 20, 30, 40, 50}:
+  print(i)
             
           
 ```
@@ -347,48 +347,48 @@
 
 ``` 
             
-              for i in range(0,10):
-                print(i)
+for i in range(0,10):
+  print(i)
             
           
 ```
 
 ``` 
             
-              for i in range(0,10,2):
-                print(i)
+for i in range(0,10,2):
+  print(i)
             
           
 ```
 
 ``` 
             
-              for i in range(0,10,2):
-                print(i, end=' ')
+for i in range(0,10,2):
+  print(i, end=' ')
             
           
 ```
 
 ``` 
             
-              for i in range(10,0,-2):
-                 print(i)
+for i in range(10,0,-2):
+   print(i)
             
           
 ```
 
 ``` 
             
-              for i in range(10,0):
-                print(i)
+for i in range(10,0):
+  print(i)
             
           
 ```
 
 ``` 
             
-              for i in "Bonjour,le,monde!".split():
-                print(i)
+for i in "Bonjour,le,monde!".split():
+  print(i)
             
           
 ```
@@ -396,7 +396,7 @@
 ``` 
             
           for i in "Bonjour,le,monde!".split(","):
-                print(i)
+  print(i)
             
           
 ```
@@ -405,14 +405,14 @@ Write a program in Python to display the following output
 
 ``` 
             
-              1
-              12
-              123
-              1234
-              12345
-              123456
-              1234567
-              12345678
+1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
             
           
 ```
@@ -425,9 +425,9 @@ Write a program in Python to display the following output
 
 ``` 
             
-              num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
-              num.sort()
-              print(num)
+num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
+num.sort()
+print(num)
             
           
 ```
@@ -436,9 +436,9 @@ Write a program in Python to display the following output
 
 ``` 
             
-              num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
-              num.sort(reverse=True)
-              print(num)
+num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
+num.sort(reverse=True)
+print(num)
             
           
 ```
@@ -447,8 +447,8 @@ Write a program in Python to display the following output
 
 ``` 
             
-              num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
-              print(min(num))
+num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
+print(min(num))
             
           
 ```
@@ -457,8 +457,8 @@ Write a program in Python to display the following output
 
 ``` 
             
-              num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
-              print(max(num))
+num = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
+print(max(num))
             
           
 ```
@@ -467,9 +467,9 @@ Write a program in Python to display the following output
 
 ``` 
             
-              num = [70, 20, 30, 10, 50, 60, 20, 80, 70, 50]
-              num = sorted(num,reverse=True)[:5]
-              print(num)
+num = [70, 20, 30, 10, 50, 60, 20, 80, 70, 50]
+num = sorted(num,reverse=True)[:5]
+print(num)
             
           
 ```
@@ -478,8 +478,8 @@ Modify the code given below to display the five greatest unique numbers.
 
 ``` 
             
-              print(sorted("Bonjour le monde!".split(), key=str.lower, 
-                        reverse=True))
+print(sorted("Bonjour le monde!".split(), key=str.lower, 
+          reverse=True))
             
           
 ```
@@ -492,9 +492,9 @@ Modify the code given below to display the five greatest unique numbers.
 
 ``` 
             
-              a = {"contente": 12, "content": 12, "triste": 2}
-              print(a)
-              print(type(a))
+a = {"contente": 12, "content": 12, "triste": 2}
+print(a)
+print(type(a))
             
           
 ```
@@ -502,7 +502,7 @@ Modify the code given below to display the five greatest unique numbers.
 ``` 
             
           a = {"contente": 12, "content": 12, "triste": 2}
-              for cle in a:
+for cle in a:
             print("la phrase ", key, " apparait ", a[cle], " fois")
             
           
@@ -510,8 +510,8 @@ Modify the code given below to display the five greatest unique numbers.
 
 ``` 
             
-              a = {"contente": 12, "content": 12, "triste": 2}
-              for key,value in a.items():
+a = {"contente": 12, "content": 12, "triste": 2}
+for key,value in a.items():
           print("la phrase ", key, " apparait ", value, " fois")
             
           
@@ -520,8 +520,8 @@ Modify the code given below to display the five greatest unique numbers.
 ``` 
             
           a = {"contente": 12, "content": 12, "triste": 2}
-              a["joie"] = 10
-              print(a)
+a["joie"] = 10
+print(a)
             
           
 ```
@@ -530,16 +530,16 @@ Modify the code given below to display the five greatest unique numbers.
             
           a = {"contente": 12, "content": 12, "triste": 2}
           del a["triste"]
-              print(a)
+print(a)
             
           
 ```
 
 ``` 
             
-              mots = {"contente": 12, "content": 12, "triste": 2, 
-                  "joie" : 10}
-              print(sorted(mots))
+mots = {"contente": 12, "content": 12, "triste": 2, 
+    "joie" : 10}
+print(sorted(mots))
             
           
 ```
@@ -547,9 +547,9 @@ Modify the code given below to display the five greatest unique numbers.
 ``` 
             
           mots = {"contente": 12, "content": 12, "triste": 2, 
-                  "joie" : 10}
-              mots_tuple = [(key, value) for key,value in mots.items()]
-              print(mots_tuple)
+    "joie" : 10}
+mots_tuple = [(key, value) for key,value in mots.items()]
+print(mots_tuple)
             
           
 ```
@@ -558,12 +558,12 @@ Modify the code given below to display the five greatest unique numbers.
 
 ``` 
             
-              from operator import itemgetter
-              
+from operator import itemgetter
+
           mots = {"contente": 12, "content": 12, "triste": 2, 
-                  "joie" : 10}
-              mots_tuple = [(key, value) for key,value in mots.items()]
-              print(sorted(mots_tuple, key=itemgetter(1)))
+    "joie" : 10}
+mots_tuple = [(key, value) for key,value in mots.items()]
+print(sorted(mots_tuple, key=itemgetter(1)))
             
           
 ```
@@ -573,7 +573,7 @@ Modify the code given below to display the five greatest unique numbers.
 ``` 
             
           nom = input("Quel est votre nom?")
-              print(nom)
+print(nom)
             
           
 ```
@@ -581,8 +581,8 @@ Modify the code given below to display the five greatest unique numbers.
 ``` 
             
           age = input("Quel est votre âge? ")
-              print(age)
-              print(type(age))
+print(age)
+print(type(age))
             
           
 ```
@@ -590,9 +590,9 @@ Modify the code given below to display the five greatest unique numbers.
 ``` 
             
           age = input("Quel est votre âge? ")
-              age = int(age)
-              print(age)
-              print(type(age))
+age = int(age)
+print(age)
+print(type(age))
             
           
 ```
@@ -620,9 +620,9 @@ and display the following values for every module:
 ``` 
             
           message = "Bonjour le monde"
-              with open("bonjour.txt", "w") as file:
-                file.write(message)
-              file.close()
+with open("bonjour.txt", "w") as file:
+  file.write(message)
+file.close()
             
           
 ```
@@ -630,9 +630,9 @@ and display the following values for every module:
 ``` 
             
           with open("bonjour.txt", "r") as file:
-                text = file.read()
-                print(text)
-              file.close()
+  text = file.read()
+  print(text)
+file.close()
             
           
 ```
@@ -642,9 +642,9 @@ and display the following values for every module:
           message1 = "Bonjour le monde"
           message2 = "Programmation en Python"
           with open("bonjour.txt", "w") as file:
-                file.write(message1)
-                file.write(message2)
-              file.close()
+  file.write(message1)
+  file.write(message2)
+file.close()
             
           
 ```
@@ -652,9 +652,9 @@ and display the following values for every module:
 ``` 
             
           with open("bonjour.txt", "r") as file:
-                text = file.read()
-                print(text)
-              file.close()
+  text = file.read()
+  print(text)
+file.close()
             
           
 ```
@@ -663,15 +663,15 @@ and display the following values for every module:
             
           message1 = "Bonjour le monde\n"
           message2 = "Programmation en Python"
-              with open("bonjour.txt", "w") as file:
-                file.write(message1)
-                file.write(message2)
-              file.close()
-              
+with open("bonjour.txt", "w") as file:
+  file.write(message1)
+  file.write(message2)
+file.close()
+
           with open("bonjour.txt", "r") as file:
-                text = file.read()
-                print(text)
-              file.close()
+  text = file.read()
+  print(text)
+file.close()
             
           
 ```
@@ -683,9 +683,9 @@ and display the following values for every module:
           message1 = "Bonjour le monde\n"
           message2 = "Programmation en Python"
           with open("bonjour.txt", "w") as file:
-                file.write(message1)
-                file.write(message2)
-              file.close()
+  file.write(message1)
+  file.write(message2)
+file.close()
             
           
 ```
@@ -693,31 +693,31 @@ and display the following values for every module:
 ``` 
             
           with open("bonjour.txt", "r") as file:
-                text = file.readline()
-                print(text)
-              file.close()
+  text = file.readline()
+  print(text)
+file.close()
             
           
 ```
 
 ``` 
             
-          message1 = "Bonjour le monde\n"
-          message2 = "Programmation en Python\n"
-          with open("bonjour.txt", "w") as file:
-                file.write(message1)
-                file.write(message2)
-              file.close()
+message1 = "Bonjour le monde\n"
+message2 = "Programmation en Python\n"
+with open("bonjour.txt", "w") as file:
+  file.write(message1)
+  file.write(message2)
+file.close()
             
           
 ```
 
 ``` 
             
-          with open("bonjour.txt", "r") as file:
-                for line in file:
-                  print(line)
-              file.close()
+with open("bonjour.txt", "r") as file:
+for line in file:
+    print(line)
+file.close()
             
           
 ```
