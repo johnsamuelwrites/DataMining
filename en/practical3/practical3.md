@@ -30,9 +30,9 @@ you finish easy and medium-difficult exercises to have a good score.
 Given below is the difficulty scale that will be marked for every
 exercise:
 
-1.  [★]{style="color:red"}: Easy
-2.  [★★]{style="color:red"}: Medium
-3.  [★★★]{style="color:red"}: Difficult
+1.  [★]: Easy
+2.  [★★]: Medium
+3.  [★★★]: Difficult
 
 ### Guidelines
 
@@ -48,7 +48,7 @@ exercise:
 
 
 
-#### Exercise 3.1 [★]{style="color:red"}
+#### Exercise 3.1 [★]
 
 
 We will now work with **linear regression** (refer
@@ -349,7 +349,7 @@ What do you think? Can we use this program to predict the missing data
 the above program with different degrees.
 
 
-#### Exercise 3.2 [★★]{style="color:red"}
+#### Exercise 3.2 [★★]
 
 
 Classifiers are helpful to classify our dataset into one or more
@@ -645,7 +645,7 @@ Your next question is to plot the confusion metrics for all the above
 three classifiers.
 
 
-#### Exercise 3.3 [★★]{style="color:red"}
+#### Exercise 3.3 [★★]
 
 
 In this practical session, we start experimenting with decision trees.
@@ -1026,7 +1026,7 @@ for i in range(10):
     display(img)
 ```
 
-#### Exercise 3.4 [★★]{style="color:red"}
+#### Exercise 3.4 [★★]
 
 
 We now split our MNIST (handwriting) data into two: training data and
@@ -1085,7 +1085,7 @@ Try modifying (reducing and increasing) the training data size. What are
 your observations?
 
 
-#### Exercise 3.5 [★★]{style="color:red"}
+#### Exercise 3.5 [★★]
 
 
 Your final exercise is to use [Tensorflow](https://www.tensorflow.org/).

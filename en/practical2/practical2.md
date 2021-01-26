@@ -18,9 +18,9 @@ you finish easy and medium-difficult exercises to have a good score.
 Given below is the difficulty scale that will be marked with every
 exercise:
 
-1.  [★]{style="color:red"}: Easy
-2.  [★★]{style="color:red"}: Medium
-3.  [★★★]{style="color:red"}: Difficult
+1.  [★]: Easy
+2.  [★★]: Medium
+3.  [★★★]: Difficult
 
 ### Guidelines
 
@@ -36,7 +36,7 @@ exercise:
 
 
 
-#### Exercise 2.1 [★]{style="color:red"}
+#### Exercise 2.1 [★]
 
 
 [matplotlib](https://matplotlib.org/api/pyplot_api.html) can be used to
@@ -203,7 +203,7 @@ available year, i.e, for each year, we want to see the count of
 programming languages belonging to each programming language paradigm.
 
 
-#### Exercise 2.2 [★]{style="color:red"}
+#### Exercise 2.2 [★]
 
 
 In this exercise, we will work on images. Download an image (e.g.,
@@ -353,7 +353,7 @@ create a single plot of these top intensities. Write a python program
 that can achieve this.
 
 
-#### Exercise 2.3 [★★]{style="color:red"}
+#### Exercise 2.3 [★★]
 
 
 In this exercise, we will take a look at [KMeans clustering
@@ -410,7 +410,7 @@ achieve the following:
 ![](../../2017/DataMining/images/piechart.png)
 
 
-#### Exercise 2.4 [★★]{style="color:red"}
+#### Exercise 2.4 [★★]
 
 
 We will try to get more clusters and also check the time taken by each
@@ -587,7 +587,7 @@ again with **KMeans** and try to get clusters of size between 2 and 11.
 Your next goal is to test the above code for cluster sizes between 2 and
 21 which will give you the figure given below.
 
-[Note:]{style="color:"red""} The following image was generated after 6
+[Note:] The following image was generated after 6
 minutes. Optionally, you can add *print* statements to test whether your
 code is working fine.
 

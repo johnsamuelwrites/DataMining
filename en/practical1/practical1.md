@@ -198,18 +198,18 @@ datatypes (U100, i4)
 [CSV support in
 numpy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html)
 (**Ref:**
-[https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html]{style="color:green"})
+[https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html])
 is different from Python\'s default [CSV
 reader](https://docs.python.org/3.5/library/csv.html) (**Ref:**
-[https://docs.python.org/3.5/library/csv.html]{style="color:green"})
+[https://docs.python.org/3.5/library/csv.html])
 because of its capability to support the [data
 types](https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html)
 (**Ref:**
-[https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html]{style="color:green"}).
+[https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html]).
 Before continuing, take a deep look at
 [numpy.loadtxt](https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html)
 (**Ref:**
-[https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html]{style="color:green"}).
+[https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html]).
 
 \
 
@@ -231,7 +231,7 @@ tsv file.
 
 Note the changes in the above code compared to the previous one. A TSV
 file is a tab-separated file, i.e., the column values are separated by a
-tab ([\\t]{style="color:red"}).
+tab ([\\t]).
 
 
 #### Exercise 1.3
@@ -243,25 +243,25 @@ Our next exercise is to parse JSON files. Copy the file
 your current working directory and use the following code to parse the
 JSON file. In this exercise, we use [Pandas python
 package](https://pandas.pydata.org/pandas-docs/stable/) (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/]{style="color:green"}) to
+[https://pandas.pydata.org/pandas-docs/stable/]) to
 parse the JSON file to obtain a [Pandas
 DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
 (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html]{style="color:green"}).
+[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html]).
 Try using methods like
 [transpose](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.transpose.html#pandas.DataFrame.transpose)
 (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.transpose.html\#pandas.DataFrame.transpose]{style="color:green"}),
+[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.transpose.html\#pandas.DataFrame.transpose]),
 [count](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html#pandas.DataFrame.count)
 (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html\#pandas.DataFrame.count]{style="color:green"})
+[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html\#pandas.DataFrame.count])
 etc.
 
 Before continuing this exercise, please practice working with Pandas.
 Take a look at [10 minutes to
 pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
 (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/getting\_started/10min.html]{style="color:green"}).
+[https://pandas.pydata.org/pandas-docs/stable/getting\_started/10min.html]).
 
 ``` 
             
@@ -284,9 +284,9 @@ In this exercise, we will take a look at how to download data from
 external data sources using special query interfaces. Take for example,
 above data was obtained from [Wikidata
 query](https://query.wikidata.org/) (**Ref:**
-[https://query.wikidata.org/]{style="color:green"}) interface with the
+[https://query.wikidata.org/]) interface with the
 [query examples](./references.html) (**Ref:**
-[https://johnsamuel.info/en/teaching/courses/2018/DataMining/references.html]{style="color:green"}).
+[https://johnsamuel.info/en/teaching/courses/2018/DataMining/references.html]).
 See the screenshot given below.
 
 ![](../../2017/DataMining/images/wikidataquery.png)
@@ -294,7 +294,7 @@ See the screenshot given below.
 Given below is the code to read data from an external data source. Use
 this
 [url](https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&format=json):
-[https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&format=json]{style="color:red"}
+[https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&format=json]
 and replace \"..\" by the previous URL value.
 
 ``` 
@@ -414,7 +414,7 @@ Now, compute and display the following information (using various
 [operations available in pandas
 library](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/10min.html]{style="color:green"})):
+[https://pandas.pydata.org/pandas-docs/stable/10min.html])):
 
 1.  The population of countries in alphabetical order of their names and
     ascending order of year.
@@ -452,7 +452,7 @@ Now, compute and display the following information (using various
 [operations available in pandas
 library](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 (**Ref:**
-[https://pandas.pydata.org/pandas-docs/stable/10min.html]{style="color:green"})):
+[https://pandas.pydata.org/pandas-docs/stable/10min.html])):
 
 1.  The number of articles published on different subjects every year.
 2.  Top subject of interest to the scientific community every year(based
@@ -460,7 +460,7 @@ library](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 3.  Top 10 subjects of interest to the scientific community (based on
     the above query results) since 2010.
 
-[Hint:]{style="color:red"} Take a look at functions groupby,
+[Hint:] Take a look at functions groupby,
 reset\_index, head, tail, sort\_values, count of Pandas
 
 
