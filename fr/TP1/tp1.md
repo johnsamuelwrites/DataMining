@@ -14,7 +14,7 @@
 
 
 
-#### Exercice 1.1 {#exercice-11}
+#### Exercice 1.1
 
 
 
@@ -165,7 +165,7 @@ Maintenant, vous êtes prêt à exécuter le code !
 
 
 
-#### Exercice 1.2 {#exercice-12}
+#### Exercice 1.2
 
 La plupart du temps, nous travaillons avec des fichiers CSV (comma-separated values) pour l\'analyse des données. Un fichier CSV est constitué d\'une ou plusieurs lignes et chaque ligne comporte une ou plusieurs valeurs séparées par des virgules. On peut considérer chaque ligne comme une ligne et chaque valeur d\'une ligne comme une valeur de colonne. La première ligne est parfois utilisée pour décrire les noms des colonnes.
 
@@ -221,7 +221,7 @@ tabulation ((\\t)).
 
 
 
-#### Exercice 1.3 {#exercice-13}
+#### Exercice 1.3
 
 La plupart des sources de données externes peuvent fournir leurs données au format JSON.
 Notre prochain exercice consiste à analyser les fichiers JSON. Copiez le fichier
@@ -257,7 +257,7 @@ print(dataframe)
 
 
 
-#### Exercice 1.4 {#exercice-14}
+#### Exercice 1.4
 
 Dans cet exercice, nous examinerons comment télécharger des données à partir
 des sources de données externes utilisant des interfaces d\'interrogation spéciales. Par exemple, les données ci-dessus ont été obtenues à partir de [Wikidata query](https://query.wikidata.org/)
@@ -294,7 +294,7 @@ print(dataframe)
 
 
 
-#### Exercice 1.5 {#exercice-15}
+#### Exercice 1.5 
 
 Ce dernier exercice utilisera quelques analyses de données de base. Poursuivant avec le code de l\'exercice 1.4, comptons le nombre de langages de programmation sortis en un an.
 
