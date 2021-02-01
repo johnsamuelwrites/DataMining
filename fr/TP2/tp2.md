@@ -8,7 +8,7 @@
 
 
 
-#### Exercise 2.1 \[★\] {#exercise-21-}
+#### Exercise 2.1 \[★\]
 
 [matplotlib](https://matplotlib.org/api/pyplot_api.html) peut être utilisé pour tracer des graphiques. Voici un code très simple avec seulement valeurs x. Après avoir importé la bibliothèque *matplotlib*, nous initialisons les valeurs x et les traçons.
 
@@ -170,7 +170,7 @@ Modifiez le code ci-dessus, afin que nous puissions obtenir des informations vis
 
 
 
-#### Exercice 2.2 \[★\] {#exercice-22-}
+#### Exercice 2.2 \[★\]
 
 Dans cet exercice, nous allons travailler sur les images. Téléchargez une image (par ex,
 [image.bmp](../../images/picture.bmp) et [flower.jpg](../../images/flower.jpg)) dans votre version actuelle
@@ -299,7 +299,7 @@ Votre prochaine question consiste à obtenir les 20 premières intensités dans 
 
 
 
-#### Exercice 2.3 \[★★\] {#exercice-23-}
+#### Exercice 2.3 \[★★\]
 
 Dans cet exercice, nous examinerons [Algorithme de regroupement KMeans](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html).
 En continuant avec les images, nous allons maintenant trouver 4 couleurs prédominantes dans une image.
@@ -345,7 +345,7 @@ réaliser ce qui suit :
 
 
 
-#### Exercise 2.4 \[★★\] {#exercise-24-}
+#### Exercise 2.4 \[★★\]
 
 Nous allons essayer d\'obtenir plus de clusters et de vérifier le temps pris par chacun de ces algorithmes.
 Commençons par quelques exercices très simples pour expérimenter l\'algorithme KMeans. Considérez les données suivantes et visualisez-les sur un nuage de points à l\'aide d\'un diagramme de dispersion.
