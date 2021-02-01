@@ -4,10 +4,10 @@ Practical sessions for Data Mining
 ## Français
 ### Sujets de travaux pratiques et projet
 * [Instructions](fr/README.md)
-* [TP0](fr/TP0/TP0.md) (facultatif)
-* [TP1](fr/TP1/TP1.md)
-* [TP2](fr/TP2/TP2.md)
-* [TP3](fr/TP3/TP3.md)
+* [TP0](fr/TP0/TP0.md) [Notebook Jupyter 0](fr/tp0/tp0.ipynb) (facultatif)
+* [TP1](fr/TP1/TP1.md) [Notebook Jupyter 1](fr/tp1/tp1.ipynb)
+* [TP2](fr/TP2/TP2.md) [Notebook Jupyter 2](fr/tp2/tp2.ipynb)
+* [TP3](fr/TP3/TP3.md) [Notebook Jupyter 3](fr/tp3/tp3.ipynb)
 * [Projet](fr/Projet/Projet.md)
 
 ## English 
