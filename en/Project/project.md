@@ -128,7 +128,7 @@ English) in PDF format detailing the following:
 ### Submission
 
 
--   Please **do not** submit your images, JSON, TSV, and CSV files.
+-   Please **do not** submit your image.
 -   Rename your project report as Name1\_Name2\_\[Name3\].pdf, where
     Name1, Name2, etc. are your names.
 -   Add your project report in your project folder.
