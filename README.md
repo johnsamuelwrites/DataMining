@@ -23,6 +23,8 @@ Practical sessions for Data Mining
 * John Samuel
 
 ## Archives and Releases
+* [Zenodo]()
+* [Software Heritage](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/johnsamuelwrites/DataMining)
 * [Release Notes](RELEASE.md)
 
 ## Licence
