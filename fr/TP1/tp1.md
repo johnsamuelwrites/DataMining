@@ -240,8 +240,8 @@ Essayez d\'utiliser des méthodes comme
 etc.
 
 Avant de continuer cet exercice, veuillez vous entraîner à travailler avec des pandas.
-Consultez [10 minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
-(**Ref:** (<https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html>)).
+Consultez [10 minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html)
+(**Ref:** (<https://pandas.pydata.org/pandas-docs/stable/10min.html>)).
 
 
 
