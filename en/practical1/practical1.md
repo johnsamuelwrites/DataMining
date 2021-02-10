@@ -281,8 +281,7 @@ In this exercise, we will take a look at how to download data from
 external data sources using special query interfaces. Take for example,
 above data was obtained from [Wikidata query](https://query.wikidata.org/) (**Ref:**
 [https://query.wikidata.org/]) interface with the
-[query examples](./references.html) (**Ref:**
-[https://johnsamuel.info/en/teaching/courses/2018/DataMining/references.html]).
+[query examples](./references.html).
 See the screenshot given below.
 
 ![](../../images/wikidataquery.png)
