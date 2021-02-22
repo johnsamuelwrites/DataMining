@@ -138,7 +138,7 @@ Now let\'s try with third order polynomial equation (cubic equation).
     print(y_predict)
 
 
-Download the file [population.csv](../../2018/DataMining/population.csv)
+Download the file [population.csv](../../data/population.csv)
 (source: query given in [references](./references.html)). We will first
 plot this multi-annual population.
 

@@ -61,7 +61,7 @@ We will now initialize the y-values and plot the graph.
 
 In the [first practical session](./practicals1.html), we saw how to
 parse JSON files. Continuing with the same
-[JSON](../../2018/DataMining/pl.json) file, we will now plot the results
+[JSON](../../data/pl.json) file, we will now plot the results
 of number of programming languages released per year. Verify the output.
 
 ``` 
@@ -469,7 +469,7 @@ with higher values.
 
 
 Now we will try obtaining clusters with some real data (reference:
-[citypopulation.json](../../2018/DataMining/citypopulation.json),
+[citypopulation.json](../../data/citypopulation.json),
 Source: Wikidata). It contains information concerning different cities
 of the world: city name, year of its foundation and its population in
 the year 2010. In the following code, we want to cluster population data

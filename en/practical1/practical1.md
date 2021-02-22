@@ -177,7 +177,7 @@ row and every value in a row as a column value. The first row is
 sometimes used to describe the column names.
 
 Copy the file
-[pl.csv](../../../../../en/teaching/courses/2018/DataMining/pl.csv) to
+[pl.csv](../../data/pl.csv) to
 your current working directory (where you are running Jupyter: TP1) and
 use the following code to parse the csv file. Note the column names and
 datatypes (U100, i4)
@@ -214,7 +214,7 @@ Before continuing, take a deep look at
 \
 
 Copy the file
-[pl.tsv](../../../../../en/teaching/courses/2018/DataMining/pl.tsv) to
+[pl.tsv](../../data/pl.tsv) to
 your current working directory and use the following code to parse the
 tsv file.
 
@@ -239,7 +239,7 @@ tab ([\\t]).
 
 Most of the external data sources may provide their data in JSON format.
 Our next exercise is to parse JSON files. Copy the file
-[pl.json](../../../../../en/teaching/courses/2018/DataMining/pl.json) to
+[pl.json](../../data/pl.json) to
 your current working directory and use the following code to parse the
 JSON file. In this exercise, we use [Pandas python
 package](https://pandas.pydata.org/pandas-docs/stable/) (**Ref:**
@@ -280,8 +280,7 @@ print(dataframe)
 In this exercise, we will take a look at how to download data from
 external data sources using special query interfaces. Take for example,
 above data was obtained from [Wikidata query](https://query.wikidata.org/) (**Ref:**
-[https://query.wikidata.org/]) interface with the
-[query examples](./references.html).
+[https://query.wikidata.org/]) interface.
 See the screenshot given below.
 
 ![](../../images/wikidataquery.png)
@@ -345,7 +344,7 @@ print(grouped)
 Till now, we worked with tables having two columns. Now we focus on
 tables with three columns (programming language, year, paradigm). Copy
 the file
-[plparadigm.json](../../../../../en/teaching/courses/2018/DataMining/plparadigm.json)
+[plparadigm.json](../../data/plparadigm.json)
 to your working directory. And test the following program.
 
 ``` 

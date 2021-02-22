@@ -225,7 +225,7 @@ tabulation ((\\t)).
 
 La plupart des sources de données externes peuvent fournir leurs données au format JSON.
 Notre prochain exercice consiste à analyser les fichiers JSON. Copiez le fichier
-[pl.json](../../../../../en/teaching/courses/2018/DataMining/pl.json) à votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier JSON. Dans cet exercice, nous utilisons [Pandas python
+[pl.json](../../data/pl.json) à votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier JSON. Dans cet exercice, nous utilisons [Pandas python
 package](https://pandas.pydata.org/pandas-docs/stable/) (**Ref:**
 (<https://pandas.pydata.org/pandas-docs/stable/>)) d\'analyser le fichier JSON pour obtenir un [Pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
 (**Ref:**
