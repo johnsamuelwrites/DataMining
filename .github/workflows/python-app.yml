@@ -29,13 +29,13 @@ jobs:
         cd en/practical1/
         papermill practical1.ipynb tmp.ipynb
         rm tmp.ipynb
-        cd ../../ ; en/practical2/
+        cd ../../ ; cd en/practical2/
         papermill practical2.ipynb tmp.ipynb
         rm tmp.ipynb
-        cd ../../ ; fr/tp1/
+        cd ../../ ; cd fr/tp1/
         papermill tp1.ipynb tmp.ipynb
         rm tmp.ipynb
-        cd ../../ ; fr/tp2/
+        cd ../../ ; cd fr/tp2/
         papermill tp2.ipynb tmp.ipynb
         rm tmp.ipynb
         
