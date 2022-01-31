@@ -26,11 +26,20 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run all Jupyter notebooks
       run: |
-        cd en/practical1/
+        cd en/practical0/
+        papermill practical0.ipynb tmp.ipynb
+        rm tmp.ipynb
+        cd ../../ ; cd en/practical1/
         papermill practical1.ipynb tmp.ipynb
         rm tmp.ipynb
         cd ../../ ; cd en/practical2/
         papermill practical2.ipynb tmp.ipynb
+        rm tmp.ipynb
+        cd ../../ ; cd en/practical3/
+        papermill practical3.ipynb tmp.ipynb
+        rm tmp.ipynb
+        cd ../../ ; cd fr/TP0/
+        papermill tp0.ipynb tmp.ipynb
         rm tmp.ipynb
         cd ../../ ; cd fr/TP1/
         papermill tp1.ipynb tmp.ipynb
@@ -38,5 +47,7 @@ jobs:
         cd ../../ ; cd fr/TP2/
         papermill tp2.ipynb tmp.ipynb
         rm tmp.ipynb
-        
+        cd ../../ ; cd fr/TP3/
+        papermill tp3.ipynb tmp.ipynb
+        rm tmp.ipynb
 
