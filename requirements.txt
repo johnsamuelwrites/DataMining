@@ -2,4 +2,6 @@ papermill
 pandas
 sklearn
 matplotlib
+ipython 
+ipykernel
 jupyter-core
