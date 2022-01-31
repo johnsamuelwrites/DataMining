@@ -23,6 +23,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run all Jupyter notebooks
+      run: |
+        cd en/practical1/
+        papermill practical1.ipynb tmp.ipynb
+        rm tmp.ipynb
+        
 
