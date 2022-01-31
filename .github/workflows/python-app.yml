@@ -32,10 +32,10 @@ jobs:
         cd ../../ ; cd en/practical2/
         papermill practical2.ipynb tmp.ipynb
         rm tmp.ipynb
-        cd ../../ ; cd fr/tp1/
+        cd ../../ ; cd fr/TP1/
         papermill tp1.ipynb tmp.ipynb
         rm tmp.ipynb
-        cd ../../ ; cd fr/tp2/
+        cd ../../ ; cd fr/TP2/
         papermill tp2.ipynb tmp.ipynb
         rm tmp.ipynb
         
