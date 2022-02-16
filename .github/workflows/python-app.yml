@@ -39,6 +39,9 @@ jobs:
         cd ../../ ; cd en/practical3/
         papermill practical3.ipynb tmp.ipynb
         rm tmp.ipynb
+        cd ../../ ; cd en/examples/
+        papermill Examples.ipynb tmp.ipynb
+        rm tmp.ipynb
         cd ../../ ; cd fr/TP0/
         papermill tp0.ipynb tmp.ipynb
         rm tmp.ipynb

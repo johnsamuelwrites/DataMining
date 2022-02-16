@@ -1,6 +1,6 @@
 papermill
 pandas
-sklearn
+scikit-learn
 matplotlib
 ipython 
 ipykernel
