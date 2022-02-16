@@ -18,6 +18,7 @@ Practical sessions for Data Mining
 * [Practicals 2](en/practical2/practical2.md) ::  [Jupyter Notebook 2](en/practical2/practical2.ipynb)
 * [Practicals 3](en/practical3/practical3.md) ::  [Jupyter Notebook 3](en/practical3/practical3.ipynb)
 * [Project](en/Project/project.md)
+* [Some examples](en/examples/Examples.ipynb)
 
 # Author
 * John Samuel
