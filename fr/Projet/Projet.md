@@ -19,6 +19,8 @@ Les principales tâches du projet sont présentées ci-dessous :
 6.  Tests
 7.  Rapport
 
+![Architecture](../../images/Project-Architecture.png "Architecture")
+
 #### Collecte de données
 
 Vous devez collecter et télécharger un ensemble d'images. Vous avez les tâches suivantes à programmer, en automatisant le processus autant que possible :
