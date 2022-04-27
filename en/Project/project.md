@@ -23,6 +23,8 @@ The main tasks of the project are given below:
 
 ## Data Collection
 
+![Architecture](../../images/Project-Architecture.png "Architecture")
+
 You have to collect and download a set of images. You have the following
 tasks to program, automating the process as much as possible:
 

@@ -21,6 +21,9 @@ Les principales tâches du projet sont présentées ci-dessous :
 
 ## Collecte de données
 
+![Architecture](../../images/Project-Architecture.png "Architecture")
+
+
 Vous devez collecter et télécharger un ensemble d'images. Vous avez les tâches suivantes à programmer, en automatisant le processus autant que possible :
 
 1.  Créer un dossier appelé *images*.
