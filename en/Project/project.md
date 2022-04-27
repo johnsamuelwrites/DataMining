@@ -1,9 +1,9 @@
-### Goals
+# Project
+
+## Goals
 
 -   Implementation of a well-commented [Recommender system](https://en.wikipedia.org/wiki/Recommender_system) in Python
 -   Writing of project report.
-
-### Project
 
 
 The goal of this project is to recommend images based on the preferences
@@ -21,7 +21,7 @@ The main tasks of the project are given below:
 6.  Tests
 7.  Report
 
-#### Data Collection
+## Data Collection
 
 You have to collect and download a set of images. You have the following
 tasks to program, automating the process as much as possible:
@@ -38,7 +38,7 @@ tasks to program, automating the process as much as possible:
 For this task, you should look for sources having additional information
 like the tags, categories, etc.
 
-#### Labeling and Annotation
+## Labeling and Annotation
 
 In this task, you may need to label, annotate and save additional
 information about every image. You may analyze the images using
@@ -51,7 +51,7 @@ E.g., color names, \#cat, \#flower, \#sunflower, rose etc. How are you
 planning to process the user tags? Is it possible to automate this
 process?
 
-#### Data Analyses
+## Data Analyses
 
 Ask the user to select some images and add tags. For every user, you are
 now ready to build a user-preference profile, based on this selection.
@@ -75,7 +75,7 @@ favorite images. How did you create random users? How many users did you
 create? What information did you store for every user? What types of
 analyses did you perform?
 
-#### Data Visualization
+## Data Visualization
 
 In this task, your goal is to visualize the different characteristics of
 all the downloaded images.
@@ -89,7 +89,7 @@ The users may also like to visualize the above information related to
 their favorite images. In this task, you must also add functionality to
 let the users visualize information related to their own user profile.
 
-#### Recommendation System
+## Recommendation System
 
 Are you now ready to recommend images to a user? In this task, your goal
 is to build the recommendation system. Which approach did you decide to
@@ -99,13 +99,13 @@ profile? What type of information did you use for building a user
 profile? What\'s missing? What are the limitations of your proposed
 approach?
 
-#### Tests
+## Tests
 
 Your next task is to develop and run different tests on your proposed
 system. Are different functions functional? How did you test your
 project? How are you verifying that your recommender system is working?
 
-#### Report
+## Report
 
 Your final task is to prepare a 4-page Project report (French or
 English) in PDF format detailing the following:
@@ -125,7 +125,7 @@ English) in PDF format detailing the following:
 **Note**: Please do not add any program (or code) in this report.
 
 
-### Submission
+## Submission
 
 
 -   Please **do not** submit your image.
