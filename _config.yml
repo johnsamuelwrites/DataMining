@@ -1,6 +1,6 @@
 # Explanation: https://jupyterbook.org/en/stable/customize/config.html
 # Book settings
-title                       : DP-Data Mining  # The title of the book. Will be placed in the left navbar.
+title                       : Data Mining  # The title of the book. Will be placed in the left navbar.
 author                      : John Samuel  # The author of the book
 copyright                   : "2021"  
 logo                        : "datamining.svg"  
