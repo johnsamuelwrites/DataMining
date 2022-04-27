@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project &#8212; DP-Data Mining</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Examples" href="../examples/Examples.html" />
+    <link rel="prev" title="Practical 3" href="../practical3/practical3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datamining.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DP-Data Mining</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   DataMining
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Français
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fr/README.html">
+   Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fr/TP0/tp0.html">
+   TP 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fr/TP1/tp1.html">
+   TP 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fr/TP2/tp2.html">
+   TP 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fr/TP3/tp3.html">
+   TP 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fr/Projet/Projet.html">
+   Projet
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  English
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practical0/practical0.html">
+   Practical 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practical1/practical1.html">
+   Practical 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practical2/practical2.html">
+   Practical 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practical3/practical3.html">
+   Practical 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../examples/Examples.html">
+   Examples
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/en/Project/project.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goals">
+   Goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-collection">
+   Data Collection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labeling-and-annotation">
+   Labeling and Annotation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analyses">
+   Data Analyses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-visualization">
+   Data Visualization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommendation-system">
+   Recommendation System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tests">
+   Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#report">
+   Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission">
+   Submission
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Project</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goals">
+   Goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-collection">
+   Data Collection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labeling-and-annotation">
+   Labeling and Annotation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analyses">
+   Data Analyses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-visualization">
+   Data Visualization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommendation-system">
+   Recommendation System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tests">
+   Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#report">
+   Report
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission">
+   Submission
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="project">
+<h1>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implementation of a well-commented <a class="reference external" href="https://en.wikipedia.org/wiki/Recommender_system">Recommender system</a> in Python</p></li>
+<li><p>Writing of project report.</p></li>
+</ul>
+<p>The goal of this project is to recommend images based on the preferences
+of the user. You have three practical sessions to build this system. You
+must ensure that all the tasks related to data acquisition, annotation,
+analysis, and visualization are automated.</p>
+<p>The main tasks of the project are given below:</p>
+<ol class="simple">
+<li><p>Data Collection</p></li>
+<li><p>Labeling and Annotation</p></li>
+<li><p>Data Analyses</p></li>
+<li><p>Data Visualization</p></li>
+<li><p>Recommendation System</p></li>
+<li><p>Tests</p></li>
+<li><p>Report</p></li>
+</ol>
+</div>
+<div class="section" id="data-collection">
+<h2>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Architecture" src="../../_images/Project-Architecture.png" /></p>
+<p>You have to collect and download a set of images. You have the following
+tasks to program, automating the process as much as possible:</p>
+<ol class="simple">
+<li><p>Create a folder called <em>images</em>.</p></li>
+<li><p>Download open-licensed images to the folder <em>images</em> (minimum 100
+images).</p></li>
+<li><p>Save metadata of every image like image size, image format (.jpeg,
+.png, etc.), image orientation (landscape, portrait, square, etc.),
+creation date, camera model, etc. in one or more JSON files. You can
+make use of the <a class="reference external" href="https://en.wikipedia.org/wiki/Exif">Exif</a>
+information present in the image files.</p></li>
+</ol>
+<p>For this task, you should look for sources having additional information
+like the tags, categories, etc.</p>
+</div>
+<div class="section" id="labeling-and-annotation">
+<h2>Labeling and Annotation<a class="headerlink" href="#labeling-and-annotation" title="Permalink to this headline">¶</a></h2>
+<p>In this task, you may need to label, annotate and save additional
+information about every image. You may analyze the images using
+clustering algorithms for finding the predominant colours.</p>
+<p>You already have some metadata from the EXIF of images from the previous
+task. In this task, your goal is to obtain additional information, like
+the predominant colors, tags. How about asking users to tag the images?
+E.g., color names, #cat, #flower, #sunflower, rose etc. How are you
+planning to process the user tags? Is it possible to automate this
+process?</p>
+</div>
+<div class="section" id="data-analyses">
+<h2>Data Analyses<a class="headerlink" href="#data-analyses" title="Permalink to this headline">¶</a></h2>
+<p>Ask the user to select some images and add tags. For every user, you are
+now ready to build a user-preference profile, based on this selection.
+You may collect the following information manually, but the objective of
+this task is to obtain them using the selected images in an automated
+manner:</p>
+<ol class="simple">
+<li><p>Favorite colors</p></li>
+<li><p>Favorite image orientation</p></li>
+<li><p>Favorite image sizes (thumbnail images, large images, medium-size
+images, etc.)</p></li>
+<li><p>Favorite tags</p></li>
+<li><p>…</p></li>
+</ol>
+<p>Now, with your knowledge of different types of classifiers and
+clustering algorithms, what more information will you add for every
+image?</p>
+<p>Your next objective is to analyze the user information and their
+favorite images. How did you create random users? How many users did you
+create? What information did you store for every user? What types of
+analyses did you perform?</p>
+</div>
+<div class="section" id="data-visualization">
+<h2>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h2>
+<p>In this task, your goal is to visualize the different characteristics of
+all the downloaded images.</p>
+<ol class="simple">
+<li><p>The available number of images for every year</p></li>
+<li><p>The available number of images for different types: image size,
+image orientation, camera models, etc.</p></li>
+<li><p>Color characteristics</p></li>
+</ol>
+<p>The users may also like to visualize the above information related to
+their favorite images. In this task, you must also add functionality to
+let the users visualize information related to their own user profile.</p>
+</div>
+<div class="section" id="recommendation-system">
+<h2>Recommendation System<a class="headerlink" href="#recommendation-system" title="Permalink to this headline">¶</a></h2>
+<p>Are you now ready to recommend images to a user? In this task, your goal
+is to build the recommendation system. Which approach did you decide to
+take? Collaborative filtering, content-based, or a hybrid approach? For
+every user, are you now in a position to build a user-preference
+profile? What type of information did you use for building a user
+profile? What’s missing? What are the limitations of your proposed
+approach?</p>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+<p>Your next task is to develop and run different tests on your proposed
+system. Are different functions functional? How did you test your
+project? How are you verifying that your recommender system is working?</p>
+</div>
+<div class="section" id="report">
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
+<p>Your final task is to prepare a 4-page Project report (French or
+English) in PDF format detailing the following:</p>
+<ul class="simple">
+<li><p>The goal of your project</p></li>
+<li><p>Data sources of your images and license.</p></li>
+<li><p>Size of your data.</p></li>
+<li><p>Information that you decided to store for each image.</p></li>
+<li><p>Information concerning user preferences</p></li>
+<li><p>Data mining and/or machine learning models that you used along with
+the metrics obtained.</p></li>
+<li><p>Self-evaluation of your work.</p></li>
+<li><p>Remarks concerning the practical sessions, exercises, and scope for
+improvement.</p></li>
+<li><p>Conclusion</p></li>
+</ul>
+<p><strong>Note</strong>: Please do not add any program (or code) in this report.</p>
+</div>
+<div class="section" id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Please <strong>do not</strong> submit your image.</p></li>
+<li><p>Rename your project report as Name1_Name2_[Name3].pdf, where
+Name1, Name2, etc. are your names.</p></li>
+<li><p>Add your project report in your project folder.</p></li>
+<li><p>Compress and rename your project work as
+Name1_Name2_[Name3].zip, where Name1, Name2 are your names.</p></li>
+<li><p>Submit your <strong>project work</strong> online.</p></li>
+</ul>
+<div class="section" id="evaluation">
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<p>The criteria for the project evaluation is given below:</p>
+<ol class="simple">
+<li><p>Data Collection</p>
+<ol class="simple">
+<li><p>Automated approaches to data collection</p></li>
+<li><p>Use of open-licensed images</p></li>
+<li><p>Storage and management of images and the associated metadata</p></li>
+</ol>
+</li>
+<li><p>Labeling and Annotation</p>
+<ol class="simple">
+<li><p>Automated approaches to labeling</p></li>
+<li><p>Storage and management of labels and annotations of images</p></li>
+<li><p>Use of classification and clustering algorithms</p></li>
+</ol>
+</li>
+<li><p>Data Analyses</p>
+<ol class="simple">
+<li><p>Types of analyses used</p></li>
+<li><p>Use of Pandas and Scikit-learn</p></li>
+<li><p>Use of data mining algorithms</p></li>
+</ol>
+</li>
+<li><p>Data Visualization</p>
+<ol class="simple">
+<li><p>Types of visualization techniques used</p></li>
+<li><p>Use of matplotlib</p></li>
+</ol>
+</li>
+<li><p>Recommendation System</p>
+<ol class="simple">
+<li><p>Storage and management of user preferences and user-profile</p></li>
+<li><p>Use of recommendation algorithms</p></li>
+</ol>
+</li>
+<li><p>Tests</p>
+<ol class="simple">
+<li><p>Presence of functional tests</p></li>
+<li><p>Presence of user tests</p></li>
+</ol>
+</li>
+<li><p>Report</p>
+<ol class="simple">
+<li><p>Clarity of presentation</p></li>
+<li><p>Presence of a clear introduction and conclusion, architecture
+diagrams, a summary of different tasks achieved, and limitations</p></li>
+<li><p>Bibliography</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./en/Project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../practical3/practical3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Practical 3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../examples/Examples.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Examples</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By John Samuel<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools and libraries &#8212; DP-Data Mining</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/datamining.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DP-Data Mining</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   DataMining
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Français
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fr/README.html">
+   Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fr/TP0/tp0.html">
+   TP 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fr/TP1/tp1.html">
+   TP 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fr/TP2/tp2.html">
+   TP 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fr/TP3/tp3.html">
+   TP 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fr/Projet/Projet.html">
+   Projet
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  English
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="practical0/practical0.html">
+   Practical 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="practical1/practical1.html">
+   Practical 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="practical2/practical2.html">
+   Practical 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="practical3/practical3.html">
+   Practical 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Project/project.html">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/Examples.html">
+   Examples
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/en/references.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tools and libraries
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorials-and-manual-pages">
+   Tutorials and Manual pages
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resize-images-or-create-thumbnail-images">
+     Resize images or create thumbnail images
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-thumbnail-images">
+     Create thumbnail images
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-json-data">
+     Create JSON data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-json-data-to-file">
+     Write JSON data to file
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-json-data-from-file">
+     Read JSON data from file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sparql-queries">
+   SPARQL queries
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-names-of-100-programming-languages">
+     Get names of 100 programming languages.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-names-of-100-programming-languages-and-their-paradigms">
+     Get names of 100 programming languages and their paradigms.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-available-information-of-population-of-different-countries-at-different-periods-of-time">
+     Get available information of population of different countries at different periods of time.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-population-of-france-at-different-periods-of-time">
+     Get population of France at different periods of time.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-number-of-programming-languages-released-every-year">
+     Get number of programming languages released every year.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-number-of-programming-languages-released-every-year-belonging-to-different-paradigms">
+     Get number of programming languages released every year belonging to different paradigms.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-number-of-softwares-released-every-year">
+     Get number of softwares released every year.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standards-and-tools">
+   Standards and tools
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Tools and libraries</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tools and libraries
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorials-and-manual-pages">
+   Tutorials and Manual pages
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resize-images-or-create-thumbnail-images">
+     Resize images or create thumbnail images
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-thumbnail-images">
+     Create thumbnail images
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-json-data">
+     Create JSON data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-json-data-to-file">
+     Write JSON data to file
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-json-data-from-file">
+     Read JSON data from file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sparql-queries">
+   SPARQL queries
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-names-of-100-programming-languages">
+     Get names of 100 programming languages.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-names-of-100-programming-languages-and-their-paradigms">
+     Get names of 100 programming languages and their paradigms.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-available-information-of-population-of-different-countries-at-different-periods-of-time">
+     Get available information of population of different countries at different periods of time.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-population-of-france-at-different-periods-of-time">
+     Get population of France at different periods of time.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-number-of-programming-languages-released-every-year">
+     Get number of programming languages released every year.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-number-of-programming-languages-released-every-year-belonging-to-different-paradigms">
+     Get number of programming languages released every year belonging to different paradigms.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-number-of-softwares-released-every-year">
+     Get number of softwares released every year.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standards-and-tools">
+   Standards and tools
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="tools-and-libraries">
+<h1>Tools and libraries<a class="headerlink" href="#tools-and-libraries" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyter.org/">Jupyter</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/index.html">Scikit-learn</a></p></li>
+<li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/">Pandas</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html">urllib.request</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/api/pyplot_api.html">matplotlib.pyplot</a></p></li>
+<li><p><a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a></p></li>
+</ul>
+</div>
+<div class="section" id="tutorials-and-manual-pages">
+<h1>Tutorials and Manual pages<a class="headerlink" href="#tutorials-and-manual-pages" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Quick start tutorials</p>
+<ul>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/user/quickstart.html">NumPy QuickStart tutorial</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html">Pandas 10min tutorial</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/tutorial/basic/tutorial.html#introduction">Scikit tutorial</a></p></li>
+<li><p><a class="reference external" href="https://www.tensorflow.org/get_started/get_started_for_beginners">Tensorflow: Getting Started for ML Beginners</a></p></li>
+</ul>
+</li>
+<li><p>Visualization</p>
+<ul>
+<li><p><a class="reference external" href="https://matplotlib.org/examples/pie_and_polar_charts/pie_demo_features.html">Pie and polar charts</a></p></li>
+</ul>
+</li>
+<li><p>Clustering</p>
+<ul>
+<li><p><a class="reference external" href="https://www.pyimagesearch.com/2014/05/26/opencv-python-k-means-color-clustering/">OpenCV and Python K-Means Color Clustering</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/clustering.html">Scikit-learn Clustering</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/clustering.html#k-means">K-Means algorithm</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans">Mini Batch K-Means algorithm</a></p></li>
+</ul>
+</li>
+<li><p>Classifier</p>
+<ul>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier">MLPClassifier</a></p></li>
+<li><p><a class="reference external" href="https://web.archive.org/web/20190602073143/https://www.tensorflow.org/api_docs/python/tf/contrib/learn/DNNClassifier">DNNClassifier</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html#sphx-glr-auto-examples-classification-plot-classifier-comparison-py">Classifier comparison</a></p></li>
+</ul>
+</li>
+<li><p>Regression</p>
+<ul>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/linear_model.html">Linear model</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">Linear regression</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html">Polynomial Features</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/auto_examples/linear_model/plot_polynomial_interpolation.html#sphx-glr-auto-examples-linear-model-plot-polynomial-interpolation-py">Polynomial interpolation</a></p></li>
+</ul>
+</li>
+<li><p>Neural networks</p>
+<ul>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/neural_networks_supervised.html">Neural network models (supervised)</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html">Perceptron</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/neural_networks_supervised.html#multi-layer-perceptron">Multi-layer Perceptron</a></p></li>
+<li><p><a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier">MLPClassifier</a></p></li>
+</ul>
+</li>
+<li><p>JSON</p>
+<ul>
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/json.html">JSON encoder and decoder</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="resize-images-or-create-thumbnail-images">
+<h2>Resize images or create thumbnail images<a class="headerlink" href="#resize-images-or-create-thumbnail-images" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+              <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
+              
+              <span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;flower.jpg&quot;</span><span class="p">)</span>
+              <span class="c1">#resize image to 200px x 200 px using ANTIALIAS interpolation</span>
+              <span class="n">imgfile</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">resize</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+              
+              <span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imgfile</span><span class="p">)</span>
+              <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-thumbnail-images">
+<h2>Create thumbnail images<a class="headerlink" href="#create-thumbnail-images" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+              <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
+              
+              <span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;flower.jpg&quot;</span><span class="p">)</span>
+              <span class="n">imgfile</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+              
+              <span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imgfile</span><span class="p">)</span>
+              <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+          
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-json-data">
+<h2>Create JSON data<a class="headerlink" href="#create-json-data" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="kn">import</span> <span class="nn">json</span>
+              
+              <span class="n">colors</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">120</span><span class="p">],</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
+              <span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;user 1&quot;</span>
+              
+              <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+              <span class="n">data</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user</span>
+              <span class="n">data</span><span class="p">[</span><span class="s1">&#39;colors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">colors</span>
+              
+              <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="write-json-data-to-file">
+<h2>Write JSON data to file<a class="headerlink" href="#write-json-data-to-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="kn">import</span> <span class="nn">json</span>
+              
+              <span class="n">colors</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">120</span><span class="p">],</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
+              <span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;user 1&quot;</span>
+              
+              <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+              <span class="n">data</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">user</span>
+              <span class="n">data</span><span class="p">[</span><span class="s1">&#39;colors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">colors</span>
+              
+              <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;user.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                  <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+              
+              <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+          
+</pre></div>
+</div>
+</div>
+<div class="section" id="read-json-data-from-file">
+<h2>Read JSON data from file<a class="headerlink" href="#read-json-data-from-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="kn">import</span> <span class="nn">json</span>
+              
+              <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+              <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;user.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                  <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+              
+              <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sparql-queries">
+<h1>SPARQL queries<a class="headerlink" href="#sparql-queries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="get-names-of-100-programming-languages">
+<h2>Get names of 100 programming languages.<a class="headerlink" href="#get-names-of-100-programming-languages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+            SELECT ?languageLabel (YEAR(?inception) as ?year)
+            WHERE
+            {
+             #instances of programming language
+             ?language wdt:P31 wd:Q9143;
+              wdt:P571 ?inception;
+              rdfs:label ?languageLabel.
+             FILTER(lang(?languageLabel) = &quot;en&quot;)
+            }
+            ORDER BY ?year
+            LIMIT 100
+          
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-names-of-100-programming-languages-and-their-paradigms">
+<h2>Get names of 100 programming languages and their paradigms.<a class="headerlink" href="#get-names-of-100-programming-languages-and-their-paradigms" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+            SELECT ?languageLabel ?paradigmLabel (YEAR(?inception) as ?year)
+            WHERE
+            {
+             #instances of programming language
+             ?language wdt:P31 wd:Q9143;
+              wdt:P571 ?inception; #inception
+              wdt:P3966 ?paradigm; #programming language paradigm       
+              rdfs:label ?languageLabel. #label
+             ?paradigm rdfs:label ?paradigmLabel #label
+             FILTER(lang(?languageLabel) = &quot;en&quot; &amp;&amp; lang(?paradigmLabel) = &quot;en&quot;) #English
+            }
+            ORDER BY ?year ?paradigmLabel 
+            LIMIT 100
+          
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-available-information-of-population-of-different-countries-at-different-periods-of-time">
+<h2>Get available information of population of different countries at different periods of time.<a class="headerlink" href="#get-available-information-of-population-of-different-countries-at-different-periods-of-time" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+            SELECT DISTINCT ?countryLabel (YEAR(?date) as ?year) ?population
+            WHERE {
+             ?country wdt:P31 wd:Q6256; #Country 
+               p:P1082 ?populationStatement;
+              rdfs:label ?countryLabel. #Label
+             ?populationStatement ps:P1082 ?population; #population
+              pq:P585 ?date. #period in time
+             FILTER(lang(?countryLabel)=&quot;en&quot;) #Label in English
+            }
+            ORDER by ?countryLabel ?year
+            LIMIT 1000
+          
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-population-of-france-at-different-periods-of-time">
+<h2>Get population of France at different periods of time.<a class="headerlink" href="#get-population-of-france-at-different-periods-of-time" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+             SELECT  (YEAR(?date) as ?year)?population
+             WHERE
+             {
+               VALUES ?country {wd:Q142}
+               ?country p:P1082 ?populationStatement.
+               ?populationStatement ps:P1082 ?population;
+                                    pq:P585 ?date.
+             }
+             ORDER by ?year
+          
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-number-of-programming-languages-released-every-year">
+<h2>Get number of programming languages released every year.<a class="headerlink" href="#get-number-of-programming-languages-released-every-year" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+           SELECT ?year (COUNT(?programmingLanguage) as ?count)
+           WHERE
+           {
+             ?programmingLanguage wdt:P31/wdt:P279* wd:Q9143;
+               wdt:P571 ?date.
+             BIND(YEAR(?date) as ?year)
+           }
+           GROUP BY ?year 
+           ORDER by ?year
+          
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-number-of-programming-languages-released-every-year-belonging-to-different-paradigms">
+<h2>Get number of programming languages released every year belonging to different paradigms.<a class="headerlink" href="#get-number-of-programming-languages-released-every-year-belonging-to-different-paradigms" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+           SELECT ?year ?paradigmLabel (COUNT(?programmingLanguage) as ?count)
+           WHERE
+           {
+             ?programmingLanguage wdt:P31/wdt:P279* wd:Q9143;
+               wdt:P3966 ?paradigm;
+               wdt:P571 ?date.
+             ?paradigm rdfs:label ?paradigmLabel FILTER(lang(?paradigmLabel)=&quot;en&quot;).
+             BIND(YEAR(?date) as ?year)
+           }
+           GROUP BY ?year ?paradigmLabel
+           ORDER by ?year ?paradigmLabel
+          
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-number-of-softwares-released-every-year">
+<h2>Get number of softwares released every year.<a class="headerlink" href="#get-number-of-softwares-released-every-year" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 
+          
+             SELECT ?year (COUNT(?software) as ?count)
+             WHERE
+             {
+               ?software wdt:P31/wdt:P279* wd:Q7397;
+                 wdt:P571 ?date.
+               BIND(YEAR(?date) as ?year)
+             }
+             GROUP BY ?year
+             ORDER by ?year
+          
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="standards-and-tools">
+<h1>Standards and tools<a class="headerlink" href="#standards-and-tools" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3.org/Math/">W3C Math</a></p></li>
+<li><p><a class="reference external" href="https://material.io/color/">Color Tool-Material design</a></p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./en"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By John Samuel<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

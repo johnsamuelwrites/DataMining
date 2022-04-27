@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP 1 &#8212; DP-Data Mining</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="TP 2" href="../TP2/tp2.html" />
+    <link rel="prev" title="TP 0" href="../TP0/tp0.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datamining.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DP-Data Mining</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   DataMining
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Français
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TP0/tp0.html">
+   TP 0
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   TP 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TP2/tp2.html">
+   TP 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../TP3/tp3.html">
+   TP 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Projet/Projet.html">
+   Projet
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  English
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/README.html">
+   Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/practical0/practical0.html">
+   Practical 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/practical1/practical1.html">
+   Practical 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/practical2/practical2.html">
+   Practical 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/practical3/practical3.html">
+   Practical 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/Project/project.html">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../en/examples/Examples.html">
+   Examples
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/fr/TP1/tp1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/johnsamuelwrites/DP-DataMining/main?urlpath=lab/tree/fr/TP1/tp1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/johnsamuelwrites/DP-DataMining/blob/main/fr/TP1/tp1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercices">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hello-world">
+     Hello World!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>TP 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectifs">
+   Objectifs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercices">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hello-world">
+     Hello World!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tp-1">
+<h1>TP 1<a class="headerlink" href="#tp-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objectifs">
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Analyser et travailler avec des fichiers CSV, TSV et JSON</p></li>
+<li><p>Interroger des sources de données externes</p></li>
+<li><p>Analyses de données</p></li>
+</ul>
+<div class="section" id="exercices">
+<h3>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Installation et mise en place de pip, scikit-learn et jupyter</p></li>
+<li><p>Analyse et lecture de fichiers CSV/TSV</p></li>
+<li><p>Analyse et lecture des fichiers JSON</p></li>
+<li><p>Interrogation de sources de données externes (API)</p></li>
+<li><p>Effectuer des analyses de données classiques</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<p>Exécutez les commandes suivantes sur vos machines virtuelles</p>
+<p><strong>pip</strong></p>
+<p>Pour installer <code class="docutils literal notranslate"><span class="pre">pip</span></code>, vous devez exécuter les commandes suivantes sur votre terminal :</p>
+<p><strong>Note</strong> : Veuillez noter que toutes les lignes commençant par “$” doivent être exécutées sur le terminal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-dev</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-pip</span></code></p>
+<p>Installation de virtualenv</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
+<p>Installation dans virtualenv</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">virtualenv</span> <span class="pre">--system-site-packages</span> <span class="pre">-p</span> <span class="pre">python3</span> <span class="pre">env</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">source</span> <span class="pre">env/bin/activate</span></code></p>
+<p>Installation de Jupyter</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--force-reinstall</span>&#160; <span class="pre">--no-cache</span> <span class="pre">jupyter</span></code></p>
+<p>Installation de scikit-learn</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scikit-learn</span></code></p>
+<p>Installation de  numpy</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy</span></code></p>
+<p>Installation de  pandas</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+<p>Installation de matplotlib</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">matplotlib</span></code></p>
+</div>
+<div class="section" id="hello-world">
+<h3>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h3>
+<p>Si votre installation est réussie, vous pouvez lancer</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">TP1</span> <span class="pre">&amp;&amp;</span> <span class="pre">cd</span> <span class="pre">TP1</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<p>Une nouvelle page apparaîtra sur votre navigateur et vous verrez l’image suivante <img alt="" src="../../_images/jupyter.png" /></p>
+<p>Cliquez sur l’onglet “Running”. Vous ne voyez aucun notebook en cours d’exécution (si c’est la première fois que vous utilisez jupyter).
+<img alt="" src="../../_images/jupyterrunning.png" /></p>
+<p>Retournez à l’onglet “Files”, cliquez sur “New” et choisissez Python3 sous
+Notebook.</p>
+<p><img alt="" src="../../_images/jupyternotebooks.png" /></p>
+<p>Un nouvel onglet s’ouvrira comme indiqué ci-dessous. Inscrivez le code suivant dans la cellule.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="fr/TP1/images/jupyterprogram.png" /></p>
+<p>Vous pouvez vous déplacer dans n’importe quelle cellule et appuyer sur “Run”.</p>
+<p>Par défaut, votre ordinateur portable est nommé “Untitled”. Vous pouvez le renommer comme indiqué ci-dessous, en cliquant sur le nom “Untitled” et en lui donnant un nouveau nom.</p>
+<p><img alt="" src="fr/TP1/images/jupyterrenamenotebook.png" /></p>
+<p>Retournez maintenant à l’onglet “Files” et vous pouvez voir le Notebook renommé.
+Vous pouvez cliquer sur votre Notebook à tout moment pour continuer à travailler.</p>
+<p><img alt="" src="fr/TP1/images/jupyternotebooks.png" /></p>
+<p>Maintenant, continuons à travailler sur votre Notebook actuel. Ecrivez le code suivant pour vérifier si scikit est correctement installé.</p>
+<p>Le code ci-dessous indique les ensembles de données disponibles de scikit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">datasets</span><span class="o">.</span><span class="n">__all__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="fr/TP1/images/jupyterscikit.png" /></p>
+<p>Maintenant, vous êtes prêt à exécuter le code !</p>
+<p><strong>Note:</strong>, Vous pouvez arrêter le Notebook Jupyter à tout moment en tapant “Ctrl+c” sur le terminal et en appuyant sur “y” pour confirmer l’arrêt.</p>
+</div>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">¶</a></h2>
+<p>La plupart du temps, nous travaillons avec des fichiers CSV (comma-separated values) pour l’analyse des données. Un fichier CSV est constitué d’une ou plusieurs lignes et chaque ligne comporte une ou plusieurs valeurs séparées par des virgules. On peut considérer chaque ligne comme une ligne et chaque valeur d’une ligne comme une valeur de colonne. La première ligne est parfois utilisée pour décrire les noms des colonnes.</p>
+<p>Copier le fichier
+<span class="xref myst">pl.csv</span> dans votre répertoire de travail actuel (où vous exécutez Jupyter : TP1) et utilisez le code suivant pour analyser le fichier csv. Notez les noms de colonnes et les types de données (U100, i4)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
+    <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
+    <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="fr/TP1/images/numpycsv.png" /></p>
+<p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">Soutien du CSV en numpy</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html</a>))
+est différent du défaut de Python <a class="reference external" href="https://docs.python.org/3.5/library/csv.html">CSV
+reader</a> (<strong>Ref:</strong>
+(<a class="reference external" href="https://docs.python.org/3.5/library/csv.html">https://docs.python.org/3.5/library/csv.html</a>))
+en raison de sa capacité à prendre en charge les <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html">types de données</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html">https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html</a>)).
+Avant de continuer, examinez en profondeur
+<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">numpy.loadtxt</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html</a>)).</p>
+<p>Copier le fichier
+<span class="xref myst">pl.tsv</span> dans votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier TSV.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
+    <span class="s2">&quot;../../data/pl.tsv&quot;</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
+    <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notez les changements dans le code ci-dessus par rapport au précédent. Un fichier TSV est un fichier séparé par des tabulations, c’est-à-dire que les valeurs des colonnes sont séparées par un
+tabulation ((\t)).</p>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">¶</a></h2>
+<p>La plupart des sources de données externes peuvent fournir leurs données au format JSON.
+Notre prochain exercice consiste à analyser les fichiers JSON. Copiez le fichier
+<span class="xref myst">pl.json</span> à votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier JSON. Dans cet exercice, nous utilisons <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">Pandas python
+package</a> (<strong>Ref:</strong>
+(<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">https://pandas.pydata.org/pandas-docs/stable/</a>)) d’analyser le fichier JSON pour obtenir un <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">Pandas DataFrame</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html</a>)).
+Essayez d’utiliser des méthodes comme
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.transpose.html#pandas.DataFrame.transpose">transpose</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.transpose.html#pandas.DataFrame.transpose">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.transpose.html#pandas.DataFrame.transpose</a>)),
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html#pandas.DataFrame.count">count</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html#pandas.DataFrame.count">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html#pandas.DataFrame.count</a>))
+etc.</p>
+<p>Avant de continuer cet exercice, veuillez vous entraîner à travailler avec des pandas.
+Consultez <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">10 minutes to pandas</a>
+(<strong>Ref:</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>)).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">json_normalize</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">¶</a></h2>
+<p>Dans cet exercice, nous examinerons comment télécharger des données à partir
+des sources de données externes utilisant des interfaces d’interrogation spéciales. Par exemple, les données ci-dessus ont été obtenues à partir de <a class="reference external" href="https://query.wikidata.org/">Wikidata query</a></p>
+<p><img alt="" src="fr/TP1/images/wikidataquery.png" /></p>
+<p>Vous trouverez ci-dessous le code permettant de lire les données provenant d’une source externe. Utilisez ce
+<a class="reference external" href="https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&amp;format=json">url</a>:
+(<a class="reference external" href="https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear">https://query.wikidata.org/sparql?query=SELECT ?languageLabel (YEAR(?inception) as ?year</a>)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&amp;format=json).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://query.wikidata.org/sparql?query=SELECT</span><span class="si">%20%</span><span class="s2">3FlanguageLabel%20(YEAR(</span><span class="si">%3F</span><span class="s2">inception)</span><span class="si">%20a</span><span class="s2">s</span><span class="si">%20%</span><span class="s2">3Fyear)%0AWHERE%0A%7B%0A</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%23i</span><span class="s2">nstances</span><span class="si">%20o</span><span class="s2">f%20programming</span><span class="si">%20la</span><span class="s2">nguage%0A</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%3F</span><span class="s2">language%20wdt%3AP31%20wd%3AQ9143%3B%0A</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20wdt%3AP571</span><span class="si">%20%</span><span class="s2">3Finception%3B%0A</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20</span><span class="si">%20%</span><span class="s2">20rdfs%3Alabel</span><span class="si">%20%</span><span class="s2">3FlanguageLabel.%0A</span><span class="si">%20%</span><span class="s2">20FILTER(lang(</span><span class="si">%3F</span><span class="s2">languageLabel)</span><span class="si">%20%</span><span class="s2">3D</span><span class="si">%20%</span><span class="s2">22en%22)%0A%7D%0AORDER%20BY</span><span class="si">%20%</span><span class="s2">3Fyear%0ALIMIT%20100&amp;format=json&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">responsedata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">responsedata</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;bindings&quot;</span><span class="p">]:</span>
+    <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]])</span>
+
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">])</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">¶</a></h2>
+<p>Ce dernier exercice utilisera quelques analyses de données de base. Poursuivant avec le code de l’exercice 1.4, comptons le nombre de langages de programmation sortis en un an.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vous pouvez également utiliser plusieurs fonctions d’agrégation en utilisant agg()</p>
+<p>grouped = dataframe.groupby(‘year’).agg([‘count’])
+print(grouped)</p>
+<p>Jusqu’à présent, nous avons travaillé avec des tableaux à deux colonnes. Maintenant, nous nous concentrons sur des tableaux à trois colonnes (langage de programmation, année, paradigme). Copiez le fichier <span class="xref myst">plparadigm.json</span> dans votre répertoire de travail. Et testez le programme suivant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.io.json</span> <span class="kn">import</span> <span class="n">json_normalize</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">jsondata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/plparadigm.json&quot;</span><span class="p">))</span>
+<span class="n">array</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">jsondata</span><span class="p">:</span>
+    <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;paradigmLabel&quot;</span><span class="p">]])</span>
+
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">])</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;int64&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Testez maintenant le programme suivant. Comparez la différence de rendement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;paradigmLabel&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Votre prochain objectif est de lancer la requête suivante pour obtenir la population
+des informations sur les différents pays (limitées à 10000 lignes). Exécutez le
+suite à la requête sur <a class="reference external" href="https://query.wikidata.org">Wikidata query service</a>
+et téléchargez le fichier JSON.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT DISTINCT ?countryLabel (YEAR(?date) as ?year) ?population
+WHERE {
+ ?country wdt:P31 wd:Q6256; #Country 
+   p:P1082 ?populationStatement;
+  rdfs:label ?countryLabel. #Label
+ ?populationStatement ps:P1082 ?population; #population
+  pq:P585 ?date. #period in time
+ FILTER(lang(?countryLabel)=&quot;en&quot;) #Label in English
+}
+ORDER by ?countryLabel ?year
+LIMIT 10000
+</pre></div>
+</div>
+<p>Maintenant, calculez et affichez les informations suivantes (en utilisant différentes
+[opérations disponibles dans la bibliothèque des pandas] (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>)
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>))):</p>
+<ol class="simple">
+<li><p>La population des pays dans l’ordre alphabétique de leur nom et
+par ordre croissant d’année.</p></li>
+<li><p>La dernière population disponible de chaque pays</p></li>
+<li><p>Le pays ayant la population la plus faible et la plus élevée (compte tenu de la
+population la plus récente)</p></li>
+</ol>
+<p>Votre prochain objectif est de lancer la requête suivante pour obtenir des informations relatives
+aux articles scientifiques publiés après 2010 (limité à 10 000 lignes). Lancer
+la requête suivante sur <a class="reference external" href="https://query.wikidata.org">Wikidata query service</a> et téléchargez le fichier JSON.
+Il vous donne les informations suivantes relatives à la recherche scientifique
+article : titre, sujet principal et année de publication.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT ?title ?subjectLabel ?year
+{
+  ?article wdt:P31 wd:Q13442814; #scientific article
+           wdt:P1476 ?title; #title of the article
+           wdt:P921 ?subject; #main subject
+           wdt:P577 ?date. #publication date
+  ?subject rdfs:label ?subjectLabel.
+  BIND(YEAR(?date) as ?year).
+  #published after 2010
+  FILTER(lang(?title)=&quot;en&quot; &amp;&amp;
+     lang(?subjectLabel)=&quot;en&quot; &amp;&amp; ?year&gt;2010)
+}
+LIMIT 10000
+</pre></div>
+</div>
+<p>Maintenant, calculez et affichez les informations suivantes (en utilisant diverses <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">opérations disponibles dans la bibliothèque des pandas</a>
+(<strong>Ref:</strong>
+(<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>))):</p>
+<ol class="simple">
+<li><p>Le nombre d’articles publiés sur différents sujets chaque année.</p></li>
+<li><p>Principal sujet d’intérêt pour la communauté scientifique chaque année (sur la base
+sur les résultats de l’interrogation ci-dessus).</p></li>
+<li><p>Les 10 principaux sujets d’intérêt pour la communauté scientifique (sur la base
+les résultats de l’interrogation ci-dessus) depuis 2010.</p></li>
+</ol>
+<p>(Indice :) Regardez les fonctions groupby, reset_index, head, tail, sort_values, count de Pandas</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./fr/TP1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../TP0/tp0.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TP 0</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../TP2/tp2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TP 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By John Samuel<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
