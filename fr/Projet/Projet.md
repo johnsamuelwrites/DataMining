@@ -1,9 +1,9 @@
-### Objectifs
+# Projet
+
+## Objectifs
 
 - Mise en place d'un [système de recommandation] (https://en.wikipedia.org/wiki/Recommender_system) bien commenté en Python
 - Rédaction du rapport de projet.
-
-### Projet
 
 
 L'objectif de ce projet est de recommander des images en fonction des préférences
@@ -19,7 +19,7 @@ Les principales tâches du projet sont présentées ci-dessous :
 6.  Tests
 7.  Rapport
 
-#### Collecte de données
+## Collecte de données
 
 Vous devez collecter et télécharger un ensemble d'images. Vous avez les tâches suivantes à programmer, en automatisant le processus autant que possible :
 
@@ -33,7 +33,7 @@ Vous devez collecter et télécharger un ensemble d'images. Vous avez les tâche
 Pour cette tâche, vous devez rechercher les sources disposant d'informations supplémentaires
 comme les balises, les catégories, etc.
 
-#### Étiquetage et annotation
+## Étiquetage et annotation
 
 Dans cette tâche, vous devrez peut-être étiqueter, annoter et enregistrer des
 des informations sur chaque image. Vous pouvez analyser les images en utilisant
@@ -47,7 +47,7 @@ Par exemple, les noms de couleurs, \#cat, \#fleur, \#sous-fleur, rose etc.
 Comment prévoyez-vous de traiter ces tags ? Est-il possible d'automatiser ce
 processus ?
 
-#### Analyses de données
+## Analyses de données
 
 Demandez à l'utilisateur de sélectionner quelques images et d'ajouter des balises. Pour chaque utilisateur, vous êtes
 maintenant prêt à construire un profil de préférences d'utilisateur, basé sur cette sélection.
@@ -69,7 +69,7 @@ Votre prochain objectif est d'analyser les informations des utilisateurs et leur
 les images préférées. Comment avez-vous créé des utilisateurs aléatoires ? Combien d'utilisateurs avez-vous
 créer ? Quelles informations avez-vous stockées pour chaque utilisateur ? Quels types d'analyses avez-vous effectuées ?
 
-#### Visualisation des données
+## Visualisation des données
 
 Dans cette tâche, votre objectif est de visualiser les différentes caractéristiques de
 toutes les images téléchargées.
@@ -81,15 +81,15 @@ toutes les images téléchargées.
 
 Les utilisateurs peuvent également visualiser les informations ci-dessus relatives à leurs images préférées. Dans cette tâche, vous devez également ajouter une fonctionnalité permettant aux utilisateurs de visualiser les informations liées à leur propre profil d'utilisateur.
 
-#### Système de recommandation
+## Système de recommandation
 
 Êtes-vous maintenant prêt à recommander des images à un utilisateur ? Dans cette tâche, votre objectif est de construire le système de recommandation. Quelle approche avez-vous décidé de prendre ? Filtrage collaboratif, basé sur le contenu ou une approche hybride ? Pour chaque utilisateur, êtes-vous maintenant en mesure de construire une profil ? Quel type d'information avez-vous utilisé pour établir un profil d'utilisateur profil ? Qu'est-ce qui manque ? Quelles sont les limites de votre proposition ?
 
-#### Tests
+## Tests
 
 Votre prochaine tâche consiste à mettre au point et à effectuer différents tests sur votre proposition système. Les différentes fonctions sont-elles fonctionnelles ? Comment avez-vous testé votre projet ? Comment vérifiez-vous que votre système de recommandation fonctionne ?
 
-#### Rapport
+## Rapport
 
 Votre tâche finale consiste à préparer un rapport de 4 pages sur le projet (en français ou en anglais). 
 anglais) en format PDF, qui détaille les points suivants :
@@ -106,7 +106,7 @@ anglais) en format PDF, qui détaille les points suivants :
 
 **Note** : Veuillez n'ajouter aucun programme (ou code) dans ce rapport.
 
-### Soumission
+## Soumission
 
 
 - Veuillez **ne pas** soumettre vos images.
@@ -115,7 +115,7 @@ anglais) en format PDF, qui détaille les points suivants :
 - Compressez et renommez votre travail de projet comme Nom1\_Nom2\_\[Nom3\].zip, où Nom1, Nom2 sont vos noms.
 - Soumettez votre **projet** en ligne.
 
-### Évaluation
+## Évaluation
 
 
 Les critères d'évaluation des projets sont indiqués ci-dessous : 

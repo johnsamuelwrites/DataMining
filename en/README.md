@@ -1,4 +1,4 @@
-# Data Mining
+# Instructions 
 
 ## Exercises
 * [Practicals 0](./practical0/practical0.md):  [Jupyter Notebook 0](./practical0/practical0.ipynb) (Optional)

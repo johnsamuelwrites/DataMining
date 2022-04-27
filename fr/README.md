@@ -1,4 +1,4 @@
-# DataMining
+# Instructions 
 
 ## Sujets de travaux pratiques et projet
 * [TP0](./TP0/tp0.md) :: [Notebook Jupyter 0](./TP0/tp0.ipynb) (facultatif)
