@@ -1,10 +1,10 @@
 # Instructions 
 
 ## Exercises
-* [Practicals 0](./practical0/practical0.md):  [Jupyter Notebook 0](./practical0/practical0.ipynb) (Optional)
-* [Practicals 1](./practical1/practical1.md):  [Jupyter Notebook 1](./practical1/practical1.ipynb)
-* [Practicals 2](./practical2/practical2.md):  [Jupyter Notebook 2](./practical2/practical2.ipynb)
-* [Practicals 3](./practical3/practical3.md):  [Jupyter Notebook 3](./practical3/practical3.ipynb)
+* [Jupyter Notebook 0](./practical0/practical0.ipynb) (Optional)
+* [Jupyter Notebook 1](./practical1/practical1.ipynb)
+* [Jupyter Notebook 2](./practical2/practical2.ipynb)
+* [Jupyter Notebook 3](./practical3/practical3.ipynb)
 * [Project](./Project/project.md)
 * [Some examples](./examples/Examples.ipynb)
 
