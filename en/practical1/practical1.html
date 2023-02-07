@@ -607,8 +607,8 @@ following code to check whether scikit is properly installed.</p>
 <p>Now, you are ready to go!!</p>
 <p><strong>Note:</strong>, You can stop Jupyter notebook at any point by typing
 “Ctrl+c” on the terminal and by pressing ‘y’ to confirm shutdown.</p>
-<p>Practise the (optional) exercises given in <span class="xref myst">practicals
-0</span>.</p>
+<p>Practise the (optional) exercises given in <a class="reference internal" href="../practical0/practical0.html"><span class="doc std std-doc">practicals
+0</span></a>.</p>
 </section>
 </section>
 <section id="exercise-2">
@@ -764,6 +764,22 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </div>
 </div>
 </div>
+<p>To display the unique values of the column <strong>year</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To display the unique values of the column <strong>languageLabel</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>To sort the values by one or more columns:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -866,14 +882,20 @@ languages released in a year.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+<span class="n">grouped</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>You can also use multiple aggregate functions using agg()</p>
-<p>grouped = dataframe.groupby(‘year’).agg([‘count’])
-print(grouped)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;count&#39;</span><span class="p">])</span>
+<span class="n">grouped</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Till now, we worked with tables having two columns. Now we focus on
 tables with three columns (programming language, year, paradigm). Copy
 the file
@@ -972,7 +994,7 @@ on the above query results).</p></li>
 the above query results) since 2010.</p></li>
 </ol>
 <p><strong>Hint</strong>:Take a look at functions groupby, reset_index, head, tail, sort_values, count of Pandas</p>
-<p>If you get time-out errors, please change the LIMIT to some lower values (1000, 2000, 5000).</p>
+<p><strong>Note</strong>: If you get time-out errors, please change the LIMIT to some lower values (1000, 2000, 5000).</p>
 </section>
 </section>
 
