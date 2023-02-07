@@ -622,7 +622,8 @@ sometimes used to describe the column names.</p>
 <span class="xref myst">pl.csv</span> to
 your current working directory (where you are running Jupyter: TP1) and
 use the following code to parse the csv file. Note the column names and
-datatypes (U100, i4)</p>
+datatypes (U100, i4), where U100 corresponds to 100-character unicode string and i4 corresponds to 32-bit signed integer.</p>
+<p>Please check the complete list of dtypes <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.dtypes.html">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -630,9 +631,9 @@ datatypes (U100, i4)</p>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
     <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span> <span class="c1"># Change this value to the path of your CSV file</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
-    <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
-    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+    <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># skip the first row, since it&#39;s the header</span>
+    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="c1"># the separator is comma since it is a CSV file</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span> <span class="c1"># UTF-8 encoding</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
@@ -644,9 +645,9 @@ datatypes (U100, i4)</p>
 numpy</a>
 (<strong>Ref:</strong>
 (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html</a>))
-is different from Python’s default <a class="reference external" href="https://docs.python.org/3.5/library/csv.html">CSV
+is different from Python’s default <a class="reference external" href="https://docs.python.org/3.9/library/csv.html">CSV
 reader</a> (<strong>Ref:</strong>
-(<a class="reference external" href="https://docs.python.org/3.5/library/csv.html">https://docs.python.org/3.5/library/csv.html</a>))
+(<a class="reference external" href="https://docs.python.org/3.9/library/csv.html">https://docs.python.org/3.9/library/csv.html</a>))
 because of its capability to support the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html">data
 types</a>
 (<strong>Ref:</strong>
@@ -678,6 +679,22 @@ tsv file.</p>
 <p>Note the changes in the above code compared to the previous one. A TSV
 file is a tab-separated file, i.e., the column values are separated by a
 tab ((\t)).</p>
+<p>For counting the number of rows in your dataset, you can use <code class="docutils literal notranslate"><span class="pre">len()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also display the output of variables and methods in a notebook without <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="exercise-3">
 <h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
@@ -715,6 +732,68 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </div>
 </div>
 </div>
+<p>And the output without <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To display the values of the column <strong>year</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To display the values of the column <strong>languageLabel</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Getting some important information like count, min, max using <code class="docutils literal notranslate"><span class="pre">describe()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To sort the values by one or more columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To obtain the data types of the columns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="exercise-4">
 <h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
@@ -746,6 +825,34 @@ this
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">])</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 </div>
 </div>
@@ -790,7 +897,7 @@ to your working directory. And test the following program.</p>
 <span class="p">)</span>
 
 <span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+<span class="n">grouped</span>
 </pre></div>
 </div>
 </div>
@@ -799,7 +906,7 @@ to your working directory. And test the following program.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;paradigmLabel&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+<span class="n">grouped</span>
 </pre></div>
 </div>
 </div>
@@ -864,8 +971,8 @@ on the above query results).</p></li>
 <li><p>Top 10 subjects of interest to the scientific community (based on
 the above query results) since 2010.</p></li>
 </ol>
-<p>(Hint:) Take a look at functions groupby,
-reset_index, head, tail, sort_values, count of Pandas</p>
+<p><strong>Hint</strong>:Take a look at functions groupby, reset_index, head, tail, sort_values, count of Pandas</p>
+<p>If you get time-out errors, please change the LIMIT to some lower values (1000, 2000, 5000).</p>
 </section>
 </section>
 
