@@ -383,6 +383,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#captures-d-ecran">
+   Captures d’écran
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
    Exercice 1
   </a>
@@ -451,6 +456,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#captures-d-ecran">
+   Captures d’écran
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercice-1">
    Exercice 1
   </a>
@@ -517,14 +527,18 @@ title="Print to PDF"
 </ol>
 </section>
 </section>
+<section id="captures-d-ecran">
+<h2>Captures d’écran<a class="headerlink" href="#captures-d-ecran" title="Permalink to this headline">#</a></h2>
+<p>Des captures d’écran ont été fournies afin que vous puissiez vérifier et comparer si le résultat que vous obtenez correspond à ce que nous attendons de l’étape (ou de l’exercice) en question.</p>
+</section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
-<p>Exécutez les commandes suivantes sur vos machines virtuelles</p>
+<p>Exécutez les commandes suivantes sur vos <strong>machines virtuelles</strong></p>
 <p><strong>pip</strong></p>
 <p>Pour installer <code class="docutils literal notranslate"><span class="pre">pip</span></code>, vous devez exécuter les commandes suivantes sur votre terminal :</p>
-<p><strong>Note</strong> : Veuillez noter que toutes les lignes commençant par “$” doivent être exécutées sur le terminal.</p>
+<p>Veuillez remarquer que toutes les lignes commençant par “$” doivent être exécutées sur le terminal.</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-dev</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-pip</span></code></p>
@@ -546,9 +560,13 @@ title="Print to PDF"
 </section>
 <section id="hello-world">
 <h3>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h3>
-<p>Si votre installation est réussie, vous pouvez lancer</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">TP1</span> <span class="pre">&amp;&amp;</span> <span class="pre">cd</span> <span class="pre">TP1</span></code></p>
+<p>Si votre installation est réussie, vous pouvez exécuter la commande suivante pour cloner le répertoire:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/johnsamuelwrites/DataMining</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">DataMining</span></code></p>
+<p>Lancez Jupyter Notebook (ou Lab)</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<p>or</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">lab</span></code></p>
 <p>Une nouvelle page apparaîtra sur votre navigateur et vous verrez l’image suivante <img alt="" src="../../_images/jupyter.png" /></p>
 <p>Cliquez sur l’onglet “Running”. Vous ne voyez aucun notebook en cours d’exécution (si c’est la première fois que vous utilisez jupyter).
 <img alt="" src="../../_images/jupyterrunning.png" /></p>
@@ -565,7 +583,7 @@ Notebook.</p>
 </div>
 <p><img alt="" src="fr/TP1/images/jupyterprogram.png" /></p>
 <p>Vous pouvez vous déplacer dans n’importe quelle cellule et appuyer sur “Run”.</p>
-<p>Par défaut, votre ordinateur portable est nommé “Untitled”. Vous pouvez le renommer comme indiqué ci-dessous, en cliquant sur le nom “Untitled” et en lui donnant un nouveau nom.</p>
+<p>Par défaut, votre notebook est nommé “Untitled”. Vous pouvez le renommer comme indiqué ci-dessous, en cliquant sur le nom “Untitled” et en lui donnant un nouveau nom.</p>
 <p><img alt="" src="fr/TP1/images/jupyterrenamenotebook.png" /></p>
 <p>Retournez maintenant à l’onglet “Files” et vous pouvez voir le Notebook renommé.
 Vous pouvez cliquer sur votre Notebook à tout moment pour continuer à travailler.</p>
@@ -583,20 +601,20 @@ Vous pouvez cliquer sur votre Notebook à tout moment pour continuer à travaill
 </div>
 <p><img alt="" src="fr/TP1/images/jupyterscikit.png" /></p>
 <p>Maintenant, vous êtes prêt à exécuter le code !</p>
-<p><strong>Note:</strong>, Vous pouvez arrêter le Notebook Jupyter à tout moment en tapant “Ctrl+c” sur le terminal et en appuyant sur “y” pour confirmer l’arrêt.</p>
+<p><strong>Remarque:</strong>, Vous pouvez arrêter le Notebook Jupyter à tout moment en tapant “Ctrl+c” sur le terminal et en appuyant sur “y” pour confirmer l’arrêt.</p>
 </section>
 </section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
-<p>La plupart du temps, nous travaillons avec des fichiers CSV (comma-separated values) pour l’analyse des données. Un fichier CSV est constitué d’une ou plusieurs lignes et chaque ligne comporte une ou plusieurs valeurs séparées par des virgules. On peut considérer chaque ligne comme une ligne et chaque valeur d’une ligne comme une valeur de colonne. La première ligne est parfois utilisée pour décrire les noms des colonnes.</p>
+<p>La plupart du temps, nous travaillons avec des fichiers CSV (comma-separated values) pour l’analyse des données. Un fichier CSV est constitué d’une ou plusieurs lignes et chaque ligne comporte une ou plusieurs valeurs séparées par des virgules. On peut considérer chaque ligne comme une rangée et chaque valeur d’une ligne comme une valeur de colonne. La première ligne est parfois utilisée pour décrire les noms des colonnes.</p>
 <p>Copier le fichier
-<span class="xref myst">pl.csv</span> dans votre répertoire de travail actuel (où vous exécutez Jupyter : TP1) et utilisez le code suivant pour analyser le fichier csv. Notez les noms de colonnes et les types de données (U100, i4)</p>
+<span class="xref myst">pl.csv</span> dans votre répertoire de travail actuel (où vous exécutez Jupyter : TP1) et utilisez le code suivant pour analyser le fichier csv. Remarquez les noms de colonnes et les types de données (U100, i4)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span> <span class="c1">#Remplacez cette valeur par le chemin d&#39;accès de votre fichier CSV.</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
@@ -628,7 +646,7 @@ Avant de continuer, examinez en profondeur
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/pl.tsv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../../data/pl.tsv&quot;</span><span class="p">,</span> <span class="c1">#Remplacez cette valeur par le chemin d&#39;accès de votre fichier TSV.</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
@@ -639,7 +657,7 @@ Avant de continuer, examinez en profondeur
 </div>
 </div>
 </div>
-<p>Notez les changements dans le code ci-dessus par rapport au précédent. Un fichier TSV est un fichier séparé par des tabulations, c’est-à-dire que les valeurs des colonnes sont séparées par un
+<p>Les changements dans le code ci-dessus par rapport au précédent. Un fichier TSV est un fichier séparé par des tabulations, c’est-à-dire que les valeurs des colonnes sont séparées par un
 tabulation ((\t)).</p>
 </section>
 <section id="exercice-3">
@@ -768,7 +786,7 @@ WHERE {
  FILTER(lang(?countryLabel)=&quot;en&quot;) #Label in English
 }
 ORDER by ?countryLabel ?year
-LIMIT 10000
+LIMIT 1000
 </pre></div>
 </div>
 <p>Maintenant, calculez et affichez les informations suivantes (en utilisant différentes

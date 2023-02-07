@@ -383,6 +383,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#screenshots">
+   Screenshots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-1">
    Exercise 1
   </a>
@@ -451,6 +456,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#screenshots">
+   Screenshots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-1">
    Exercise 1
   </a>
@@ -517,11 +527,15 @@ title="Print to PDF"
 </ol>
 </section>
 </section>
+<section id="screenshots">
+<h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">#</a></h2>
+<p>Screenshots have been provided so that you can check and compare whether the output you have is the same as what we want from the step (or exercise) in question.</p>
+</section>
 <section id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
-<p>Run the following commands on your virtual machines</p>
+<p>Run the following commands on your <strong>virtual machines</strong></p>
 <p><strong>pip</strong></p>
 <p>For installing <code class="docutils literal notranslate"><span class="pre">pip</span></code>, you need to run the following commands on your terminal:</p>
 <p><strong>Note</strong>: Please note that all the lines starting with <code class="docutils literal notranslate"><span class="pre">$</span> </code> need to be run on the terminal.</p>
@@ -546,9 +560,13 @@ title="Print to PDF"
 </section>
 <section id="hello-world">
 <h3>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h3>
-<p>If your installation is successful, you can run</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">TP1</span> <span class="pre">&amp;&amp;</span> <span class="pre">cd</span> <span class="pre">TP1</span></code></p>
+<p>If your installation is successful, you can run the following command to clone the repository</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/johnsamuelwrites/DataMining</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">DataMining</span></code></p>
+<p>Run Jupyter Notebook (or Lab)</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<p>or</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">lab</span></code></p>
 <p>A new page will appear on your browser and you will see the following
 image <img alt="" src="../../_images/jupyter.png" /></p>
 <p>Click on the tab ‘Running’. You see no notebooks running (if it’s the
@@ -610,7 +628,7 @@ datatypes (U100, i4)</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span> <span class="c1"># Change this value to the path of your CSV file</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
@@ -646,7 +664,7 @@ tsv file.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/pl.tsv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../../data/pl.tsv&quot;</span><span class="p">,</span> <span class="c1"># Change this value to the path of your CSV file</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
