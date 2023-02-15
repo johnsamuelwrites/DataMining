@@ -575,8 +575,8 @@ of number of programming languages released per year. Verify the output.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="en/practical2/images/dataframeplot.png" />
-Now, we want to create multiple subplots. A simple way is given below.
+<p><img alt="" src="en/practical2/images/dataframeplot.png" /></p>
+<p>Now, we want to create multiple subplots. A simple way is given below.
 Recall in <span class="xref myst">first practical session</span>, we did group by
 on multiple columns. Subplots can be used to visualize these data.</p>
 <div class="cell docutils container">
@@ -612,8 +612,8 @@ on multiple columns. Subplots can be used to visualize these data.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="en/practical2/images/subplots.png" />
-Make changes to the above code, so that we can get visual information on
+<p><img alt="" src="en/practical2/images/subplots.png" /></p>
+<p>Make changes to the above code, so that we can get visual information on
 count of languages of different programming paradigms released in every
 available year, i.e, for each year, we want to see the count of
 programming languages belonging to each programming language paradigm.</p>
@@ -668,6 +668,24 @@ width and height of image (in pixels).</p>
 </div>
 </div>
 </div>
+<p>We can also get additional information from the images like the EXIF (Exchangeable image file format) information. In some cases, the EXIF information of images is deleted (because they may contain private information).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">PIL.ExifTags</span> <span class="kn">import</span> <span class="n">TAGS</span>
+
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">exif_data</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">_getexif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">exif_data</span><span class="p">:</span>  <span class="c1"># if there is some EXIF information</span>
+    <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">exif_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">TAGS</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">TAGS</span><span class="p">[</span><span class="n">tag</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Let’s now get an histogram of colors. When you execute the following
 code, you will get a single array of values, frequency of each band (R,
 G, B etc.) concatenated together. In the following code, we will assume
@@ -695,8 +713,8 @@ of different colors.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="en/practical2/images/histogramsubplots.png" />
-But if wish to see all of them in one single plot.</p>
+<p><img alt="" src="en/practical2/images/histogramsubplots.png" /></p>
+<p>But if you wish to see all of them in one single plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -717,8 +735,8 @@ But if wish to see all of them in one single plot.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="en/practical2/images/histogramplot.png" />
-But we do not wish to loose the band colors.</p>
+<p><img alt="" src="en/practical2/images/histogramplot.png" /></p>
+<p>But we do not wish to loose the band colors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -741,8 +759,8 @@ But we do not wish to loose the band colors.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="en/practical2/images/histogramplotcolors.png" />
-Your next question is to get the top 20 intensities in each band and
+<p><img alt="" src="en/practical2/images/histogramplotcolors.png" /></p>
+<p>Your next question is to get the top 20 intensities in each band and
 create a single plot of these top intensities. Write a python program
 that can achieve this.</p>
 </section>
@@ -762,7 +780,7 @@ image.</p>
 
 <span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">histogram</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">clusters</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">npbins</span><span class="p">)</span>
@@ -782,8 +800,8 @@ image.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="en/practical2/images/barchart.png" />
-For your next question, your goal is to understand the above code and
+<p><img alt="" src="en/practical2/images/barchart.png" /></p>
+<p>For your next question, your goal is to understand the above code and
 achieve the following:</p>
 <ol class="simple">
 <li><p>Assume that the number of clusters is given by the user, generalize
@@ -793,16 +811,16 @@ descending order of the frequency of colors.</p></li>
 <li><p>Also add support for pie chart in addition to the bar chart. Ensure
 that we use the image colors as the wedge colors. (e.g., given
 below)</p></li>
-<li><p>Do you have any interesting observations?
-<img alt="" src="en/practical2/images/piechart.png" /></p></li>
+<li><p>Do you have any interesting observations?</p></li>
 </ol>
+<p><img alt="" src="en/practical2/images/piechart.png" /></p>
 </section>
 <section id="exercise-4">
 <h2>Exercise 4 [★★]<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
 <p>We will try to get more clusters and also check the time taken by each
 of these algorithms.
 Let’s start with some very simple exercises to experiment with the
-KMeans algorithm. Consider the following data and visualize it on a
+KMeans algorithm. Consider the following data and visualize it
 using a scatter plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -874,7 +892,7 @@ labels of our clustered data.</p>
     <span class="p">]</span>
 <span class="p">)</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clusters</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
 </pre></div>
@@ -914,7 +932,7 @@ two colors for visually distinguishing them.</p>
     <span class="p">]</span>
 <span class="p">)</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;#ff0000&quot;</span><span class="p">,</span> <span class="s2">&quot;#00ff00&quot;</span><span class="p">])</span>
 
@@ -1029,7 +1047,7 @@ again with <strong>KMeans</strong> and try to get clusters of size between 2 and
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
     <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1056,11 +1074,11 @@ again with <strong>KMeans</strong> and try to get clusters of size between 2 and
 </div>
 </div>
 <p>Your next goal is to test the above code for cluster sizes between 2 and
-21 which will give you the figure given below.
-[Note:] The following image was generated after 6
+21 which will give you the figure given below.</p>
+<p><strong>Note</strong>: The following image was generated after 6
 minutes. Optionally, you can add <em>print</em> statements to test whether your
-code is working fine.
-<img alt="" src="en/practical2/images/kmeans.png" />
+code is working fine.</p>
+<p><img alt="" src="en/practical2/images/kmeans.png" />
 Now we modify the above algorithm to use <strong>MiniBatchKMeans</strong> clustering
 algorithm (refer
 <a class="reference external" href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans">here</a>).
@@ -1083,7 +1101,7 @@ Observe the changes.</p>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
     <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1135,7 +1153,7 @@ We start with <strong>KMeans</strong>.</p>
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
     <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">total_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
@@ -1148,9 +1166,9 @@ We start with <strong>KMeans</strong>.</p>
 </div>
 </div>
 </div>
-<p>You may get a graph similar to the following.
-<img alt="" src="en/practical2/images/kmeanstime.png" />
-We now use <strong>MiniBatchKMeans</strong>.</p>
+<p>You may get a graph similar to the following.</p>
+<p><img alt="" src="en/practical2/images/kmeanstime.png" /></p>
+<p>We now use <strong>MiniBatchKMeans</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -1168,7 +1186,7 @@ We now use <strong>MiniBatchKMeans</strong>.</p>
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
     <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">total_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
@@ -1181,9 +1199,9 @@ We now use <strong>MiniBatchKMeans</strong>.</p>
 </div>
 </div>
 </div>
-<p>You may get a graph similar to the following.
-<img alt="" src="en/practical2/images/minibatchkmeanstime.png" />
-Now test the above code using <strong>MiniBatchKMeans</strong> algorithm with cluster
+<p>You may get a graph similar to the following.</p>
+<p><img alt="" src="en/practical2/images/minibatchkmeanstime.png" /></p>
+<p>Now test the above code using <strong>MiniBatchKMeans</strong> algorithm with cluster
 sizes between 2 and 50. What are your observations?
 Finally we want to see whether we get the same cluster centers from both
 the algorithms. Run the following program to see the cluster centers
@@ -1203,10 +1221,10 @@ black) to distinguish the cluster centers from the two algorithms.</p>
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
-<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">mclusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
@@ -1258,7 +1276,7 @@ clustered. Run the following program a couple of times.</p>
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">mclusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1330,7 +1348,7 @@ clustered. Run the following program a couple of times.</p>
     <span class="n">c</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1426,7 +1444,7 @@ What are your conclusions?</p>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Calculating the clusters</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 
@@ -1478,7 +1496,7 @@ What are your conclusions?</p>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Calculating the clusters</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 

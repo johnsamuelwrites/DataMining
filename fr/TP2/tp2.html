@@ -473,7 +473,7 @@ et <a class="reference external" href="http://scikit-learn.org/stable/modules/sv
 </section>
 <section id="exercise-1">
 <h2>Exercise 1 [★]<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://matplotlib.org/api/pyplot_api.html">matplotlib</a> peut être utilisé pour tracer des graphiques. Voici un code très simple avec seulement valeurs x. Après avoir importé la bibliothèque <em>matplotlib</em>, nous initialisons les valeurs x et les traçons.</p>
+<p><a class="reference external" href="https://matplotlib.org/api/pyplot_api.html">matplotlib</a> peut être utilisé pour tracer des graphiques. Vous trouverez ci-dessous un code très simple avec seulement des valeurs x. Après avoir importé la bibliothèque <em>matplotlib</em>, nous initialisons les valeurs de x et nous traçons le graphique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
@@ -486,7 +486,7 @@ et <a class="reference external" href="http://scikit-learn.org/stable/modules/sv
 </div>
 </div>
 <p><img alt="" src="fr/TP2/images/plot.png" /></p>
-<p>Changeons maintenant la couleur, le style et la largeur de la ligne.</p>
+<p>Modifions maintenant la couleur, le style et la largeur de la ligne.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
@@ -512,8 +512,8 @@ et <a class="reference external" href="http://scikit-learn.org/stable/modules/sv
 </div>
 </div>
 <p><img alt="" src="fr/TP2/images/stepploty.png" /></p>
-<p>Dans la <a class="reference internal" href="../TP1/tp1.html"><span class="doc std std-doc">première session pratique</span></a>, nous avons vu comment analyser les fichiers JSON. En continuant avec le même fichier <span class="xref myst">JSON</span>, nous allons maintenant tracer les résultats
-du nombre de langages de programmation publiés par an. Vérifiez la sortie.</p>
+<p>Lors de la <a class="reference internal" href="../TP1/tp1.html"><span class="doc std std-doc">première séance pratique</span></a>, nous avons vu comment analyser les fichiers JSON. En continuant avec le même fichier <span class="xref myst">JSON</span>, nous allons maintenant représenter graphiquement  les résultats
+du nombre de langages de programmation publiés par an. Vérifiez le résultat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">json_normalize</span>
@@ -568,9 +568,9 @@ du nombre de langages de programmation publiés par an. Vérifiez la sortie.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/dataframeplot.png" />
-Maintenant, nous voulons créer plusieurs sous-images. Une méthode simple est donnée ci-dessous.
-Rappelons que lors de la <a class="reference internal" href="../TP1/tp1.html"><span class="doc std std-doc">première session pratique</span></a>, nous avons regroupé par
+<p><img alt="" src="fr/TP2/images/dataframeplot.png" /></p>
+<p>Maintenant, nous voulons créer plusieurs sous-images. Une méthode simple est donnée ci-dessous.
+Rappelons que lors de la <a class="reference internal" href="../TP1/tp1.html"><span class="doc std std-doc">première séance pratique</span></a>, nous avons regroupé par
 sur plusieurs colonnes. Des sous-parcelles peuvent être utilisées pour visualiser ces données.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -605,14 +605,13 @@ sur plusieurs colonnes. Des sous-parcelles peuvent être utilisées pour visuali
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/subplots.png" />
-Modifiez le code ci-dessus, afin que nous puissions obtenir des informations visuelles sur le nombre de langages de différents paradigmes de programmation publiés au cours de chaque année disponible, c’est-à-dire que pour chaque année, nous voulons voir le nombre de langages de programmation appartenant à chaque paradigme de langage de programmation.</p>
+<p><img alt="" src="fr/TP2/images/subplots.png" /></p>
+<p>Modifiez le code ci-dessus, afin que nous puissions obtenir des informations visuelles sur le nombre de langages de différents paradigmes de programmation publiés au cours de chaque année disponible, c’est-à-dire que pour chaque année, nous voulons voir le nombre de langages de programmation appartenant à chaque paradigme de langage de programmation.</p>
 </section>
 <section id="exercice-2">
 <h2>Exercice 2 [★]<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
 <p>Dans cet exercice, nous allons travailler sur les images. Téléchargez une image (par ex,
-<span class="xref myst">image.bmp</span> et <span class="xref myst">flower.jpg</span>) dans votre version actuelle
-et l’ouvrir de la manière suivante. Nous allons d’abord essayer d’obtenir quelques métadonnées de l’image.</p>
+<span class="xref myst">image.bmp</span> et <span class="xref myst">flower.jpg</span>) dans votre dossier et ouvrez-la de la manière suivante. Nous allons d’abord essayer de d’obtenir quelques métadonnées de l’image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
@@ -624,7 +623,7 @@ et l’ouvrir de la manière suivante. Nous allons d’abord essayer d’obtenir
 </div>
 </div>
 </div>
-<p>Nous utilison le module ‘Image’ de Python PIL
+<p>Nous utilisons le module ‘Image’ de Python PIL
 (<a class="reference external" href="http://www.effbot.org/imagingbook/image.htm">Documentation</a>). Nous allons essayez maintenant d’obtenir des données de 100 pixels à partir d’une image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -652,6 +651,24 @@ et l’ouvrir de la manière suivante. Nous allons d’abord essayer d’obtenir
 </div>
 </div>
 </div>
+<p>Nous pouvons également obtenir des informations supplémentaires sur les images, comme les informations EXIF (Exchangeable image file format). Dans certains cas, les informations EXIF des images sont supprimées (car elles peuvent contenir des informations privées).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">PIL.ExifTags</span> <span class="kn">import</span> <span class="n">TAGS</span>
+
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">exif_data</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">_getexif</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">exif_data</span><span class="p">:</span>  <span class="c1"># s&#39;il existe des informations EXIF</span>
+    <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">exif_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">TAGS</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">TAGS</span><span class="p">[</span><span class="n">tag</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Obtenons maintenant un histogramme des couleurs. Lorsque vous exécutez le code suivant, vous obtenez un tableau unique de valeurs, la fréquence de chaque bande (R, G, B etc.) concaténée ensemble. Dans le code suivant, nous supposerons que nous travaillons avec une image de 3 bandes (mode RGB) et que chaque bande est représentée par 8 bits. Nous allons tracer le <a class="reference external" href="http://www.effbot.org/imagingbook/image.htm#tag-Image.Image.histogram">histogramme</a> de différentes couleurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -673,8 +690,8 @@ et l’ouvrir de la manière suivante. Nous allons d’abord essayer d’obtenir
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/histogramsubplots.png" />
-Mais si vous souhaitez les voir tous dans une seule image.</p>
+<p><img alt="" src="fr/TP2/images/histogramsubplots.png" /></p>
+<p>Mais si vous souhaitez les voir tous dans une seule image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -695,8 +712,8 @@ Mais si vous souhaitez les voir tous dans une seule image.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/histogramplot.png" />
-Mais nous ne voulons pas perdre les couleurs de la bande.</p>
+<p><img alt="" src="fr/TP2/images/histogramplot.png" /></p>
+<p>Mais nous ne voulons pas perdre les couleurs de la bande.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -719,8 +736,8 @@ Mais nous ne voulons pas perdre les couleurs de la bande.</p>
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/histogramplotcolors.png" />
-Votre prochaine question consiste à obtenir les 20 premières intensités dans chaque bande et à créer un seul tracé de ces premières intensités. Écrivez un programme python qui peut réaliser cela.</p>
+<p><img alt="" src="fr/TP2/images/histogramplotcolors.png" /></p>
+<p>Votre prochaine question consiste à obtenir les 20 premières intensités dans chaque bande et à créer un seul tracé de ces premières intensités. Écrivez un programme python qui peut réaliser cela.</p>
 </section>
 <section id="exercice-3">
 <h2>Exercice 3 [★★]<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
@@ -736,7 +753,7 @@ En continuant avec les images, nous allons maintenant trouver 4 couleurs prédom
 
 <span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">histogram</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">clusters</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">npbins</span><span class="p">)</span>
@@ -756,8 +773,8 @@ En continuant avec les images, nous allons maintenant trouver 4 couleurs prédom
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/barchart.png" />
-Pour votre prochaine question, votre objectif est de comprendre le code ci-dessus et
+<p><img alt="" src="fr/TP2/images/barchart.png" /></p>
+<p>Pour votre prochaine question, votre objectif est de comprendre le code ci-dessus et
 réaliser ce qui suit :</p>
 <ol class="simple">
 <li><p>Supposer que le nombre de grappes est donné par l’utilisateur, généraliser
@@ -766,9 +783,9 @@ le code ci-dessus.</p></li>
 ordre décroissant de la fréquence des couleurs.</p></li>
 <li><p>Ajoutez également le support pour le graphique circulaire en plus du graphique en barres. Assurez-vous que
 que nous utilisons les couleurs de l’image comme les couleurs de la tranche.</p></li>
-<li><p>Avez-vous des observations intéressantes ?
-<img alt="" src="fr/TP2/images/piechart.png" /></p></li>
+<li><p>Avez-vous des observations intéressantes ?</p></li>
 </ol>
+<p><img alt="" src="fr/TP2/images/piechart.png" /></p>
 </section>
 <section id="exercise-4">
 <h2>Exercise 4 [★★]<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h2>
@@ -842,7 +859,7 @@ Commençons par quelques exercices très simples pour expérimenter l’algorith
     <span class="p">]</span>
 <span class="p">)</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clusters</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
 </pre></div>
@@ -882,7 +899,7 @@ deux couleurs pour les distinguer visuellement.</p>
     <span class="p">]</span>
 <span class="p">)</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;#ff0000&quot;</span><span class="p">,</span> <span class="s2">&quot;#00ff00&quot;</span><span class="p">])</span>
 
@@ -984,7 +1001,7 @@ deux couleurs pour les distinguer visuellement.</p>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
     <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1013,10 +1030,9 @@ deux couleurs pour les distinguer visuellement.</p>
 <p>Votre prochain objectif est de tester le code ci-dessus pour les tailles de grappes entre 2 et 21, ce qui vous donnera le chiffre indiqué ci-dessous.</p>
 <p><strong>Note:</strong> L’image suivante a été générée après 6 minutes.</p>
 <p>En option, vous pouvez ajouter des déclarations <em>print</em> pour tester si votre code fonctionne bien.</p>
-<p><img alt="" src="fr/TP2/images/kmeans.png" />
-Now we modify the above algorithm to use <strong>MiniBatchKMeans</strong> clustering
-algorithm (refer
-<a class="reference external" href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans">here</a>).
+<p><img alt="" src="fr/TP2/images/kmeans.png" /></p>
+<p>Maintenant, nous modifions l’algorithme ci-dessus pour utiliser l’algorithme de clustering <strong>MiniBatchKMeans</strong>.
+(voir <a class="reference external" href="http://scikit-learn.org/stable/modules/clustering.html#mini-batch-kmeans">ici</a>).
 Observez les changements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1036,7 +1052,7 @@ Observez les changements.</p>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
     <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1062,10 +1078,10 @@ Observez les changements.</p>
 </div>
 </div>
 </div>
-<p>What did you observe? Your next goal is to test the above code for cluster sizes between 2 and 21 which will give you the figure given below.</p>
-<p>What are your conclusions?</p>
-<p><img alt="" src="fr/TP2/images/minibatchkmeans.png" />
-Afin de comparer les deux algorithmes, nous considérons le temps pris par chacun de ces algorithmes. Nous allons répéter l’expérience ci-dessus, mais cette fois nous allons tracer le temps nécessaire pour obtenir des grappes de tailles différentes.</p>
+<p>Qu’avez-vous observé ? Votre prochain objectif est de tester le code ci-dessus pour des tailles de grappes comprises entre 2 et 21, ce qui vous donnera la figure ci-dessous.</p>
+<p>Quelles sont vos conclusions ?</p>
+<p><img alt="" src="fr/TP2/images/minibatchkmeans.png" /></p>
+<p>Afin de comparer les deux algorithmes, nous considérons le temps pris par chacun de ces algorithmes. Nous allons répéter l’expérience ci-dessus, mais cette fois nous allons tracer le temps nécessaire pour obtenir des grappes de tailles différentes.</p>
 <p>Nous commençons par <strong>KMeans</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1084,7 +1100,7 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
     <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">total_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
@@ -1097,8 +1113,8 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
 </div>
 </div>
 </div>
-<p>Vous pouvez obtenir un graphique similaire à celui qui suit.
-<img alt="" src="fr/TP2/images/kmeanstime.png" /></p>
+<p>Vous pouvez obtenir un graphique similaire à celui qui suit.</p>
+<p><img alt="" src="fr/TP2/images/kmeanstime.png" /></p>
 <p>Nous utilisons maintenant <strong>MiniBatchKMeans</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1117,7 +1133,7 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
     <span class="n">cluster_count</span> <span class="o">=</span> <span class="n">x</span>
 
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
     <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">total_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
@@ -1148,10 +1164,10 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
-<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">mclusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
@@ -1202,7 +1218,7 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">mclusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">mclusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1274,7 +1290,7 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
     <span class="n">c</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 <span class="n">npbins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1370,7 +1386,7 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Calculer les clusters</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 
@@ -1423,7 +1439,7 @@ Afin de comparer les deux algorithmes, nous considérons le temps pris par chacu
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Calculer les clusters</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">cluster_count</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 
 
