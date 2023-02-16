@@ -21,9 +21,9 @@ The main tasks of the project are given below:
 6.  Tests
 7.  Report
 
-## Data Collection
-
 ![Architecture](../../images/Project-Architecture.png "Architecture")
+
+## Data Collection
 
 You have to collect and download a set of images. You have the following
 tasks to program, automating the process as much as possible:
