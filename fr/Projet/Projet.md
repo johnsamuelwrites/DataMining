@@ -2,7 +2,7 @@
 
 ## Objectifs
 
-- Mise en place d'un [système de recommandation] (https://en.wikipedia.org/wiki/Recommender_system) bien commenté en Python
+- Mise en place d'un [système de recommandation](https://en.wikipedia.org/wiki/Recommender_system) bien commenté en Python
 - Rédaction du rapport de projet.
 
 
@@ -33,12 +33,12 @@ Vous devez collecter et télécharger un ensemble d'images. Vous avez les tâche
     .png, etc.), l'orientation de l'image (paysage, portrait, carré, etc.),
     date de création, modèle d'appareil photo, etc. dans un ou plusieurs fichiers JSON. Vous pouvez utiliser les informations [Exif](https://en.wikipedia.org/wiki/Exif) présentes dans les fichiers d'images.
 
+## Étiquetage et annotation
+
 Pour cette tâche, vous devez rechercher les sources disposant d'informations supplémentaires
 comme les balises, les catégories, etc.
 
-## Étiquetage et annotation
-
-Dans cette tâche, vous devrez peut-être étiqueter, annoter et enregistrer des
+Dans cette tâche, vous devrez peut-être étiqueter, annoter et enregistrer
 des informations sur chaque image. Vous pouvez analyser les images en utilisant
 des algorithmes de regroupement pour trouver les couleurs prédominantes.
 
@@ -94,11 +94,10 @@ Votre prochaine tâche consiste à mettre au point et à effectuer différents t
 
 ## Rapport
 
-Votre tâche finale consiste à préparer un rapport de 4 pages sur le projet (en français ou en anglais). 
-anglais) en format PDF, qui détaille les points suivants :
+Votre tâche finale consiste à préparer un rapport de 5 pages sur le projet (en français ou en anglais) en format PDF, qui détaille les points suivants :
 
 - Le but de votre projet
-- Sources des données de vos images et leur licence.
+- Sources des données de vos images et leurs licences.
 - Taille de vos données.
 - Informations que vous avez décidé de stocker pour chaque image.
 - Informations concernant les préférences de l'utilisateur
@@ -110,7 +109,6 @@ anglais) en format PDF, qui détaille les points suivants :
 **Note** : Veuillez n'ajouter aucun programme (ou code) dans ce rapport.
 
 ## Soumission
-
 
 - Veuillez **ne pas** soumettre vos images.
 - Renommez votre rapport de projet sous le nom de Nom1\_Nom2\_\[Nom3\].pdf, où Nom1, Nom2, etc. sont vos noms.
@@ -150,4 +148,4 @@ Les critères d'évaluation des projets sont indiqués ci-dessous :
         des diagrammes, un résumé des différentes tâches réalisées et des limites
     3. Bibliographie
 
-
+**Rémarque**: Vous pouvez consulter des [exemples supplémentaires](../../examples) de notebooks.
