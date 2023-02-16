@@ -483,7 +483,7 @@ able to predict *y-*values for new *x-*values.</p>
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -508,7 +508,7 @@ train our Linear Regression model test whether it is able to predict
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -533,7 +533,7 @@ x<sup>2</sup></em>. What did you observe with the following code? Did it predict
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -561,7 +561,7 @@ features. Try changing the value of <em>degree</em> in the code given below.</p>
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_predict</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -588,7 +588,7 @@ features. Try changing the value of <em>degree</em> in the code given below.</p>
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x_predict</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -817,7 +817,7 @@ Here, we will label the complete dataset and see whether our model
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">perceptron</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -826,26 +826,31 @@ Here, we will label the complete dataset and see whether our model
 results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
-    <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Perceptron</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Perceptron</span>
 
-    <span class="n">numarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> 
-          <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
-          <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> 
-          <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> 
-          <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> 
-          <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
-          <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">numarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 
-    <span class="n">perceptron</span> <span class="o">=</span> <span class="n">Perceptron</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-    <span class="n">perceptron</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="n">perceptron</span> <span class="o">=</span> <span class="n">Perceptron</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">perceptron</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 
-    <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 
-    <span class="n">y_predict</span> <span class="o">=</span> <span class="n">perceptron</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">perceptron</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -878,7 +883,7 @@ results.</p>
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">mlpclassifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -911,7 +916,7 @@ results.</p>
 <span class="n">x_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">svcclassifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+<span class="n">y_predict</span>
 </pre></div>
 </div>
 </div>
@@ -1221,7 +1226,7 @@ of each of the features: color, tag, size and mode.</p>
 
 <span class="c1"># Use of decision tree classifiers</span>
 <span class="n">dtc</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
-<span class="n">dtc</span> <span class="o">=</span> <span class="n">dtc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">resultframe</span><span class="p">)</span>
+<span class="n">dtc</span> <span class="o">=</span> <span class="n">dtc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">resultframe</span><span class="p">)</span>
 
 <span class="c1"># prediction</span>
 <span class="n">prediction</span> <span class="o">=</span> <span class="n">dtc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
@@ -1246,81 +1251,82 @@ below. It’s similar to the code we tested before. Take a look at the
 classes and the features.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> 
-    <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-    <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
-    <span class="kn">import</span> <span class="nn">graphviz</span>
-    <span class="kn">import</span> <span class="nn">pydotplus</span>
-    <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">pydotplus</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
 
-    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;nature&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span> 
-            <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;architecture&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;portrait&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;people&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;nature&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;portrait&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;nature&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;people&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;nature&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span> <span class="s1">&#39;portrait&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;architecture&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;people&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;portrait&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;nature&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;people&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span> <span class="s1">&#39;portrait&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;people&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;landscape&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;architecture&#39;</span><span class="p">,</span> <span class="s1">&#39;thumbnail&#39;</span><span class="p">,</span><span class="s1">&#39;landscape&#39;</span><span class="p">]]</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;NotFavorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;NotFavorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;NotFavorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;Favorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;NotFavorite&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;NotFavorite&#39;</span>
-              <span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;nature&quot;</span><span class="p">,</span> <span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;architecture&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;portrait&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;nature&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;portrait&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;nature&quot;</span><span class="p">,</span> <span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;nature&quot;</span><span class="p">,</span> <span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="s2">&quot;portrait&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;architecture&quot;</span><span class="p">,</span> <span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;portrait&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;nature&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span> <span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="s2">&quot;portrait&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;people&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;architecture&quot;</span><span class="p">,</span> <span class="s2">&quot;thumbnail&quot;</span><span class="p">,</span> <span class="s2">&quot;landscape&quot;</span><span class="p">],</span>
+<span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NotFavorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NotFavorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NotFavorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Favorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NotFavorite&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NotFavorite&quot;</span><span class="p">,</span>
+<span class="p">]</span>
 
 
-    <span class="c1">#creating dataframes</span>
-    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">])</span>
-    <span class="n">resultframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;favorite&#39;</span><span class="p">])</span>
+<span class="c1"># creating dataframes</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="s2">&quot;mode&quot;</span><span class="p">])</span>
+<span class="n">resultframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;favorite&quot;</span><span class="p">])</span>
 
-    <span class="c1">#generating numerical labels</span>
-    <span class="n">le1</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-    <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le1</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">])</span>
+<span class="c1"># generating numerical labels</span>
+<span class="n">le1</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le1</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">])</span>
 
-    <span class="n">le2</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-    <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;tag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le2</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;tag&#39;</span><span class="p">])</span>
+<span class="n">le2</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;tag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le2</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;tag&quot;</span><span class="p">])</span>
 
-    <span class="n">le3</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-    <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le3</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">])</span>
+<span class="n">le3</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le3</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">])</span>
 
-    <span class="n">le4</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-    <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le4</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">])</span>
+<span class="n">le4</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le4</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">])</span>
 
-    <span class="n">le5</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-    <span class="n">resultframe</span><span class="p">[</span><span class="s1">&#39;favorite&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le5</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">resultframe</span><span class="p">[</span><span class="s1">&#39;favorite&#39;</span><span class="p">])</span>
+<span class="n">le5</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">resultframe</span><span class="p">[</span><span class="s2">&quot;favorite&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le5</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">resultframe</span><span class="p">[</span><span class="s2">&quot;favorite&quot;</span><span class="p">])</span>
 
-    <span class="c1">#Use of decision tree classifiers</span>
-    <span class="n">dtc</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
-    <span class="n">dtc</span> <span class="o">=</span> <span class="n">dtc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">resultframe</span><span class="p">)</span>
+<span class="c1"># Use of decision tree classifiers</span>
+<span class="n">dtc</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">dtc</span> <span class="o">=</span> <span class="n">dtc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">resultframe</span><span class="p">)</span>
 
-    <span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">dtc</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-          <span class="n">feature_names</span><span class="o">=</span><span class="n">dataframe</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
-          <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-          <span class="n">class_names</span> <span class="o">=</span>
-          <span class="n">le5</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span>
-            <span class="n">resultframe</span><span class="o">.</span><span class="n">favorite</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-         <span class="p">)</span> 
-    <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span> 
-     
-    <span class="n">pydot_graph</span> <span class="o">=</span> <span class="n">pydotplus</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">pydot_graph</span><span class="o">.</span><span class="n">create_png</span><span class="p">())</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span>
+    <span class="n">dtc</span><span class="p">,</span>
+    <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">feature_names</span><span class="o">=</span><span class="n">dataframe</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">rounded</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">class_names</span><span class="o">=</span><span class="n">le5</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">resultframe</span><span class="o">.</span><span class="n">favorite</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+<span class="p">)</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
+
+<span class="n">pydot_graph</span> <span class="o">=</span> <span class="n">pydotplus</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">pydot_graph</span><span class="o">.</span><span class="n">create_png</span><span class="p">())</span>
+<span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1394,7 +1400,7 @@ importance of the different features. Note that we are asking to create
 
 <span class="c1"># Use of random forest classifier</span>
 <span class="n">rfc</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">rfc</span> <span class="o">=</span> <span class="n">rfc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">resultframe</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+<span class="n">rfc</span> <span class="o">=</span> <span class="n">rfc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">resultframe</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 
 <span class="c1"># prediction</span>
 <span class="n">prediction</span> <span class="o">=</span> <span class="n">rfc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
@@ -1482,7 +1488,7 @@ importance of the different features. Note that we are asking to create
     <span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">rfc</span> <span class="o">=</span> <span class="n">rfc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">resultframe</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+<span class="n">rfc</span> <span class="o">=</span> <span class="n">rfc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataframe</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">resultframe</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span>
