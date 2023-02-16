@@ -171,3 +171,4 @@ The criteria for the project evaluation is given below:
         diagrams, a summary of different tasks achieved, and limitations
     3. Bibliography
 
+**Note**: You can check [supplementary examples](../../examples) of noteooks.
