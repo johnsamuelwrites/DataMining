@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>TP 1 &#8212; Data Mining</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +61,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fr/TP1/tp1';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="TP 2" href="../TP2/tp2.html" />
     <link rel="prev" title="TP 0" href="../TP0/tp0.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/datamining.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Data Mining</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/datamining.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/datamining.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -113,417 +156,256 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Français
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Français</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../README.html">
-   Instructions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TP0/tp0.html">
-   TP 0
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   TP 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TP2/tp2.html">
-   TP 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../TP3/tp3.html">
-   TP 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Projet/Projet.html">
-   Projet
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TP0/tp0.html">TP 0</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">TP 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TP2/tp2.html">TP 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TP3/tp3.html">TP 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Projet/Projet.html">Projet</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  English
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">English</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../en/README.html">
-   Instructions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../en/practical0/practical0.html">
-   Practical 0
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../en/practical1/practical1.html">
-   Practical 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../en/practical2/practical2.html">
-   Practical 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../en/practical3/practical3.html">
-   Practical 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../en/Project/project.html">
-   Project
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/README.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/practical0/practical0.html">Practical 0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/practical1/practical1.html">Practical 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/practical2/practical2.html">Practical 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/practical3/practical3.html">Practical 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/Project/project.html">Project</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/johnsamuelwrites/DataMining/master?urlpath=lab/tree/fr/TP1/tp1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/johnsamuelwrites/DataMining/master?urlpath=lab/tree/fr/TP1/tp1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/johnsamuelwrites/DataMining/blob/master/fr/TP1/tp1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/johnsamuelwrites/DataMining/blob/master/fr/TP1/tp1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/fr/TP1/tp1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/fr/TP1/tp1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   Objectifs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercices">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#captures-d-ecran">
-   Captures d’écran
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation">
-     Installation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hello-world">
-     Hello World!
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4">
-   Exercice 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5">
-   Exercice 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6">
-   Exercice 6
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP 1</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   Objectifs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercices">
-     Exercices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#captures-d-ecran">
-   Captures d’écran
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-1">
-   Exercice 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation">
-     Installation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hello-world">
-     Hello World!
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-2">
-   Exercice 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-3">
-   Exercice 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-4">
-   Exercice 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-5">
-   Exercice 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-6">
-   Exercice 6
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#captures-d-ecran">Captures d’écran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="tp-1">
-<h1>TP 1<a class="headerlink" href="#tp-1" title="Permalink to this headline">#</a></h1>
+<h1>TP 1<a class="headerlink" href="#tp-1" title="Permalink to this heading">#</a></h1>
 <section id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">#</a></h2>
+<h2>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Analyser et travailler avec des fichiers CSV, TSV et JSON</p></li>
 <li><p>Interroger des sources de données externes</p></li>
 <li><p>Analyses de données</p></li>
 </ul>
 <section id="exercices">
-<h3>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Exercices<a class="headerlink" href="#exercices" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>Installation et mise en place de pip, scikit-learn et jupyter</p></li>
 <li><p>Analyse et lecture de fichiers CSV/TSV</p></li>
 <li><p>Analyse et lecture des fichiers JSON</p></li>
@@ -533,13 +415,13 @@ title="Print to PDF"
 </section>
 </section>
 <section id="captures-d-ecran">
-<h2>Captures d’écran<a class="headerlink" href="#captures-d-ecran" title="Permalink to this headline">#</a></h2>
+<h2>Captures d’écran<a class="headerlink" href="#captures-d-ecran" title="Permalink to this heading">#</a></h2>
 <p>Des captures d’écran ont été fournies afin que vous puissiez vérifier et comparer si le résultat que vous obtenez correspond à ce que nous attendons de l’étape (ou de l’exercice) en question.</p>
 </section>
 <section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Permalink to this heading">#</a></h2>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
 <p>Exécutez les commandes suivantes sur vos <strong>machines virtuelles</strong></p>
 <p><strong>pip</strong></p>
 <p>Pour installer <code class="docutils literal notranslate"><span class="pre">pip</span></code>, vous devez exécuter les commandes suivantes sur votre terminal :</p>
@@ -564,7 +446,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">matplotlib</span></code></p>
 </section>
 <section id="hello-world">
-<h3>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h3>
+<h3>Hello World!<a class="headerlink" href="#hello-world" title="Permalink to this heading">#</a></h3>
 <p>Si votre installation est réussie, vous pouvez exécuter la commande suivante pour cloner le répertoire:</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/johnsamuelwrites/DataMining</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">DataMining</span></code></p>
@@ -611,10 +493,10 @@ Vous pouvez cliquer sur votre Notebook à tout moment pour continuer à travaill
 </section>
 </section>
 <section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Permalink to this heading">#</a></h2>
 <p>La plupart du temps, nous travaillons avec des fichiers CSV (comma-separated values) pour l’analyse des données. Un fichier CSV est constitué d’une ou plusieurs lignes et chaque ligne comporte une ou plusieurs valeurs séparées par des virgules. On peut considérer chaque ligne comme une rangée et chaque valeur d’une ligne comme une valeur de colonne. La première ligne est parfois utilisée pour décrire les noms des colonnes.</p>
 <p>Copier le fichier
-<span class="xref myst">pl.csv</span> dans votre répertoire de travail actuel (où vous exécutez Jupyter : TP1) et utilisez le code suivant pour analyser le fichier csv. Remarquez les noms de colonnes et les types de données (U100, i4), où U100 correspond à une chaîne unicode de 100 caractères et i4 correspond à un entier signé de 32 bits.</p>
+<a class="reference download internal" download="" href="../../_downloads/8bd6c4fffa907a011f0abc1d5130d114/pl.csv"><span class="xref download myst">pl.csv</span></a> dans votre répertoire de travail actuel (où vous exécutez Jupyter : TP1) et utilisez le code suivant pour analyser le fichier csv. Remarquez les noms de colonnes et les types de données (U100, i4), où U100 correspond à une chaîne unicode de 100 caractères et i4 correspond à un entier signé de 32 bits.</p>
 <p>Veuillez consulter la liste complète des dtypes <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.dtypes.html">ici</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,7 +529,7 @@ Avant de continuer, examinez en profondeur
 (<strong>Ref:</strong>
 (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html</a>)).</p>
 <p>Copier le fichier
-<span class="xref myst">pl.tsv</span> dans votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier TSV.</p>
+<a class="reference download internal" download="" href="../../_downloads/3efbb5784ae36153542449224c638155/pl.tsv"><span class="xref download myst">pl.tsv</span></a> dans votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier TSV.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -683,10 +565,10 @@ tabulation ((\t)).</p>
 </div>
 </section>
 <section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Permalink to this heading">#</a></h2>
 <p>La plupart des sources de données externes peuvent fournir leurs données au format JSON.
 Notre prochain exercice consiste à analyser les fichiers JSON. Copiez le fichier
-<span class="xref myst">pl.json</span> à votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier JSON. Dans cet exercice, nous utilisons <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">Pandas python
+<a class="reference download internal" download="" href="../../_downloads/02d8e3487eae86363474b4252d118db1/pl.json"><span class="xref download myst">pl.json</span></a> à votre répertoire de travail actuel et utilisez le code suivant pour analyser le fichier JSON. Dans cet exercice, nous utilisons <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">Pandas python
 package</a> (<strong>Ref:</strong>
 (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/">https://pandas.pydata.org/pandas-docs/stable/</a>)) d’analyser le fichier JSON pour obtenir un <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html">Pandas DataFrame</a>
 (<strong>Ref:</strong>
@@ -795,13 +677,13 @@ Consultez <a class="reference external" href="https://pandas.pydata.org/pandas-d
 </div>
 </section>
 <section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Permalink to this heading">#</a></h2>
 <p>Dans cet exercice, nous examinerons comment télécharger des données à partir
 des sources de données externes utilisant des interfaces d’interrogation spéciales. Par exemple, les données ci-dessus ont été obtenues à partir de <a class="reference external" href="https://query.wikidata.org/">Wikidata query</a></p>
 <p><img alt="" src="fr/TP1/images/wikidataquery.png" /></p>
 <p>Vous trouverez ci-dessous le code permettant de lire les données provenant d’une source externe. Utilisez ce
 <a class="reference external" href="https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&amp;format=json">url</a>:
-(<a class="reference external" href="https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear">https://query.wikidata.org/sparql?query=SELECT ?languageLabel (YEAR(?inception) as ?year</a>)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&amp;format=json).</p>
+(<a class="reference external" href="https://query.wikidata.org/sparql?query=SELECT%20%3FlanguageLabel%20(YEAR(%3Finception)%20as%20%3Fyear">https://query.wikidata.org/sparql?query=SELECT %3FlanguageLabel (YEAR(%3Finception) as %3Fyear</a>)%0AWHERE%0A%7B%0A%20%20%23instances%20of%20programming%20language%0A%20%20%3Flanguage%20wdt%3AP31%20wd%3AQ9143%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20wdt%3AP571%20%3Finception%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FlanguageLabel.%0A%20%20FILTER(lang(%3FlanguageLabel)%20%3D%20%22en%22)%0A%7D%0AORDER%20BY%20%3Fyear%0ALIMIT%20100&amp;format=json).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
@@ -854,7 +736,7 @@ des sources de données externes utilisant des interfaces d’interrogation spé
 </div>
 </section>
 <section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Permalink to this heading">#</a></h2>
 <p>Ce exercice utilisera quelques analyses de données de base. Poursuivant avec le code de l’exercice 1.4, comptons le nombre de langages de programmation sortis en un an.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -873,7 +755,7 @@ des sources de données externes utilisant des interfaces d’interrogation spé
 </div>
 </div>
 </div>
-<p>Jusqu’à présent, nous avons travaillé avec des tableaux à deux colonnes. Maintenant, nous nous concentrons sur des tableaux à trois colonnes (langage de programmation, année, paradigme). Copiez le fichier <span class="xref myst">plparadigm.json</span> dans votre répertoire de travail. Et testez le programme suivant.</p>
+<p>Jusqu’à présent, nous avons travaillé avec des tableaux à deux colonnes. Maintenant, nous nous concentrons sur des tableaux à trois colonnes (langage de programmation, année, paradigme). Copiez le fichier <a class="reference download internal" download="" href="../../_downloads/55da9666f5708cc02da782825e24d384/plparadigm.json"><span class="xref download myst">plparadigm.json</span></a> dans votre répertoire de travail. Et testez le programme suivant.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.io.json</span> <span class="kn">import</span> <span class="n">json_normalize</span>
@@ -927,7 +809,7 @@ LIMIT 1000
 [opérations disponibles dans la bibliothèque des pandas] (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>)
 (<strong>Ref:</strong>
 (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>))):</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>La population des pays dans l’ordre alphabétique de leur nom et
 par ordre croissant d’année.</p></li>
 <li><p>La dernière population disponible de chaque pays</p></li>
@@ -957,7 +839,7 @@ LIMIT 10000
 <p>Maintenant, calculez et affichez les informations suivantes (en utilisant diverses <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">opérations disponibles dans la bibliothèque des pandas</a>
 (<strong>Ref:</strong>
 (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">https://pandas.pydata.org/pandas-docs/stable/10min.html</a>))):</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Le nombre d’articles publiés sur différents sujets chaque année.</p></li>
 <li><p>Principal sujet d’intérêt pour la communauté scientifique chaque année (sur la base
 sur les résultats de l’interrogation ci-dessus).</p></li>
@@ -968,7 +850,7 @@ les résultats de l’interrogation ci-dessus) depuis 2010.</p></li>
 <p><strong>Remarque</strong>: Si vous obtenez des erreurs de dépassement de temps (time-out), veuillez modifier la LIMITE à des valeurs inférieures (1000, 2000, 5000).</p>
 </section>
 <section id="exercice-6">
-<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Permalink to this headline">#</a></h2>
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Permalink to this heading">#</a></h2>
 <p>Dans notre dernier exercice, nous allons interroger Wikidata et obtenir les URL des images. Ensuite, nous téléchargerons ces images.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1083,50 +965,119 @@ les résultats de l’interrogation ci-dessus) depuis 2010.</p></li>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../TP0/tp0.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TP 0</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../TP0/tp0.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">TP 0</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../TP2/tp2.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../TP2/tp2.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">TP 2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By John Samuel<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectifs">Objectifs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#captures-d-ecran">Captures d’écran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Samuel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
