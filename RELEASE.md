@@ -1,3 +1,16 @@
+# v1.2
+===============================================================================
+- Update project description
+- Add more Pandas functions
+- Add more examples of ConfusionMatrixDisplay
+- Add detailed examples of RFC and decision trees
+- Indent code using black
+- Add additional exercise
+- Correct errors
+- Update MLPClassifier and SVM classifier examples
+- Add detailed example on Perceptron
+- Move supplementary exercises and update links
+
 # v1.1
 ===============================================================================
 - Add support for Jupyterbook
