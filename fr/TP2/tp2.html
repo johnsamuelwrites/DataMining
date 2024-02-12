@@ -429,7 +429,7 @@ et <a class="reference external" href="http://scikit-learn.org/stable/modules/sv
 </section>
 <section id="exercise-1">
 <h2>Exercise 1 [★]<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://matplotlib.org/api/pyplot_api.html">matplotlib</a> peut être utilisé pour tracer des graphiques. Vous trouverez ci-dessous un code très simple avec seulement des valeurs x. Après avoir importé la bibliothèque <em>matplotlib</em>, nous initialisons les valeurs de x et nous traçons le graphique.</p>
+<p><a class="reference external" href="https://matplotlib.org/stable/api/pyplot_summary.html">matplotlib</a> peut être utilisé pour tracer des graphiques. Vous trouverez ci-dessous un code très simple avec seulement des valeurs x. Après avoir importé la bibliothèque <em>matplotlib</em>, nous initialisons les valeurs de x et nous traçons le graphique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
@@ -530,6 +530,13 @@ Rappelons que lors de la <a class="reference internal" href="../TP1/tp1.html"><s
 sur plusieurs colonnes. Des sous-parcelles peuvent être utilisées pour visualiser ces données.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>--upgrade
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">json_normalize</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">json</span>
@@ -561,7 +568,6 @@ sur plusieurs colonnes. Des sous-parcelles peuvent être utilisées pour visuali
 </div>
 </div>
 </div>
-<p><img alt="" src="fr/TP2/images/subplots.png" /></p>
 <p>Modifiez le code ci-dessus, afin que nous puissions obtenir des informations visuelles sur le nombre de langages de différents paradigmes de programmation publiés au cours de chaque année disponible, c’est-à-dire que pour chaque année, nous voulons voir le nombre de langages de programmation appartenant à chaque paradigme de langage de programmation.</p>
 </section>
 <section id="exercice-2">

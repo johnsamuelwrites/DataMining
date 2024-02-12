@@ -1,6 +1,7 @@
 # Instructions 
 
 ## Sujets de travaux pratiques et projet
+* [Installation](./installation.ipynb)
 * [Notebook Jupyter 0](./TP0/tp0.ipynb)
 * [Notebook Jupyter 1](./TP1/tp1.ipynb)
 * [Notebook Jupyter 2](./TP2/tp2.ipynb)
