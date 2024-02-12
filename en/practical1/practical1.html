@@ -181,6 +181,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../fr/README.html">Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fr/TP0/tp0.html">TP 0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fr/TP1/tp1.html">TP 1</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../../fr/TP2/tp2.html">TP 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fr/TP3/tp3.html">TP 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../fr/Projet/Projet.html">Projet</a></li>
@@ -392,14 +400,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshots">Screenshots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshots">Screenshots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
@@ -428,97 +432,20 @@ document.write(`
 <section id="exercises">
 <h3>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Installation and setting up of pip, scikit-learn and jupyter</p></li>
 <li><p>Parsing and reading CSV/TSV files</p></li>
 <li><p>Parsing and reading JSON files</p></li>
 <li><p>Querying external data sources (Query endpoints and API)</p></li>
 <li><p>Performing classical data analyses</p></li>
 </ol>
 </section>
-</section>
 <section id="screenshots">
-<h2>Screenshots<a class="headerlink" href="#screenshots" title="Link to this heading">#</a></h2>
+<h3>Screenshots<a class="headerlink" href="#screenshots" title="Link to this heading">#</a></h3>
 <p>Screenshots have been provided so that you can check and compare whether the output you have is the same as what we want from the step (or exercise) in question.</p>
+</section>
 </section>
 <section id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
-<section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
-<p>Run the following commands on your <strong>virtual machines</strong></p>
-<p><strong>pip</strong></p>
-<p>For installing <code class="docutils literal notranslate"><span class="pre">pip</span></code>, you need to run the following commands on your terminal:</p>
-<p><strong>Note</strong>: Please note that all the lines starting with <code class="docutils literal notranslate"><span class="pre">$</span> </code> need to be run on the terminal.</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-dev</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-pip</span></code></p>
-<p>Installation of virtualenv</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code></p>
-<p>Installation inside virtualenv</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">virtualenv</span> <span class="pre">--system-site-packages</span> <span class="pre">-p</span> <span class="pre">python3</span> <span class="pre">env</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">source</span> <span class="pre">env/bin/activate</span></code></p>
-<p>Installation of jupyter</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--force-reinstall</span>&#160; <span class="pre">--no-cache</span> <span class="pre">jupyter</span></code></p>
-<p>Installation of scikit-learn</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scikit-learn</span></code></p>
-<p>Installation of numpy</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy</span></code></p>
-<p>Installation of pandas</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
-<p>Installation of matplotlib</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">matplotlib</span></code></p>
-</section>
-<section id="hello-world">
-<h3>Hello World!<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h3>
-<p>If your installation is successful, you can run the following command to clone the repository</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/johnsamuelwrites/DataMining</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">DataMining</span></code></p>
-<p>Run Jupyter Notebook (or Lab)</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
-<p>or</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">jupyter</span> <span class="pre">lab</span></code></p>
-<p>A new page will appear on your browser and you will see the following
-image <img alt="" src="../../_images/jupyter.png" /></p>
-<p>Click on the tab ‘Running’. You see no notebooks running (if it’s the
-first time you are running jupyter).
-<img alt="" src="../../_images/jupyterrunning.png" /></p>
-<p>Go back to the ‘Files’ tab and click on New and choose Python3 under
-Notebook <img alt="" src="../../_images/jupyternotebook.png" /></p>
-<p>A new tab will open as shown below. Write the following code in the cell</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="" src="en/practical1/images/jupyterprogram.png" /></p>
-<p>You can go to any cell and press ‘Run’</p>
-<p>By default, your Notebook is named ‘Untitled’. You can rename it as
-shown below, by clicking on the name ‘Untitled’ and by giving a new
-name.</p>
-<p><img alt="" src="en/practical1/images/jupyterrenamenotebook.png" /></p>
-<p>Now go back to the ‘Files’ tab and you can see the renamed notebook.
-You can click on your notebook at any time to continue working.
-<img alt="" src="en/practical1/images/jupyternotebooks.png" /></p>
-<p>Now let’s continue working on your current Notebook. Write the
-following code to check whether scikit is properly installed.</p>
-<p>The code below shows the available datasets from scikit.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">datasets</span><span class="o">.</span><span class="n">__all__</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="" src="en/practical1/images/jupyterscikit.png" /></p>
-<p>Now, you are ready to go!!</p>
-<p><strong>Note:</strong>, You can stop Jupyter notebook at any point by typing
-“Ctrl+c” on the terminal and by pressing ‘y’ to confirm shutdown.</p>
-<p>Practise the (optional) exercises given in <a class="reference internal" href="../practical0/practical0.html"><span class="std std-doc">practicals
-0</span></a>.</p>
-</section>
+<p>Practise the exercises given in <a class="reference internal" href="../practical0/practical0.html"><span class="std std-doc">practicals 0</span></a>.</p>
 </section>
 <section id="exercise-2">
 <h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
@@ -1067,14 +994,10 @@ the above query results) since 2010.</p></li>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshots">Screenshots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshots">Screenshots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World!</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
