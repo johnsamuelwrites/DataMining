@@ -30,7 +30,7 @@ jobs:
         cd en/
         papermill installation.ipynb tmp.ipynb
         rm tmp.ipynb
-        cd ../ ; en/practical0/
+        cd ../ ; cd en/practical0/
         papermill practical0.ipynb tmp.ipynb
         rm tmp.ipynb
         cd ../../ ; cd en/practical1/
