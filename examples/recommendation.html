@@ -413,6 +413,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recommendation-system">
 <h1>Recommendation System<a class="headerlink" href="#recommendation-system" title="Link to this heading">#</a></h1>
+<p>Two approaches to build a recommendation system with some common processes are :</p>
+<ol class="arabic simple">
+<li><p>Classfication Algorithms</p></li>
+<li><p>Clustering Algorithms</p></li>
+</ol>
+<p><img alt="" src="../_images/DataMiningProject.png" /></p>
 <section id="using-clustering-algorithm">
 <h2>Using Clustering algorithm<a class="headerlink" href="#using-clustering-algorithm" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -469,6 +475,15 @@ document.write(`
 <span class="n">recommendations</span> <span class="o">=</span> <span class="n">recommend_items</span><span class="p">(</span><span class="n">cluster</span><span class="p">,</span> <span class="n">data_with_clusters</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recommended items:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">recommendations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Recommended items:
+   Color Category       Size       Type  Cluster
+8   blue   people     medium   portrait        0
+0  green   nature  thumbnail  landscape        0
+6   blue   nature  thumbnail   portrait        0
 </pre></div>
 </div>
 </div>
@@ -543,6 +558,12 @@ document.write(`
 <span class="n">encoded_item</span> <span class="o">=</span> <span class="p">[</span><span class="n">label_encoders</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span><span class="n">val</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_item</span><span class="p">)]</span>
 <span class="n">prediction</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">encoded_item</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prediction for the sample item: </span><span class="si">{</span><span class="n">prediction</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.6666666666666666
+Prediction for the sample item: Favorite
 </pre></div>
 </div>
 </div>
