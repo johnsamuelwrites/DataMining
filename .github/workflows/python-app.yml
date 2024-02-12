@@ -64,5 +64,6 @@ jobs:
         papermill perceptron.ipynb tmp.ipynb
         papermill rfc.ipynb tmp.ipynb
         papermill svm.ipynb tmp.ipynb
+        papermill recommendation.ipynb tmp.ipynb
         rm tmp.ipynb
 
