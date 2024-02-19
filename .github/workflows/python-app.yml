@@ -58,6 +58,7 @@ jobs:
         papermill tp3.ipynb tmp.ipynb
         rm tmp.ipynb
         cd ../../ ; cd ./examples/
+        papermill Examples-Visualization.ipynb tmp.ipynb
         papermill Examples.ipynb tmp.ipynb
         papermill decisiontree.ipynb tmp.ipynb
         papermill mlp.ipynb tmp.ipynb
