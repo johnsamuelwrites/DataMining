@@ -2,6 +2,7 @@
 
 Some detailed examples are given here:
 
+- [Visualization](./Examples-Visualization.ipynb)
 - [General Examples](Examples.ipynb)
 - [Perceptron](perceptron.ipynb)
 - [Support Vector Machines](svm.ipynb)
