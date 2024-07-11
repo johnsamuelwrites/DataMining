@@ -1,3 +1,13 @@
+# v1.3
+===============================================================================
+- Separate installation page
+- Correct errors and remove installation instructions from practicals
+- Add examples of recommendation system with sample data
+- Add diagram to explain recommendation
+- Add example on visualization
+- Add example on ipywidgets and user interaction
+- Update requirements.txt
+
 # v1.2
 ===============================================================================
 - Update project description
