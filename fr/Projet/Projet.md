@@ -2,8 +2,13 @@
 
 ## Objectifs
 
-- Mise en place d'un [système de recommandation](https://en.wikipedia.org/wiki/Recommender_system) bien commenté en Python
-- Rédaction du rapport de projet.
+- Mise en place d'un [système de recommandation](https://en.wikipedia.org/wiki/Recommender_system) bien commenté en Python. 
+  - Automatiser la collecte et l’annotation des images.
+  - Analyser les données pour identifier des tendances.  
+  - Visualiser efficacement les résultats de l’analyse.  
+  - Construire et valider un système de recommandation.  
+  - Effectuer des tests approfondis de tous les composants.  
+- Présenter les résultats dans un rapport détaillé.  
 
 
 L'objectif de ce projet est de recommander des images en fonction des préférences
@@ -86,7 +91,7 @@ Les utilisateurs peuvent également visualiser les informations ci-dessus relati
 
 ## Système de recommandation
 
-Êtes-vous maintenant prêt à recommander des images à un utilisateur ? Dans cette tâche, votre objectif est de construire le système de recommandation. Quelle approche avez-vous décidé de prendre ? Filtrage collaboratif, basé sur le contenu ou une approche hybride ? Pour chaque utilisateur, êtes-vous maintenant en mesure de construire une profil ? Quel type d'information avez-vous utilisé pour établir un profil d'utilisateur profil ? Qu'est-ce qui manque ? Quelles sont les limites de votre proposition ?
+Êtes-vous maintenant prêt à recommander des images à un utilisateur ? Dans cette tâche, votre objectif est de construire le système de recommandation. Quelle approche avez-vous décidé de prendre ? Filtrage collaboratif, basé sur le contenu ou une approche hybride ? Quel(s) algorithme(s) avez-vous choisi (classification, clustering, ...) ? Pour chaque utilisateur, êtes-vous maintenant en mesure de construire une profil ? Quel type d'information avez-vous utilisé pour établir un profil d'utilisateur profil ? Qu'est-ce qui manque ? Quelles sont les limites de votre proposition ?
 
 ## Tests
 

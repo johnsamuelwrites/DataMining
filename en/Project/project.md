@@ -2,8 +2,13 @@
 
 ## Goals
 
--   Implementation of a well-commented [Recommender system](https://en.wikipedia.org/wiki/Recommender_system) in Python
--   Writing of project report.
+- Implementation of a well-commented [Recommender system](https://en.wikipedia.org/wiki/Recommender_system) in Python.
+  - Automate image data collection and annotation.  
+  - Analyze data to identify trends.
+  - Visualize analysis results effectively.  
+  - Build and validate a recommendation system.
+  - Ensure thorough testing of all components.  
+- Present findings in a detailed report.  
 
 
 The goal of this project is to recommend images based on the preferences
@@ -95,7 +100,8 @@ let the users visualize information related to their own user profile.
 
 Are you now ready to recommend images to a user? In this task, your goal
 is to build the recommendation system. Which approach did you decide to
-take? Collaborative filtering, content-based, or a hybrid approach? For
+take? Collaborative filtering, content-based, or a hybrid approach? Which
+algorithm(s) did you choose (classifcation, clustering,...) ? For
 every user, are you now in a position to build a user-preference
 profile? What type of information did you use for building a user
 profile? What\'s missing? What are the limitations of your proposed
@@ -130,7 +136,7 @@ English) in PDF format detailing the following:
 ## Submission
 
 
--   Please **do not** submit your image.
+-   Please **do not** submit your images.
 -   Rename your project report as Name1\_Name2\_\[Name3\].pdf, where
     Name1, Name2, etc. are your names.
 -   Add your project report in your project folder.
