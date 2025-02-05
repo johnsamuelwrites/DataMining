@@ -408,7 +408,10 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-data">Exporting Data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4 ★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4 ★★</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-data-for-a-specific-time-period">Filter Data for a Specific Time Period</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5 ★★★</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6 ★★★</a></li>
 </ul>
@@ -914,7 +917,7 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter rows where &quot;languageLabel&quot; is &quot;C&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter rows where &quot;languageLabel&quot; is &quot;BCPL&quot;</span>
 <span class="n">filtered_language</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;BCPL&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">filtered_language</span><span class="p">)</span>
 </pre></div>
@@ -958,6 +961,7 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </div>
 </div>
 </div>
+<p>Save it as a CSV file as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save to CSV file</span>
@@ -966,7 +970,6 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </div>
 </div>
 </div>
-<p>Save it as a CSV file as well.</p>
 <p><strong>Question:</strong>  What is the difference between <code class="docutils literal notranslate"><span class="pre">json.load()</span></code> and <code class="docutils literal notranslate"><span class="pre">json.loads()</span></code> in Python?</p>
 </section>
 </section>
@@ -1043,7 +1046,9 @@ this
 </div>
 </div>
 </div>
-<p>Filter Data for a Specific Time Period: You can filter the data to get programming languages that were invented in a specific range of years (e.g., between 1980 and 2000). This can be useful if you’re only interested in languages created during a certain period.</p>
+<section id="filter-data-for-a-specific-time-period">
+<h3>Filter Data for a Specific Time Period<a class="headerlink" href="#filter-data-for-a-specific-time-period" title="Link to this heading">#</a></h3>
+<p>You can filter the data to get programming languages that were invented in a specific range of years (e.g., between 1980 and 2000). This can be useful if you’re only interested in languages created during a certain period.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter programming languages created between 1980 and 2000</span>
@@ -1053,6 +1058,7 @@ this
 </div>
 </div>
 </div>
+<p>Count Languages per Year: A useful operation could be to count how many languages were invented each year. This can give you a better understanding of trends in programming language creation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count the number of languages created per year</span>
@@ -1074,7 +1080,7 @@ this
 </div>
 <p><strong>Question</strong>:</p>
 <p>What is the trend in the number of programming languages being created over time? Based on the filtered data (for languages created between 1960 and 2000), identify the year with the highest number of programming languages created. Furthermore, create a new dataframe containing only the top 5 most popular programming languages (by count) during this period.</p>
-<p>Count Languages per Year: A useful operation could be to count how many languages were invented each year. This can give you a better understanding of trends in programming language creation.</p>
+</section>
 </section>
 <section id="exercise-5">
 <h2>Exercise 5 ★★★<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h2>
@@ -1413,7 +1419,10 @@ Use image processing code below to classify skyscrapers based on their skyline c
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-data">Exporting Data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4 ★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4 ★★</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-data-for-a-specific-time-period">Filter Data for a Specific Time Period</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5 ★★★</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6 ★★★</a></li>
 </ul>
