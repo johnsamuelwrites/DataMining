@@ -394,9 +394,26 @@
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#captures-d-ecran">Captures d’écran</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1 ★</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2 ★</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3 ★★</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4 ★★</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2 ★</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques-importantes">Remarques importantes :</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explorer-l-acces-aux-donnees-colonne-par-colonne">Explorer l’accès aux données colonne par colonne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrer-les-donnees-par-annee">Filtrer les données par année</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerer-les-donnees-manquantes-ou-incorrectes">Gérer les données manquantes ou incorrectes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3 ★★</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-valeurs-manquantes">Gestion des valeurs manquantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrage-des-donnees">Filtrage des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupement-et-agregation">Groupement et agrégation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exportation-des-donnees">Exportation des données</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4 ★★</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrer-les-donnees-pour-une-periode-specifique">Filtrer les données pour une période spécifique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compter-les-langages-par-annee">Compter les langages par année</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-les-langages-ayant-la-date-de-creation-la-plus-recente">Identifier les langages ayant la date de création la plus récente</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5 ★★★</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6 ★★★</a></li>
 </ul>
@@ -437,6 +454,37 @@
 </section>
 <section id="exercice-1">
 <h1>Exercice 1 ★<a class="headerlink" href="#exercice-1" title="Link to this heading">#</a></h1>
+<p>Nous installons d’abord les packages nécessaires. Dans les notebooks Jupyter, vous pouvez utiliser la commande <code class="docutils literal notranslate"><span class="pre">!</span></code> pour exécuter des commandes shell directement depuis une cellule du notebook.<br />
+Pour installer des packages Python tels que NumPy et pandas, vous pouvez utiliser la commande suivante :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sparqlwrapper
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pour importer les bibliothèques NumPy et pandas dans un notebook Jupyter, utilisez les instructions d’importation Python suivantes :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">SPARQLWrapper</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’attribut <code class="docutils literal notranslate"><span class="pre">__version__</span></code> est un moyen courant d’accéder aux informations de version d’un package Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">plot</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sw</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Effectuez les exercices donnés dans le <a class="reference internal" href="../TP0/tp0.html"><span class="std std-doc">TP 0</span></a>.</p>
 </section>
 <section id="exercice-2">
@@ -461,6 +509,26 @@
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code></strong> : Cette fonction charge des données à partir d’un fichier texte, chaque ligne du fichier étant convertie en un élément d’un tableau NumPy.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.csv&quot;</span></code></strong> : Le chemin vers le fichier CSV. Vous devez le remplacer par le chemin réel où se trouve votre fichier CSV.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dtype={&quot;names&quot;:</span> <span class="pre">(&quot;name&quot;,</span> <span class="pre">&quot;year&quot;),</span> <span class="pre">&quot;formats&quot;:</span> <span class="pre">(&quot;U100&quot;,</span> <span class="pre">&quot;i4&quot;)}</span></code></strong> : Spécifie le type de données du tableau NumPy résultant. Ici, <code class="docutils literal notranslate"><span class="pre">dtype</span></code> est défini comme un dictionnaire avec :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">names</span></code> : Un tuple indiquant les noms des colonnes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formats</span></code> : Un tuple indiquant le type de données de chaque colonne. <code class="docutils literal notranslate"><span class="pre">&quot;U100&quot;</span></code> représente une chaîne Unicode de longueur maximale 100, et <code class="docutils literal notranslate"><span class="pre">&quot;i4&quot;</span></code> représente un entier sur 4 octets.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">skiprows=1</span></code></strong> : Ce paramètre permet d’ignorer la première ligne du fichier CSV, supposée être l’en-tête.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">delimiter=&quot;,&quot;</span></code></strong> : Spécifie le délimiteur séparant les valeurs dans le fichier CSV. Ici, il s’agit d’une virgule.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">encoding=&quot;UTF-8&quot;</span></code></strong> : Spécifie l’encodage du fichier. UTF-8 est un encodage couramment utilisé pour les fichiers texte.</p></li>
+</ul>
+<section id="remarques-importantes">
+<h2>Remarques importantes :<a class="headerlink" href="#remarques-importantes" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Chemin du fichier</strong> : Assurez-vous que le chemin du fichier (<code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.csv&quot;</span></code>) est correct par rapport à votre notebook Jupyter ou votre script. Vous devrez peut-être l’ajuster en fonction de l’emplacement réel de votre fichier CSV.</p></li>
+<li><p><strong>Structure du fichier CSV</strong> : Le fichier CSV doit contenir une ligne d’en-tête correspondant aux noms de colonnes spécifiés dans le paramètre <code class="docutils literal notranslate"><span class="pre">dtype</span></code>, suivie des lignes de données.</p></li>
+<li><p><strong>Types de données des colonnes</strong> : Vérifiez que les types de données (<code class="docutils literal notranslate"><span class="pre">&quot;U100&quot;</span></code> pour les chaînes de caractères et <code class="docutils literal notranslate"><span class="pre">&quot;i4&quot;</span></code> pour les entiers) correspondent bien aux données réelles de votre fichier CSV.</p></li>
+</ol>
 <p><img alt="" src="fr/TP1/images/numpycsv.png" /></p>
 <p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">Soutien du CSV en numpy</a>
 (<strong>Ref:</strong>
@@ -495,6 +563,20 @@ Avant de continuer, examinez en profondeur
 </div>
 <p>Les changements dans le code ci-dessus par rapport au précédent. Un fichier TSV est un fichier séparé par des tabulations, c’est-à-dire que les valeurs des colonnes sont séparées par un
 tabulation ((\t)).</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code></strong> : Cette fonction charge des données à partir d’un fichier texte, chaque ligne du fichier étant convertie en un élément d’un tableau NumPy.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.tsv&quot;</span></code></strong> : Le chemin vers le fichier TSV. Vous devez le remplacer par le chemin réel où se trouve votre fichier TSV.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dtype={&quot;names&quot;:</span> <span class="pre">(&quot;name&quot;,</span> <span class="pre">&quot;year&quot;),</span> <span class="pre">&quot;formats&quot;:</span> <span class="pre">(&quot;U100&quot;,</span> <span class="pre">&quot;i4&quot;)}</span></code></strong> : Spécifie le type de données du tableau NumPy résultant. Ici, <code class="docutils literal notranslate"><span class="pre">dtype</span></code> est défini comme un dictionnaire avec :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">names</span></code> : Un tuple indiquant les noms des colonnes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formats</span></code> : Un tuple indiquant le type de données de chaque colonne. <code class="docutils literal notranslate"><span class="pre">&quot;U100&quot;</span></code> représente une chaîne Unicode de longueur maximale 100, et <code class="docutils literal notranslate"><span class="pre">&quot;i4&quot;</span></code> représente un entier sur 4 octets.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">skiprows=1</span></code></strong> : Ce paramètre permet d’ignorer la première ligne du fichier TSV, supposée être l’en-tête.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">delimiter=&quot;\t&quot;</span></code></strong> : Spécifie le délimiteur séparant les valeurs dans le fichier TSV. Ici, il s’agit d’une tabulation.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">encoding=&quot;UTF-8&quot;</span></code></strong> : Spécifie l’encodage du fichier. UTF-8 est un encodage couramment utilisé pour les fichiers texte.</p></li>
+</ul>
+<p>Pour compter le nombre de lignes dans votre jeu de données, vous pouvez utiliser <code class="docutils literal notranslate"><span class="pre">len()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">))</span>
@@ -510,6 +592,106 @@ tabulation ((\t)).</p>
 </div>
 </div>
 </div>
+</section>
+<section id="explorer-l-acces-aux-donnees-colonne-par-colonne">
+<h2>Explorer l’accès aux données colonne par colonne<a class="headerlink" href="#explorer-l-acces-aux-donnees-colonne-par-colonne" title="Link to this heading">#</a></h2>
+<p>Extraire et afficher uniquement la colonne <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code> du jeu de données.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Extraire et afficher uniquement la colonne <code class="docutils literal notranslate"><span class="pre">&quot;year&quot;</span></code> du jeu de données.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filtrer-les-donnees-par-annee">
+<h2>Filtrer les données par année<a class="headerlink" href="#filtrer-les-donnees-par-annee" title="Link to this heading">#</a></h2>
+<p>Trouvez et affichez toutes les lignes où l’année est supérieure à 1960.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filtered_data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1960</span><span class="p">]</span>
+<span class="n">filtered_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="gerer-les-donnees-manquantes-ou-incorrectes">
+<h2>Gérer les données manquantes ou incorrectes<a class="headerlink" href="#gerer-les-donnees-manquantes-ou-incorrectes" title="Link to this heading">#</a></h2>
+<p>Vérifiez le code suivant qui contient certaines valeurs manquantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enregistrez un fichier CSV modifié avec une valeur manquante (manuellement ou via script)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;pl_missing.csv&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;Simula&quot;</span><span class="p">,</span> <span class="mi">1962</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)],</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Tentez de charger avec np.loadtxt (cela provoquera une erreur)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">dataset_with_missing_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;pl_missing.csv&quot;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur :&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Charger avec np.genfromtxt (gère les valeurs manquantes)</span>
+<span class="n">dataset_with_missing_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;pl_missing.csv&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
+<span class="n">dataset_with_missing_values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Utiliser <code class="docutils literal notranslate"><span class="pre">filling_values</span></code> pour une colonne spécifique</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Charger le jeu de données avec des valeurs par défaut pour les entrées manquantes</span>
+<span class="n">dataset_with_missing_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+    <span class="s2">&quot;pl_missing.csv&quot;</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;U100&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)],</span>
+    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
+    <span class="n">names</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># La première ligne contient les noms des colonnes</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+    <span class="n">missing_values</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1"># Traiter les valeurs vides comme manquantes</span>
+    <span class="n">filling_values</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>  <span class="c1"># Remplacer les années manquantes par 0</span>
+<span class="p">)</span>
+
+<span class="n">dataset_with_missing_values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code> générera une erreur en raison des valeurs manquantes. <code class="docutils literal notranslate"><span class="pre">np.genfromtxt()</span></code> chargera le jeu de données, en remplaçant les valeurs manquantes par <code class="docutils literal notranslate"><span class="pre">nan</span></code> ou une valeur par défaut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Convertir les données en DataFrame Pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Convertir le tableau structuré NumPy en DataFrame Pandas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="c1"># Afficher le DataFrame</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question</strong> : Quelle est la différence entre <code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code> et <code class="docutils literal notranslate"><span class="pre">np.genfromtxt()</span></code> lors de la lecture de fichiers CSV ? Quand faut-il privilégier l’un par rapport à l’autre ?</p>
+</section>
 </section>
 <section id="exercice-3">
 <h1>Exercice 3 ★★<a class="headerlink" href="#exercice-3" title="Link to this heading">#</a></h1>
@@ -537,13 +719,32 @@ Consultez <a class="reference external" href="https://pandas.pydata.org/pandas-d
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
+<span class="c1"># Charger les données JSON à partir d&#39;un fichier</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
+
+<span class="c1"># Convertir les données JSON en un DataFrame pandas</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Ce code utilise la bibliothèque pandas de Python pour travailler avec des données JSON.</p>
+<p>*. <strong>Imports</strong> :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">pandas</span> <span class="pre">import</span> <span class="pre">json_normalize</span></code> : Importe la fonction <code class="docutils literal notranslate"><span class="pre">json_normalize</span></code> de la bibliothèque pandas. Cette fonction est utilisée pour aplatir les données JSON en un DataFrame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code> : Importe la bibliothèque pandas avec l’alias <code class="docutils literal notranslate"><span class="pre">pd</span></code>, qui est une convention courante.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">json</span></code> : Importe le module intégré <code class="docutils literal notranslate"><span class="pre">json</span></code> de Python pour manipuler les données JSON.</p></li>
+</ul>
+<p>*. <strong>Chargement des données JSON</strong> :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">json.load(open(&quot;../data/pl.json&quot;))</span></code> : Ouvre un fichier JSON situé à <code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.json&quot;</span></code> et charge son contenu dans la variable <code class="docutils literal notranslate"><span class="pre">data</span></code>. La fonction <code class="docutils literal notranslate"><span class="pre">json.load()</span></code> lit le fichier JSON et le transforme en un dictionnaire Python.</p></li>
+</ul>
+<p>*. <strong>Normalisation du JSON en DataFrame</strong> :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataframe</span> <span class="pre">=</span> <span class="pre">json_normalize(data)</span></code> : Utilise la fonction <code class="docutils literal notranslate"><span class="pre">json_normalize()</span></code> de pandas pour convertir les données JSON imbriquées (<code class="docutils literal notranslate"><span class="pre">data</span></code>) en une structure plate de type tableau, appelée DataFrame. Cette étape est particulièrement utile pour analyser des données JSON structurées où des objets ou tableaux imbriqués doivent être représentés sous forme tabulaire.</p></li>
+</ul>
 <p>Et l’affichage sans <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -576,6 +777,19 @@ Consultez <a class="reference external" href="https://pandas.pydata.org/pandas-d
 </div>
 </div>
 </div>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">dataframe.describe()</span></code> de pandas génère des statistiques descriptives qui résument la tendance centrale, la dispersion et la forme de la distribution d’un jeu de données. Voici ce que chaque partie inclut généralement :</p>
+<ol class="arabic simple">
+<li><p><strong>Count</strong> : Nombre d’observations non-nulles (lignes) dans chaque colonne.</p></li>
+<li><p><strong>Mean</strong> : Valeur moyenne de chaque colonne numérique.</p></li>
+<li><p><strong>Std (Écart-type)</strong> : Mesure de la dispersion ou de l’étendue des valeurs dans chaque colonne numérique.</p></li>
+<li><p><strong>Min</strong> : La plus petite valeur dans chaque colonne numérique.</p></li>
+<li><p><strong>25% (Percentile)</strong> : La valeur en dessous de laquelle 25% des observations tombent (1er quartile).</p></li>
+<li><p><strong>50% (Médiane)</strong> : La médiane ou le 50e percentile.</p></li>
+<li><p><strong>75% (Percentile)</strong> : La valeur en dessous de laquelle 75% des observations tombent (3e quartile).</p></li>
+<li><p><strong>Max</strong> : La plus grande valeur dans chaque colonne numérique.</p></li>
+</ol>
+<p>Lorsque vous appelez <code class="docutils literal notranslate"><span class="pre">describe()</span></code> sur un DataFrame pandas (<code class="docutils literal notranslate"><span class="pre">dataframe</span></code> dans ce cas), il analyse uniquement les colonnes numériques par défaut et fournit le résumé statistique pour chacune de ces colonnes. Les colonnes non numériques sont ignorées, sauf si elles sont spécifiquement incluses en utilisant des paramètres supplémentaires.</p>
+<p>Cette méthode est utile pour obtenir rapidement un aperçu des valeurs numériques de votre jeu de données, identifier les valeurs aberrantes, comprendre la distribution de vos données, etc.</p>
 <p>Pour obtenir les valeurs uniques de la colonne <strong>year</strong> :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -622,6 +836,108 @@ Consultez <a class="reference external" href="https://pandas.pydata.org/pandas-d
 </div>
 </div>
 </div>
+<p>L’attribut <code class="docutils literal notranslate"><span class="pre">dataframe.dtypes</span></code> dans pandas retourne les types de données de chaque colonne dans le DataFrame <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>. Il fournit des informations sur la manière dont pandas a interprété les données provenant du JSON (ou de toute autre source) lors de sa lecture initiale et de son processus de normalisation. Voici ce que vous verrez généralement :</p>
+<ul class="simple">
+<li><p><strong>Types numériques</strong> : Entiers (<code class="docutils literal notranslate"><span class="pre">int64</span></code>), nombres à virgule flottante (<code class="docutils literal notranslate"><span class="pre">float64</span></code>).</p></li>
+<li><p><strong>Type Objet</strong> : Typiquement des chaînes de caractères (<code class="docutils literal notranslate"><span class="pre">object</span></code>), mais peut également inclure d’autres objets Python.</p></li>
+<li><p><strong>Types Date/Heure</strong> : Si applicable, pandas reconnaîtra et étiquettera les données de date/heure de manière appropriée (<code class="docutils literal notranslate"><span class="pre">datetime64</span></code>).</p></li>
+<li><p><strong>Types Catégoriels</strong> : Si pandas identifie une colonne avec un petit nombre de valeurs uniques, il peut lui attribuer un type <code class="docutils literal notranslate"><span class="pre">category</span></code>, ce qui peut optimiser l’utilisation de la mémoire et accélérer certaines opérations.</p></li>
+</ul>
+<section id="gestion-des-valeurs-manquantes">
+<h2>Gestion des valeurs manquantes<a class="headerlink" href="#gestion-des-valeurs-manquantes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Identifier les valeurs manquantes dans le jeu de données.</p></li>
+<li><p>Remplacer les valeurs manquantes dans la colonne “year” par l’année médiane.</p></li>
+<li><p>Remplacer les valeurs manquantes dans les colonnes catégorielles (par exemple, “languageLabel”) par “Inconnu”.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+
+<span class="c1"># Identifier les valeurs manquantes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataframe</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Remplacer les valeurs manquantes dans &quot;year&quot; par la valeur médiane</span>
+<span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Remplacer les valeurs manquantes dans &quot;languageLabel&quot; par &quot;Inconnu&quot;</span>
+<span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;Inconnu&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filtrage-des-donnees">
+<h2>Filtrage des données<a class="headerlink" href="#filtrage-des-donnees" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Extraire toutes les lignes où “year” est supérieur à 1960.</p></li>
+<li><p>Extraire toutes les lignes où “languageLabel” est “BCPL”.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrer les lignes où &quot;year&quot; est supérieur à 1960</span>
+<span class="n">filtered_year</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1960</span><span class="p">]</span>
+<span class="n">filtered_year</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrer les lignes où &quot;languageLabel&quot; est &quot;BCPL&quot;</span>
+<span class="n">filtered_language</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;BCPL&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">filtered_language</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="groupement-et-agregation">
+<h2>Groupement et agrégation<a class="headerlink" href="#groupement-et-agregation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Compter combien d’entrées existent par “languageLabel”.</p></li>
+<li><p>Compter combien d’entrées existent par “year”.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compter combien d&#39;entrées existent par &quot;languageLabel&quot;</span>
+<span class="n">language_label_counts</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="c1"># Compter combien d&#39;entrées existent par &quot;year&quot;</span>
+<span class="n">year_counts</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exportation-des-donnees">
+<h2>Exportation des données<a class="headerlink" href="#exportation-des-donnees" title="Link to this heading">#</a></h2>
+<p>Sauvegarder le DataFrame modifié dans un nouveau fichier JSON.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sauvegarder dans un fichier JSON</span>
+<span class="n">dataframe</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s2">&quot;modified_pl.json&quot;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;records&quot;</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Enregistrez-le également sous forme de fichier CSV.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enregistrer dans un fichier CSV</span>
+<span class="n">dataframe</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;modified_pl.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question :</strong> Quelle est la différence entre <code class="docutils literal notranslate"><span class="pre">json.load()</span></code> et <code class="docutils literal notranslate"><span class="pre">json.loads()</span></code> en Python ?</p>
+</section>
 </section>
 <section id="exercice-4">
 <h1>Exercice 4 ★★<a class="headerlink" href="#exercice-4" title="Link to this heading">#</a></h1>
@@ -681,6 +997,54 @@ des sources de données externes utilisant des interfaces d’interrogation spé
 </div>
 </div>
 </div>
+<section id="filtrer-les-donnees-pour-une-periode-specifique">
+<h2>Filtrer les données pour une période spécifique<a class="headerlink" href="#filtrer-les-donnees-pour-une-periode-specifique" title="Link to this heading">#</a></h2>
+<p>Vous pouvez filtrer les données pour obtenir les langages de programmation inventés dans une plage d’années spécifique (par exemple, entre 1980 et 2000). Cela peut être utile si vous êtes uniquement intéressé par les langages créés pendant une période donnée.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrer le DataFrame pour les langages créés entre 1980 et 2000</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1980</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2000</span><span class="p">)]</span>
+
+<span class="c1"># Afficher les données filtrées</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compter-les-langages-par-annee">
+<h2>Compter les langages par année<a class="headerlink" href="#compter-les-langages-par-annee" title="Link to this heading">#</a></h2>
+<p>Une opération utile pourrait être de compter combien de langages ont été inventés chaque année. Cela peut vous donner une meilleure compréhension des tendances dans la création des langages de programmation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compter le nombre de langages créés par an</span>
+<span class="n">languages_per_year</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Afficher le résultat</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">languages_per_year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="identifier-les-langages-ayant-la-date-de-creation-la-plus-recente">
+<h2>Identifier les langages ayant la date de création la plus récente<a class="headerlink" href="#identifier-les-langages-ayant-la-date-de-creation-la-plus-recente" title="Link to this heading">#</a></h2>
+<p>Une autre question intéressante à poser pourrait être de savoir quel langage a la date de création la plus récente. Nous pouvons trier le DataFrame par année et trouver les dernières entrées.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trier le DataFrame par année et obtenir les 10 langages les plus récents</span>
+<span class="n">recent_languages</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Afficher les 10 langages les plus récents</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recent_languages</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question</strong></p>
+<p>Quelle est la tendance du nombre de langages de programmation créés au fil du temps ?</p>
+<p>Pour répondre à cette question, nous devons filtrer les données pour les langages créés entre 1960 et 2000, puis identifier l’année où le plus grand nombre de langages de programmation a été créé. Ensuite, nous allons créer un nouveau DataFrame contenant les 5 langages de programmation les plus populaires (par nombre d’occurrences) pendant cette période.</p>
+</section>
 </section>
 <section id="exercice-5">
 <h1>Exercice 5 ★★★<a class="headerlink" href="#exercice-5" title="Link to this heading">#</a></h1>
@@ -709,19 +1073,29 @@ des sources de données externes utilisant des interfaces d’interrogation spé
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
+<span class="c1"># Charger les données JSON depuis un fichier</span>
 <span class="n">jsondata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/plparadigm.json&quot;</span><span class="p">))</span>
+
+<span class="c1"># Créer une liste vide pour stocker les données temporaires</span>
 <span class="n">array</span> <span class="o">=</span> <span class="p">[]</span>
 
+<span class="c1"># Boucle à travers chaque élément des données JSON</span>
 <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">jsondata</span><span class="p">:</span>
+    <span class="c1"># Extraire des valeurs spécifiques de chaque élément et les ajouter à la liste</span>
+    <span class="c1"># En supposant que &quot;year&quot;, &quot;languageLabel&quot; et &quot;paradigmLabel&quot; sont des clés dans les données JSON</span>
     <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;paradigmLabel&quot;</span><span class="p">]])</span>
 
+<span class="c1"># Créer un DataFrame pandas à partir de la liste avec des colonnes nommées</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">])</span>
+
+<span class="c1"># Définir les types de données pour les colonnes du DataFrame</span>
+<span class="c1"># Cela garantit un stockage efficace et évite les erreurs potentielles lors des opérations</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="s2">&quot;int64&quot;</span><span class="p">,</span> <span class="s2">&quot;languageLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">}</span>
 <span class="p">)</span>
 
-<span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;paradigmLabel&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
-<span class="n">grouped</span>
+<span class="c1"># Regrouper le DataFrame par les colonnes &quot;year&quot; et &quot;paradigmLabel&quot;</span>
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span>
 </pre></div>
 </div>
 </div>
@@ -735,6 +1109,7 @@ des sources de données externes utilisant des interfaces d’interrogation spé
 </div>
 </div>
 </div>
+<p><strong>Question 1</strong></p>
 <p>Votre prochain objectif est de lancer la requête suivante pour obtenir la population
 des informations sur les différents pays (limitées à 10000 lignes). Exécutez le
 suite à la requête sur <a class="reference external" href="https://query.wikidata.org">Wikidata query service</a>
@@ -763,24 +1138,20 @@ par ordre croissant d’année.</p></li>
 <li><p>Le pays ayant la population la plus faible et la plus élevée (compte tenu de la
 population la plus récente)</p></li>
 </ol>
-<p>Votre prochain objectif est de lancer la requête suivante pour obtenir des informations relatives
-aux articles scientifiques publiés après 2010 (limité à 10 000 lignes). Lancer
-la requête suivante sur <a class="reference external" href="https://query.wikidata.org">Wikidata query service</a> et téléchargez le fichier JSON.
-Il vous donne les informations suivantes relatives à la recherche scientifique
-article : titre, sujet principal et année de publication.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT ?title ?subjectLabel ?year
+<p><strong>Question 2</strong> :</p>
+<p>Votre objectif suivant est d’exécuter la requête suivante pour obtenir des informations liées aux articles scientifiques publiés après 2010 (limité à 5000 lignes). Exécutez la requête suivante sur le <a class="reference external" href="https://query-scholarly.wikidata.org/">service de requêtes Wikidata</a> et téléchargez le fichier JSON.</p>
+<p>Cela vous fournira les informations suivantes concernant les articles scientifiques : titre, sujet principal et année de publication.</p>
+<p><strong>Remarque</strong> : Veuillez noter que l’URL pour interroger les articles scientifiques est <a class="reference external" href="https://query-scholarly.wikidata.org/">https://query-scholarly.wikidata.org/</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT ?title ?subject ?year
 {
-  ?article wdt:P31 wd:Q13442814; #scientific article
-           wdt:P1476 ?title; #title of the article
-           wdt:P921 ?subject; #main subject
-           wdt:P577 ?date. #publication date
-  ?subject rdfs:label ?subjectLabel.
-  BIND(YEAR(?date) as ?year).
-  #published after 2010
-  FILTER(lang(?title)=&quot;en&quot; &amp;&amp;
-     lang(?subjectLabel)=&quot;en&quot; &amp;&amp; ?year&gt;2010)
+  ?article wdt:P31 wd:Q13442814; #scientific article
+           wdt:P1476 ?title; #title of the article
+           wdt:P921 ?subject; #main subject
+           wdt:P577 ?date. #publication date
+  BIND(YEAR(?date) as ?year).
+  FILTER(lang(?title) = &quot;en&quot; &amp;&amp; ?year&gt;2010)
 }
-LIMIT 1000
+LIMIT 5000
 </pre></div>
 </div>
 <p>Maintenant, calculez et affichez les informations suivantes (en utilisant diverses <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/10min.html">opérations disponibles dans la bibliothèque des pandas</a>
@@ -888,7 +1259,34 @@ les résultats de l’interrogation ci-dessus) depuis 2010.</p></li>
 </div>
 </div>
 </div>
+<p><strong>Question 1</strong>:</p>
 <p>Modifiez le code ci-dessus et téléchargez des images liées au sujet de votre choix (villes, monuments historiques, fleurs, bâtiments, etc.).</p>
+<p><strong>Question 2</strong></p>
+<p>Votre objectif est de récupérer les données des gratte-ciel (<a class="reference external" href="https://www.wikidata.org/wiki/Q11303">Q11303</a>) (nom, pays, image, hauteur) depuis Wikidata, puis de télécharger et filtrer les images en fonction de leur taille. Utilisez le code de traitement d’image ci-dessous pour classifier les gratte-ciel en fonction du contraste de leur skyline (images de jour vs. images de nuit).</p>
+<p>Quel pays possède le plus grand nombre de gratte-ciel apparaissant sur des images de nuit ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">classifier_jour_nuit</span><span class="p">(</span><span class="n">chemin_image</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">chemin_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>  <span class="c1"># Conversion en niveaux de gris</span>
+    <span class="n">luminosité</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>  <span class="c1"># Calcul de la luminosité moyenne des pixels</span>
+
+    <span class="k">if</span> <span class="n">luminosité</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>  <span class="c1"># Les images sombres sont considérées comme des images de nuit</span>
+        <span class="k">return</span> <span class="s2">&quot;nuit&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;jour&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -963,9 +1361,26 @@ les résultats de l’interrogation ci-dessus) depuis 2010.</p></li>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#captures-d-ecran">Captures d’écran</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1 ★</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2 ★</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3 ★★</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4 ★★</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2 ★</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remarques-importantes">Remarques importantes :</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explorer-l-acces-aux-donnees-colonne-par-colonne">Explorer l’accès aux données colonne par colonne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrer-les-donnees-par-annee">Filtrer les données par année</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerer-les-donnees-manquantes-ou-incorrectes">Gérer les données manquantes ou incorrectes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3 ★★</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-valeurs-manquantes">Gestion des valeurs manquantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrage-des-donnees">Filtrage des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupement-et-agregation">Groupement et agrégation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exportation-des-donnees">Exportation des données</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4 ★★</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrer-les-donnees-pour-une-periode-specifique">Filtrer les données pour une période spécifique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compter-les-langages-par-annee">Compter les langages par année</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifier-les-langages-ayant-la-date-de-creation-la-plus-recente">Identifier les langages ayant la date de création la plus récente</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5 ★★★</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-6">Exercice 6 ★★★</a></li>
 </ul>
