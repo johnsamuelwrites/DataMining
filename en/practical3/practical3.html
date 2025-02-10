@@ -421,7 +421,7 @@ including single and multilayered perceptrons.</p></li>
 <section id="exercise-1">
 <h2>Exercise 1 [★]<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
 <p>We will now work with <strong>linear regression</strong> (refer <a class="reference external" href="http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares">here</a>).</p>
-<p>Let’s see some simple programs. In the following data, where we have
+<p>Let’s see some simple programs. In the following code, where we have
 some sample data for the equation: <em>y = x</em>. We will first train our
 Linear Regression model with a very small subset and test whether it is
 able to predict *y-*values for new *x-*values.</p>
@@ -729,7 +729,8 @@ see.</p>
 </div>
 </div>
 <p><img alt="" src="en/practical3/images/allpopulationpolynomialregression.png" /></p>
-<p>What do you think? Can we use this program to predict the missing data
+<p><strong>Question</strong> :</p>
+<p>Can we use this program to predict the missing data
 (especially in the absence of other external source of information)? Try
 the above program with different degrees.</p>
 </section>
@@ -737,7 +738,7 @@ the above program with different degrees.</p>
 <h2>Exercise 2 [★★]<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
 <p>Classifiers are helpful to classify our dataset into one or more
 classes. But unlike clustering algorithms, it’s the user who has to
-classify the data in a classification algorithm. In the following
+classify (a portion of) the data in a classification algorithm. In the following
 exercises, we see different classifiers, starting with perceptron. Look
 at the input data (<em>numarray</em>) and the associated labels (<em>result</em>).
 Here, we will label the complete dataset and see whether our model
@@ -880,7 +881,7 @@ results.</p>
 </div>
 </div>
 </div>
-<p>We will now use scikit-learn and the classifiers seen above to recognize
+<p>We will now use MNIST data and the classifiers seen above to recognize
 handwriting. Scikit-learn has a lot of datasets. We will use one such
 dataset called digits dataset, which consists of labeled handwriting
 images of digits. The following program will show the labels.</p>
@@ -1048,14 +1049,15 @@ and see its performance.</p>
 </div>
 </div>
 </div>
-<p>Did you try changing the number of hidden layers?</p>
-<p>What are your observations after trying the different classifiers?</p>
-<p>Your next question is to plot the confusion metrics for all the above
+<p><strong>Question 1</strong></p>
+<p>Did you try changing the number of hidden layers? What are your observations?</p>
+<p><strong>Question 2</strong></p>
+<p>What are your observations after trying the different classifiers? Your next question is to plot the confusion metrics for all the above
 three classifiers.</p>
 </section>
 <section id="exercise-3">
 <h2>Exercise 3 [★★]<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
-<p>In this practical session, we start experimenting with decision trees.
+<p>In this exercise, we start experimenting with decision trees.
 We will first build a Decision Tree Classifier using a very simple
 example. Like the classifiers we have seen before, we will first try to
 fit our data and then predict a class for a previously unseen value.</p>
@@ -1516,13 +1518,10 @@ training</a> (or
 <a class="reference external" href="https://fr.wikipedia.org/wiki/Algorithme_d%27apprentissage_incr%C3%A9mental">algorithme d’apprentissage incrémental
 (fr)</a>).
 Did you get good precision?</p>
+<p><strong>Question 1</strong></p>
 <p>Your next question is to modify the above program and test online
-training with <strong>MLPClassifier</strong>.</p>
-<p>Try modifying (reducing and increasing) the training data size. What are
-your observations?</p>
-<p>Did it work? Let’s now try to get the accuracy of our model. Will it
-work for our entire test data?</p>
-<p>What is the accuracy that you got? Now change the number of neurons in
+training with <strong>MLPClassifier</strong>. Try modifying (reducing and increasing) the training data size. What are
+your observations? Did it work? Let’s now try to get the accuracy of our model. Will it work for our entire test data? What is the accuracy that you got? Now change the number of neurons in
 each layer (currently it is set to 50 each). Also try to increase the
 number of hidden layers. Did your accuracy improve?</p>
 </section>
