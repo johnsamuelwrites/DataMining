@@ -640,7 +640,7 @@ tab ((\t)).</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Save a modified CSV file with a missing value (manually or via script)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;pl_missing.csv&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;Simula&quot;</span><span class="p">,</span> <span class="mi">1962</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)],</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;pl_missing.csv&quot;</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;Simula&quot;</span><span class="p">,</span> <span class="mi">1962</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)],</span>  <span class="n">header</span><span class="o">=</span><span class="s2">&quot;name,year&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Attempt to load with np.loadtxt (will cause an error)</span>
 <span class="k">try</span><span class="p">:</span>
@@ -720,8 +720,8 @@ Try using methods like
 (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html#pandas.DataFrame.count">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.count.html#pandas.DataFrame.count</a>))
 etc.</p>
 <p>Before continuing this exercise, please practice working with Pandas.
-Take a look at <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html">10 minutes to pandas</a>
-(<strong>Ref:</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html">https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html</a>)).</p>
+Take a look at <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">10 minutes to pandas</a>
+(<strong>Ref:</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html</a>)).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="kn">import</span> <span class="n">json_normalize</span>
