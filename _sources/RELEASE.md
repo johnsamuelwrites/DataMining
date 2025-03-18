@@ -1,3 +1,11 @@
+# v1.4
+===============================================================================
+- Update exercices and precise questions
+- Add silhouette score
+- Handle error
+- Update descriptions
+- Update project description
+
 # v1.3
 ===============================================================================
 - Separate installation page
