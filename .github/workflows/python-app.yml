@@ -11,60 +11,64 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.10"
-    - name: Install dependencies
-      run: |
-        sudo apt-get install -y graphviz
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run all Jupyter notebooks
-      run: |
-        cd en/
-        papermill installation.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../ ; cd en/practical0/
-        papermill practical0.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd en/practical1/
-        papermill practical1.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd en/practical2/
-        papermill practical2.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd en/practical3/
-        papermill practical3.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd fr/
-        papermill installation.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../ ; cd fr/TP0/
-        papermill tp0.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd fr/TP1/
-        papermill tp1.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd fr/TP2/
-        papermill tp2.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd fr/TP3/
-        papermill tp3.ipynb tmp.ipynb
-        rm tmp.ipynb
-        cd ../../ ; cd ./examples/
-        papermill Examples-Visualization.ipynb tmp.ipynb
-        papermill Examples.ipynb tmp.ipynb
-        papermill decisiontree.ipynb tmp.ipynb
-        papermill mlp.ipynb tmp.ipynb
-        papermill perceptron.ipynb tmp.ipynb
-        papermill rfc.ipynb tmp.ipynb
-        papermill svm.ipynb tmp.ipynb
-        papermill recommendation.ipynb tmp.ipynb
-        rm tmp.ipynb
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run all Jupyter notebooks
+        run: |
+         cd en/
+          papermill installation.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../ ; cd en/practical0/
+          papermill practical0.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd en/practical1/
+          papermill practical1.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd en/practical2/
+          papermill practical2.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd en/practical3/
+          papermill practical3.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd fr/
+          papermill installation.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../ ; cd fr/TP0/
+          papermill tp0.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd fr/TP1/
+          papermill tp1.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd fr/TP2/
+          papermill tp2.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd fr/TP3/
+          papermill tp3.ipynb tmp.ipynb
+          rm tmp.ipynb
+          cd ../../ ; cd ./examples/
+          papermill Examples-Visualization.ipynb tmp.ipynb
+          papermill Examples.ipynb tmp.ipynb
+          papermill decisiontree.ipynb tmp.ipynb
+          papermill mlp.ipynb tmp.ipynb
+          papermill perceptron.ipynb tmp.ipynb
+          papermill rfc.ipynb tmp.ipynb
+          papermill svm.ipynb tmp.ipynb
+          papermill recommendation.ipynb tmp.ipynb
+          rm tmp.ipynb
 
