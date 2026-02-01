@@ -131,7 +131,9 @@ dmypy.json
 
 # Files generated during practicals
 Hello.txt
+bonjour.txt
 modified_pl.csv
 modified_pl.json
 pl_missing.csv
 en/*/*.jpg
+fr/*/*.jpg
