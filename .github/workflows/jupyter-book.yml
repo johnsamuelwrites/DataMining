@@ -27,7 +27,7 @@ jobs:
           python -m pip install jupyter-book mystmd
 
       - name: Build Jupyter Book (MyST)
-        run: myst build
+        run: myst build --html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
