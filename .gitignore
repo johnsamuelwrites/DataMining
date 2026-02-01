@@ -129,5 +129,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Generated files
+# Files generated during practicals
 Hello.txt
+modified_pl.csv
+modified_pl.json
+pl_missing.csv
+en/*/*.jpg

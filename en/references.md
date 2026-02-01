@@ -4,6 +4,7 @@
 -   [Scikit-learn](http://scikit-learn.org/stable/index.html)
 -   [NumPy](http://www.numpy.org/)
 -   [Pandas](https://pandas.pydata.org/)
+-   [Joblib](https://joblib.readthedocs.io/)
 -   [urllib.request](https://docs.python.org/3.6/library/urllib.request.html)
 -   [matplotlib.pyplot](https://matplotlib.org/api/pyplot_api.html)
 -   [Tensorflow](https://www.tensorflow.org/)
