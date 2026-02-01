@@ -36,7 +36,7 @@ jobs:
 
       # Build Jupyter Book
       - name: Build Jupyter book
-        run: jb build .
+        run: python -m jupyter_book build .
         
       # Runs a set of commands using the runners shell
       - name: Push Jupyter book to GitHub Pages
