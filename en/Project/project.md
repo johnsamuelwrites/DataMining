@@ -1,180 +1,423 @@
-# Project
+# Project: Image Recommendation System
 
-## Goals
+## Overview
 
-- Implementation of a well-commented [Recommender system](https://en.wikipedia.org/wiki/Recommender_system) in Python.
-  - Automate image data collection and annotation.  
-  - Analyze data to identify trends.
-  - Visualize analysis results effectively.  
-  - Build and validate a recommendation system.
-  - Ensure thorough testing of all components.  
-- Present findings in a detailed report.  
+In this project, you will build an **Image Recommendation System** that suggests images to users based on their preferences. This project applies all the skills you learned in the practical sessions: data parsing, visualization, clustering, classification, and machine learning.
 
+**Duration**: 3 practical sessions
+**Team Size**: 2-3 students
+**Deliverables**:
+1. A Jupyter notebook (`Name1_Name2_[Name3].ipynb`)
+2. A 4-page summary report (PDF)
 
-The goal of this project is to recommend images based on the preferences
-of the user. You have three practical sessions to build this system. You
-must ensure that all the tasks related to data acquisition, annotation,
-analysis, and visualization are automated.
+---
 
-The main tasks of the project are given below:
+## Learning Objectives
 
-1.  Data Collection
-2.  Labeling and Annotation
-3.  Data Analyses
-4.  Data Visualization
-5.  Recommendation System
-6.  Tests
-7.  Report
+By completing this project, you will:
+- Automate data collection from web sources
+- Extract and process image metadata
+- Apply clustering algorithms to analyze image features
+- Build user preference profiles
+- Implement a recommendation algorithm
+- Visualize data insights effectively
+- Write comprehensive tests for your system
+
+---
+
+## Project Architecture
+
+The system consists of 7 interconnected tasks:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    IMAGE RECOMMENDATION SYSTEM                   │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐       │
+│  │ 1. Data      │───▶│ 2. Labeling  │───▶│ 3. Data      │       │
+│  │ Collection   │    │ & Annotation │    │ Analysis     │       │
+│  └──────────────┘    └──────────────┘    └──────────────┘       │
+│        │                    │                   │                │
+│        ▼                    ▼                   ▼                │
+│  ┌──────────────────────────────────────────────────────┐       │
+│  │              JSON Files (Metadata Storage)            │       │
+│  └──────────────────────────────────────────────────────┘       │
+│        │                    │                   │                │
+│        ▼                    ▼                   ▼                │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐       │
+│  │ 4. Data      │    │ 5. Recommend-│    │ 6. Tests     │       │
+│  │ Visualization│    │ ation System │    │              │       │
+│  └──────────────┘    └──────────────┘    └──────────────┘       │
+│                             │                                    │
+│                             ▼                                    │
+│                    ┌──────────────┐                              │
+│                    │ 7. Summary   │                              │
+│                    │    Report    │                              │
+│                    └──────────────┘                              │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ![Architecture](../../images/Project-Architecture.png "Architecture")
 
-## Data Collection
+---
 
-You have to collect and download a set of images. You have the following
-tasks to program, automating the process as much as possible:
+## Task 1: Data Collection
 
-1.  Create a folder called *images*.
-2.  Download open-licensed images to the folder *images* (minimum 100
-    images).
-3.  Save metadata of every image like image size, image format (.jpeg,
-    .png, etc.), image orientation (landscape, portrait, square, etc.),
-    creation date, camera model, etc. in one or more JSON files. You can
-    make use of the [Exif](https://en.wikipedia.org/wiki/Exif)
-    information present in the image files.
+### Goal
+Collect at least **100 open-licensed images** with their metadata.
 
-For this task, you should look for sources having additional information
-like the tags, categories, etc.
+### What You Need to Do
 
-## Labeling and Annotation
+1. **Create a folder structure**:
+   ```
+   project/
+   ├── images/           # Downloaded images
+   ├── data/             # JSON metadata files
+   └── project.ipynb     # Your notebook
+   ```
 
-In this task, you may need to label, annotate and save additional
-information about every image. You may analyze the images using
-clustering algorithms for finding the predominant colours.
+2. **Find image sources** (choose one or more):
+   - [Wikimedia Commons](https://commons.wikimedia.org/) - Use SPARQL queries (like in Practical 1)
+   - [Unsplash API](https://unsplash.com/developers) - Free API for high-quality images
+   - [Pexels API](https://www.pexels.com/api/) - Free stock photos
+   - [Flickr API](https://www.flickr.com/services/api/) - Creative Commons images
 
-You already have some metadata from the EXIF of images from the previous
-task. In this task, your goal is to obtain additional information, like
-the predominant colors, tags. How about asking users to tag the images?
-E.g., color names, \#cat, \#flower, \#sunflower, rose etc. How are you
-planning to process the user tags? Is it possible to automate this
-process?
+3. **Download images programmatically** using the techniques from Practical 1, Exercise 6
 
-## Data Analyses
+4. **Extract and save metadata** for each image:
+   - Image filename
+   - Image dimensions (width, height)
+   - File format (.jpg, .png, etc.)
+   - File size (in KB)
+   - Source URL
+   - License information
+   - EXIF data (if available): camera model, date taken, etc.
 
-Ask the user to select some images and add tags. For every user, you are
-now ready to build a user-preference profile, based on this selection.
-You may collect the following information manually, but the objective of
-this task is to obtain them using the selected images in an automated
-manner:
+### Expected Output
+- `images/` folder with 100+ images
+- `data/images_metadata.json` containing metadata for all images
 
-1.  Favorite colors
-2.  Favorite image orientation
-3.  Favorite image sizes (thumbnail images, large images, medium-size
-    images, etc.)
-4.  Favorite tags
-5.  \...
+### Hints
+- Use `PIL` to get image dimensions
+- Use `os.path.getsize()` to get file size
+- Use EXIF extraction (see Practical 2, Exercise 2)
+- Store metadata as a list of dictionaries in JSON format
 
-Now, with your knowledge of different types of classifiers and
-clustering algorithms, what more information will you add for every
-image?
+---
 
-Your next objective is to analyze the user information and their
-favorite images. How did you create random users? How many users did you
-create? What information did you store for every user? What types of
-analyses did you perform?
+## Task 2: Labeling and Annotation
 
-## Data Visualization
+### Goal
+Add descriptive labels and computed features to each image.
 
-In this task, your goal is to visualize the different characteristics of
-all the downloaded images.
+### What You Need to Do
 
-1.  The available number of images for every year
-2.  The available number of images for different types: image size,
-    image orientation, camera models, etc.
-3.  Color characteristics
+1. **Extract color information** using KMeans clustering (Practical 2, Exercise 3):
+   - Find the 3-5 predominant colors in each image
+   - Store colors as RGB values and/or color names
 
-The users may also like to visualize the above information related to
-their favorite images. In this task, you must also add functionality to
-let the users visualize information related to their own user profile.
+2. **Determine image orientation**:
+   - Landscape (width > height)
+   - Portrait (height > width)
+   - Square (width ≈ height)
 
-## Recommendation System
+3. **Add category tags** (choose an approach):
+   - **Manual**: Create a simple interface to tag images
+   - **Automated**: Use image source categories/tags
+   - **Hybrid**: Start with source tags, allow user refinement
 
-Are you now ready to recommend images to a user? In this task, your goal
-is to build the recommendation system. Which approach did you decide to
-take? Collaborative filtering, content-based, or a hybrid approach? Which
-algorithm(s) did you choose (classifcation, clustering,...) ? For
-every user, are you now in a position to build a user-preference
-profile? What type of information did you use for building a user
-profile? What\'s missing? What are the limitations of your proposed
-approach?
+4. **Classify image size**:
+   - Thumbnail: < 500px
+   - Medium: 500-1500px
+   - Large: > 1500px
 
-## Tests
+### Expected Output
+- `data/images_labels.json` with enriched metadata:
+```json
+{
+  "image_001.jpg": {
+    "predominant_colors": [[255, 128, 0], [0, 100, 200], [50, 50, 50]],
+    "color_names": ["orange", "blue", "gray"],
+    "orientation": "landscape",
+    "size_category": "medium",
+    "tags": ["nature", "sunset", "beach"]
+  }
+}
+```
 
-Your next task is to develop and run different tests on your proposed
-system. Are different functions functional? How did you test your
-project? How are you verifying that your recommender system is working?
+### Hints
+- Reuse your KMeans color extraction code from Practical 2
+- Consider using a color name mapping (RGB → color name)
+- Store all annotations in a structured JSON file
 
-## Report
+---
 
-Your final task is to prepare a 4-page Project report (French or
-English) in PDF format detailing the following:
+## Task 3: Data Analysis
 
--   The goal of your project
--   Data sources of your images and license.
--   Size of your data.
--   Information that you decided to store for each image.
--   Information concerning user preferences
--   Data mining and/or machine learning models that you used along with
-    the metrics obtained.
--   Self-evaluation of your work.
--   Remarks concerning the practical sessions, exercises, and scope for
-    improvement.
--   Conclusion
+### Goal
+Build user preference profiles based on their image selections.
 
-**Note**: Please do not add any program (or code) in this report.
+### What You Need to Do
 
+1. **Simulate users** (create at least 5 users):
+   - Each user "favorites" 10-20 images
+   - Users should have different preferences (one likes nature, another likes architecture, etc.)
+
+2. **Build user profiles** by analyzing their favorite images:
+   ```python
+   user_profile = {
+       "user_id": "user_001",
+       "favorite_colors": ["blue", "green"],      # Most common colors
+       "favorite_orientation": "landscape",        # Most common orientation
+       "favorite_size": "medium",                  # Most common size
+       "favorite_tags": ["nature", "water"],       # Most common tags
+       "favorite_images": ["img_01.jpg", ...]      # List of favorited images
+   }
+   ```
+
+3. **Analyze patterns** across users:
+   - Which colors are most popular overall?
+   - Which tags appear most frequently?
+   - Are there clusters of users with similar preferences?
+
+### Expected Output
+- `data/users.json` with user profiles
+- Analysis results showing user preference patterns
+
+### Hints
+- Use pandas for data analysis (groupby, value_counts)
+- Use Counter from collections to find most common items
+- Consider using clustering to group similar users
+
+---
+
+## Task 4: Data Visualization
+
+### Goal
+Create visualizations that reveal insights about your image collection and user preferences.
+
+### Required Visualizations
+
+1. **Image Collection Statistics**:
+   - Bar chart: Number of images per orientation
+   - Bar chart: Number of images per size category
+   - Pie chart: Distribution of image formats
+
+2. **Color Analysis**:
+   - Display predominant colors as color palettes
+   - Histogram of color frequencies across all images
+
+3. **User Preferences**:
+   - Bar chart: Favorite colors per user
+   - Comparison chart: User preferences side-by-side
+
+4. **Tag Analysis**:
+   - Bar chart: Most common tags
+   - Word cloud (optional): Tag frequency visualization
+
+### Expected Output
+- At least 6 different visualizations in your notebook
+- All plots should have titles, labels, and legends
+
+### Hints
+- Use matplotlib for all visualizations (Practical 2, Exercise 1)
+- Save important plots using `plt.savefig()`
+- Use subplots to group related visualizations
+
+---
+
+## Task 5: Recommendation System
+
+### Goal
+Implement a system that recommends images to users based on their preferences.
+
+### Choose Your Approach
+
+You must implement **at least one** of these approaches:
+
+#### Option A: Content-Based Filtering (Using Classification)
+Recommend images similar to what the user has liked before.
+
+```python
+# Train a classifier on user's favorites
+# Features: color, orientation, size, tags
+# Label: Favorite / Not Favorite
+# Predict which unseen images the user would like
+```
+
+**Use**: Decision Tree, Random Forest, or SVM (Practical 3, Exercises 2-3)
+
+#### Option B: Clustering-Based Recommendation
+Group similar images together and recommend from the same cluster.
+
+```python
+# Cluster all images based on features
+# Find which cluster the user's favorites belong to
+# Recommend other images from the same cluster
+```
+
+**Use**: KMeans (Practical 2, Exercises 3-5)
+
+#### Option C: Hybrid Approach
+Combine both methods for better recommendations.
+
+### Implementation Requirements
+
+1. **Input**: User ID
+2. **Output**: List of 5-10 recommended images (not already favorited)
+3. **Explanation**: Brief reason why each image is recommended
+
+### Expected Output
+```python
+def recommend_images(user_id, n_recommendations=5):
+    """
+    Recommend images for a user.
+
+    Args:
+        user_id: The user to recommend for
+        n_recommendations: Number of images to recommend
+
+    Returns:
+        List of (image_filename, reason) tuples
+    """
+    # Your implementation
+    pass
+```
+
+### Hints
+- Start with the examples in `examples/recommendation.ipynb`
+- Use LabelEncoder to convert categorical features to numbers
+- Test your recommendations manually - do they make sense?
+
+---
+
+## Task 6: Tests
+
+### Goal
+Verify that your system works correctly.
+
+### Required Tests
+
+1. **Data Validation Tests**:
+   - All images exist in the images folder
+   - All images have metadata
+   - Metadata values are valid (no negative dimensions, etc.)
+
+2. **Function Tests**:
+   - Color extraction returns valid RGB values
+   - User profile generation works correctly
+   - Recommendation function returns the expected number of results
+
+3. **Recommendation Quality Tests**:
+   - Recommended images are not already in user's favorites
+   - Recommendations match user preferences (e.g., if user likes blue images, recommendations should include blue images)
+
+### Expected Output
+```python
+def test_data_integrity():
+    """Test that all data is valid"""
+    # Your tests
+    assert len(images) >= 100, "Need at least 100 images"
+    assert all_images_have_metadata(), "Missing metadata"
+
+def test_recommendation_system():
+    """Test that recommendations work"""
+    recommendations = recommend_images("user_001", 5)
+    assert len(recommendations) == 5, "Should return 5 recommendations"
+    # More tests...
+```
+
+### Hints
+- Use `assert` statements for simple tests
+- Print clear pass/fail messages
+- Test edge cases (empty user profile, new user, etc.)
+
+---
+
+## Task 7: Summary Report
+
+### Goal
+Write a 4-page report summarizing your project.
+
+### Required Sections
+
+1. **Introduction** (0.5 page)
+   - Project goal
+   - Your approach in brief
+
+2. **Data Collection** (0.5 page)
+   - Image sources and licenses
+   - Number of images collected
+   - Metadata stored
+
+3. **Methodology** (1.5 pages)
+   - Labeling approach (how you extracted features)
+   - User profile construction
+   - Recommendation algorithm chosen and why
+   - Include architecture diagram
+
+4. **Results** (1 page)
+   - Key visualizations (2-3 figures)
+   - Recommendation accuracy/quality
+   - Interesting findings
+
+5. **Limitations and Future Work** (0.25 page)
+   - What didn't work well?
+   - How could it be improved?
+
+6. **Conclusion** (0.25 page)
+   - Summary of achievements
+   - Self-evaluation
+
+### Format
+- 4 pages maximum
+- PDF format
+- No code in the report (only results and explanations)
+- Include references/bibliography
+
+---
+
+## Evaluation Criteria
+
+| Task | Points | Key Criteria |
+|------|--------|--------------|
+| Data Collection | 15% | Automation, 100+ images, complete metadata |
+| Labeling & Annotation | 15% | Color extraction, proper categorization |
+| Data Analysis | 15% | User profiles, preference analysis |
+| Data Visualization | 15% | 6+ visualizations, proper formatting |
+| Recommendation System | 20% | Working algorithm, reasonable recommendations |
+| Tests | 10% | Comprehensive tests, all pass |
+| Summary Report | 10% | Clear, complete, well-structured |
+
+---
 
 ## Submission
 
+### Files to Submit
+```
+Name1_Name2_[Name3].zip
+├── Name1_Name2_[Name3].ipynb    # Your notebook
+├── data/
+│   ├── images_metadata.json
+│   ├── images_labels.json
+│   └── users.json
+└── summary_report.pdf
+```
 
--   Please **do not** submit your images.
--   Rename your project report as Name1\_Name2\_\[Name3\].pdf, where
-    Name1, Name2, etc. are your names.
--   Add your project report in your project folder.
--   Compress and rename your project work as
-    Name1\_Name2\_\[Name3\].zip, where Name1, Name2 are your names.
--   Submit your **project work** online.
+### Important Notes
+- **DO NOT** submit the images folder (too large)
+- Ensure your notebook runs without errors
+- Include comments explaining your code
+- Rename files with your team member names
 
+---
 
-### Evaluation
+## Getting Started
 
+1. Start with the template notebook: `en/Project/project.ipynb`
+2. Review the examples in `examples/recommendation.ipynb`
+3. Reuse code from your practical sessions
+4. Work incrementally - complete each task before moving to the next
 
-The criteria for the project evaluation is given below:
-
-1.  Data Collection
-    1. Automated approaches to data collection
-    2. Use of open-licensed images
-    3. Storage and management of images and the associated metadata
-2.  Labeling and Annotation
-    1. Automated approaches to labeling
-    2. Storage and management of labels and annotations of images
-    3. Use of classification and clustering algorithms
-3.  Data Analyses
-    1. Types of analyses used
-    2. Use of Pandas and Scikit-learn
-    3. Use of data mining algorithms
-4.  Data Visualization
-    1. Types of visualization techniques used
-    2. Use of matplotlib
-5.  Recommendation System
-    1. Storage and management of user preferences and user-profile
-    2. Use of recommendation algorithms
-6.  Tests
-    1. Presence of functional tests
-    2. Presence of user tests
-7.  Report
-    1. Clarity of presentation
-    2. Presence of a clear introduction and conclusion, architecture
-        diagrams, a summary of different tasks achieved, and limitations
-    3. Bibliography
-
-**Note**: You can check [supplementary examples](../../examples) of noteooks.
+**Good luck!**
