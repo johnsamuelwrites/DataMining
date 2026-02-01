@@ -4,7 +4,7 @@
 name: MyST GitHub Pages Deploy
 on:
   push:
-    # Runs on pushes targeting the default branch
+    # Runs on pushes targeting the default branch (adjust to your default branch: main or master)
     branches: [master]
 env:
   # `BASE_URL` determines, relative to the root of the domain, the URL that your site is served from.
@@ -17,11 +17,13 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: 'pages'
   cancel-in-progress: false
+
 jobs:
   deploy:
     environment:
@@ -29,20 +31,35 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v4
+
+      # Configure GitHub Pages deployment
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
+      # Setup Node.js for MyST CLI
       - uses: actions/setup-node@v4
         with:
           node-version: 18.x
+
+      # Install MyST CLI globally
       - name: Install MyST
         run: npm install -g mystmd
+
+      # Build HTML assets from MyST source files
       - name: Build HTML Assets
         run: myst build --html
+
+      # Upload the generated HTML as a GitHub Pages artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'
+
+      # Deploy the artifact to GitHub Pages on the `gh-pages` branch
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          branch: gh-pages  # <-- explicitly deploy to gh-pages
