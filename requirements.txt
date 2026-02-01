@@ -13,3 +13,4 @@ folium
 sparqlwrapper
 shapely
 geopandas
+joblib
