@@ -24,21 +24,21 @@ project:
     - file: README.md
     - title: Français
       children:
-        - file: fr\README.md
-        - file: fr\TP0\tp0.ipynb
-        - file: fr\TP1\tp1.ipynb
-        - file: fr\TP2\tp2.ipynb
-        - file: fr\TP3\tp3.ipynb
-        - file: fr\Projet\Projet.md
+        - file: fr/README.md
+        - file: fr/TP0/tp0.ipynb
+        - file: fr/TP1/tp1.ipynb
+        - file: fr/TP2/tp2.ipynb
+        - file: fr/TP3/tp3.ipynb
+        - file: fr/Projet/Projet.md
     - title: English
       children:
-        - file: en\README.md
-        - file: en\practical0\practical0.ipynb
-        - file: en\practical1\practical1.ipynb
-        - file: en\practical2\practical2.ipynb
-        - file: en\practical3\practical3.ipynb
-        - file: en\Project\project.md
-        - file: examples\Examples.ipynb
+        - file: en/README.md
+        - file: en/practical0/practical0.ipynb
+        - file: en/practical1/practical1.ipynb
+        - file: en/practical2/practical2.ipynb
+        - file: en/practical3/practical3.ipynb
+        - file: en/Project/project.md
+        - file: examples/Examples.ipynb
 site:
   options:
     logo: datamining.svg
