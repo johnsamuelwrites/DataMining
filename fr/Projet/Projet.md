@@ -8,7 +8,7 @@ Dans ce projet, vous allez construire un **Système de recommandation d'images**
 **Taille de l'équipe** : 2-3 étudiants
 **Livrables** :
 1. Un notebook Jupyter (`Nom1_Nom2_[Nom3].ipynb`)
-2. Un rapport de synthèse de 4 pages (PDF)
+2. Un rapport de synthèse de 5 pages (PDF)
 
 ---
 
@@ -339,7 +339,7 @@ def test_recommendation_system():
 ## Tâche 7 : Rapport de synthèse
 
 ### Objectif
-Écrire un rapport de 4 pages résumant votre projet.
+Écrire un rapport de 5 pages résumant votre projet.
 
 ### Sections requises
 
@@ -352,7 +352,7 @@ def test_recommendation_system():
    - Nombre d'images collectées
    - Métadonnées stockées
 
-3. **Méthodologie** (1,5 page)
+3. **Méthodologie** (2,5 page)
    - Approche d'étiquetage (comment vous avez extrait les caractéristiques)
    - Construction du profil utilisateur
    - Algorithme de recommandation choisi et pourquoi
@@ -372,7 +372,7 @@ def test_recommendation_system():
    - Auto-évaluation
 
 ### Format
-- 4 pages maximum
+- 5 pages maximum
 - Format PDF
 - Pas de code dans le rapport (seulement les résultats et explications)
 - Inclure les références/bibliographie

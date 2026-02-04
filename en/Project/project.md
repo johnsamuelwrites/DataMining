@@ -8,7 +8,7 @@ In this project, you will build an **Image Recommendation System** that suggests
 **Team Size**: 2-3 students
 **Deliverables**:
 1. A Jupyter notebook (`Name1_Name2_[Name3].ipynb`)
-2. A 4-page summary report (PDF)
+2. A 5-page summary report (PDF)
 
 ---
 
@@ -338,7 +338,7 @@ def test_recommendation_system():
 ## Task 7: Summary Report
 
 ### Goal
-Write a 4-page report summarizing your project.
+Write a 5-page report summarizing your project.
 
 ### Required Sections
 
@@ -351,7 +351,7 @@ Write a 4-page report summarizing your project.
    - Number of images collected
    - Metadata stored
 
-3. **Methodology** (1.5 pages)
+3. **Methodology** (2.5 pages)
    - Labeling approach (how you extracted features)
    - User profile construction
    - Recommendation algorithm chosen and why
@@ -371,7 +371,7 @@ Write a 4-page report summarizing your project.
    - Self-evaluation
 
 ### Format
-- 4 pages maximum
+- 5 pages maximum
 - PDF format
 - No code in the report (only results and explanations)
 - Include references/bibliography
